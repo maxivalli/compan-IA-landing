@@ -502,6 +502,80 @@
       flex-shrink: 0;
     }
 
+    /* ── COMPARATIVA ── */
+    .comparativa { background: var(--surface); }
+    .comparativa .section-title { margin-bottom: 16px; }
+
+    .comp-table-wrap {
+      overflow-x: auto;
+      margin-top: 56px;
+      border-radius: 20px;
+      border: 1px solid rgba(0,151,178,0.12);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      min-width: 700px;
+    }
+    thead tr {
+      background: var(--dark);
+      color: rgba(255,255,255,0.5);
+    }
+    thead th {
+      padding: 16px 20px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+    thead th:first-child { color: var(--white); }
+    tbody tr {
+      border-bottom: 1px solid rgba(0,151,178,0.06);
+      transition: background 0.15s;
+    }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: rgba(0,151,178,0.03); }
+    tbody tr.row-highlight {
+      background: rgba(0,151,178,0.07);
+    }
+    tbody tr.row-highlight:hover { background: rgba(0,151,178,0.11); }
+    td {
+      padding: 16px 20px;
+      color: var(--muted);
+      vertical-align: middle;
+    }
+    td:first-child {
+      font-weight: 700;
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .row-highlight td:first-child { color: var(--primary); }
+    .badge-app {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--primary-l);
+      color: var(--primary-d);
+      margin-left: 6px;
+    }
+    .check { color: var(--primary); font-size: 16px; font-weight: 700; }
+    .cross { color: #ccc; font-size: 18px; }
+    .partial { color: #f59e0b; font-size: 13px; font-weight: 600; }
+    .price-tag { font-weight: 600; color: var(--text); }
+    .price-free { color: var(--primary); font-weight: 700; }
+
+    .comp-note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+
     /* ── CTA FINAL ── */
     .cta-section {
       background: var(--dark);
@@ -745,6 +819,107 @@
           </ul>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- COMPARATIVA -->
+  <section class="comparativa">
+    <div class="container">
+      <div class="fade-up">
+        <div class="section-badge">¿Por qué CompañIA?</div>
+        <h2 class="section-title">La única que lo tiene todo,<br>en español, gratis.</h2>
+        <p class="section-sub">Comparamos con las alternativas reales del mercado.</p>
+      </div>
+
+      <div class="comp-table-wrap fade-up">
+        <table>
+          <thead>
+            <tr>
+              <th>Solución</th>
+              <th>Precio</th>
+              <th>Español / LATAM</th>
+              <th>Memoria</th>
+              <th>Música</th>
+              <th>Medicamentos</th>
+              <th>Alertas familia</th>
+              <th>Botón SOS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-highlight">
+              <td>CompañIA <span class="badge-app">gratis</span></td>
+              <td class="price-free">Gratis</td>
+              <td><span class="check">✓</span> / <span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>Ato (Argentina)</td>
+              <td class="price-tag">$149 + $29/mes</td>
+              <td><span class="check">✓</span> / <span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">—</span></td>
+            </tr>
+            <tr>
+              <td>SERENIA (España)</td>
+              <td class="price-tag">€6/mes</td>
+              <td><span class="check">✓</span> / <span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">—</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">—</span></td>
+            </tr>
+            <tr>
+              <td>Alexa Emergency Assist</td>
+              <td class="price-tag">$8/mes + Echo</td>
+              <td><span class="check">✓</span> / <span class="partial">parcial</span></td>
+              <td><span class="cross">—</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="partial">básico</span></td>
+              <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+              <td>ElliQ</td>
+              <td class="price-tag">$249 + $60/mes</td>
+              <td><span class="cross">—</span> / <span class="cross">—</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">—</span></td>
+            </tr>
+            <tr>
+              <td>Replika</td>
+              <td class="price-tag">$15/mes</td>
+              <td><span class="check">✓</span> / <span class="check">✓</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="cross">—</span></td>
+              <td><span class="cross">—</span></td>
+              <td><span class="cross">—</span></td>
+              <td><span class="cross">—</span></td>
+            </tr>
+            <tr>
+              <td>Medisafe</td>
+              <td class="price-tag">Gratis / premium</td>
+              <td><span class="check">✓</span> / <span class="check">✓</span></td>
+              <td><span class="partial">parcial</span></td>
+              <td><span class="cross">—</span></td>
+              <td><span class="check">✓</span></td>
+              <td><span class="partial">básico</span></td>
+              <td><span class="cross">—</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="comp-note fade-up">Información relevada en marzo 2026. Precios en USD salvo indicación.</p>
     </div>
   </section>
 
