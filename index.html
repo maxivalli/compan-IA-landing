@@ -1795,10 +1795,13 @@
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
     // ── Voice demo ──────────────────────────────────────────────────────────────
-    const DEMO_BACKEND = 'https://compan-ia-back-production.up.railway.app';
     const DEMO_BUBBLES = {
       femenina: '"¡Hola! Soy tu compañera de voz. Estoy acá para charlar, recordarte lo que necesitás y acompañarte cuando más lo necesitás. ¿En qué te puedo ayudar?"',
       masculina: '"¡Hola! Soy tu compañero de voz. Preguntame lo que quieras — noticias, música, recordatorios o simplemente charlar. Acá estoy para vos."',
+    };
+    const DEMO_AUDIO_SRC = {
+      femenina: 'Rosita.mp3',
+      masculina: 'Seba.mp3',
     };
     let demoGenero = 'femenina';
     let demoAudio = null;
@@ -1826,7 +1829,7 @@
 
     const playBtn = document.getElementById('vd-play-btn');
     if (playBtn) {
-      playBtn.addEventListener('click', async () => {
+      playBtn.addEventListener('click', () => {
         if (playBtn.disabled) return;
         // Si hay audio reproduciéndose, pausar
         if (demoAudio && !demoAudio.paused) {
@@ -1834,33 +1837,13 @@
           resetPlayBtn();
           return;
         }
-        playBtn.disabled = true;
-        playBtn.querySelector('.vd-play-icon').textContent = '⏳';
-        playBtn.querySelector('.vd-play-label').textContent = 'Cargando...';
-        try {
-          const res = await fetch(`${DEMO_BACKEND}/demo/tts`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ genero: demoGenero }),
-          });
-          const data = await res.json();
-          if (data.audio) {
-            const audio = new Audio('data:audio/mpeg;base64,' + data.audio);
-            demoAudio = audio;
-            playBtn.disabled = false;
-            playBtn.querySelector('.vd-play-icon').textContent = '⏸';
-            playBtn.querySelector('.vd-play-label').textContent = 'Reproduciendo...';
-            document.getElementById('vd-wave').style.display = 'flex';
-            audio.play();
-            audio.onended = () => { demoAudio = null; resetPlayBtn(); };
-          } else {
-            throw new Error('sin audio');
-          }
-        } catch {
-          playBtn.disabled = false;
-          playBtn.querySelector('.vd-play-label').textContent = 'Error, intentá de nuevo';
-          setTimeout(resetPlayBtn, 2500);
-        }
+        const audio = new Audio(DEMO_AUDIO_SRC[demoGenero]);
+        demoAudio = audio;
+        playBtn.querySelector('.vd-play-icon').textContent = '⏸';
+        playBtn.querySelector('.vd-play-label').textContent = 'Reproduciendo...';
+        document.getElementById('vd-wave').style.display = 'flex';
+        audio.play();
+        audio.onended = () => { demoAudio = null; resetPlayBtn(); };
       });
     }
 
