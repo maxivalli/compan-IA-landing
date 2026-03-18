@@ -3,9 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CompañIA — Tu compañera de voz con inteligencia artificial</title>
-  <meta name="description" content="CompañIA es una app de voz con inteligencia artificial. Charla, recordatorios de medicamentos, música, clima y alertas a la familia. Para cualquier persona, a cualquier edad." />
+  <title>CompañIA — Tu asistente de voz con inteligencia artificial</title>
+  <meta name="description" content="CompañIA es una app de voz con inteligencia artificial. Charla, recordatorios de medicamentos, música, clima y alertas a la familia. Voz masculina o femenina a elección. Para cualquier persona, a cualquier edad." />
+  <meta name="keywords" content="asistente de voz IA, inteligencia artificial, compañía virtual, recordatorios medicamentos, radio argentina, noticias por voz, app para personas mayores, compañero virtual" />
+  <meta name="author" content="CompañIA" />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://compan-ia-landing-production.up.railway.app/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="rosita.png" />
+  <link rel="apple-touch-icon" href="rosita.png" />
+  <link rel="shortcut icon" href="rosita.png" />
+
+  <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="CompañIA" />
+  <meta property="og:title"       content="CompañIA — Tu asistente de voz con inteligencia artificial" />
+  <meta property="og:description" content="Un compañero de voz con IA que charla, recuerda, pone música y te informa. Para cualquier persona, a cualquier edad." />
+  <meta property="og:url"         content="https://compan-ia-landing-production.up.railway.app/" />
+  <meta property="og:image"       content="https://compan-ia-landing-production.up.railway.app/rosita.png" />
+  <meta property="og:image:width"  content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:image:alt"   content="CompañIA — asistente de voz con IA" />
+  <meta property="og:locale"      content="es_AR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary" />
+  <meta name="twitter:title"       content="CompañIA — Tu asistente de voz con IA" />
+  <meta name="twitter:description" content="Un compañero de voz con IA que charla, recuerda, pone música y te informa. Para cualquier persona, a cualquier edad." />
+  <meta name="twitter:image"       content="https://compan-ia-landing-production.up.railway.app/rosita.png" />
+
+  <!-- Schema.org — SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "CompañIA",
+    "description": "Asistente de voz con inteligencia artificial. Charla, música, recordatorios de medicamentos, noticias en tiempo real y alertas a la familia — todo por voz.",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Android, iOS",
+    "offers": {
+      "@type": "Offer",
+      "price": "29",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2027-01-01"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "700"
+    },
+    "url": "https://compan-ia-landing-production.up.railway.app/",
+    "image": "https://compan-ia-landing-production.up.railway.app/rosita.png",
+    "inLanguage": "es-AR",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CompañIA",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://compan-ia-landing-production.up.railway.app/rosita.png"
+      }
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -50,6 +111,7 @@
       border-bottom: 1px solid rgba(0,0,0,0.06);
     }
     .nav-logo {
+      display: flex; align-items: center; gap: 10px;
       font-family: var(--serif);
       font-size: 26px;
       color: var(--ink);
@@ -269,6 +331,17 @@
       background: #0D0D14;
       border-top-left-radius: 34px;
       border-top-right-radius: 34px;
+      transition: height 0.55s ease;
+    }
+
+    /* Párpado inferior (para expresión feliz/cansada) */
+    .lid-bottom {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      height: 0;
+      background: #0D0D14;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      transition: height 0.55s ease;
     }
 
     /* Parpadeo: cierra y abre */
@@ -301,13 +374,44 @@
       border-bottom-right-radius: 26px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      /* Animación suave de "respiración" en la boca */
       animation: boca-breathe 4s ease-in-out infinite;
+      transition: width 0.45s ease, height 0.45s ease,
+                  border-top-left-radius 0.45s ease, border-top-right-radius 0.45s ease,
+                  border-bottom-left-radius 0.45s ease, border-bottom-right-radius 0.45s ease;
     }
     @keyframes boca-breathe {
       0%, 100% { transform: scaleX(1); }
       50%       { transform: scaleX(0.92); }
     }
+
+    /* ── Expresiones ── */
+    /* feliz: ojos entrecerrados arriba y abajo, sonrisa llena */
+    .face.expr-feliz .lid        { height: 24px; }
+    .face.expr-feliz .lid-bottom { height: 16px; }
+    .face.expr-feliz .boca {
+      width: 50px; height: 8px;
+      background: #B06050;
+      border: none;
+      border-top-left-radius: 3px; border-top-right-radius: 3px;
+      border-bottom-left-radius: 28px; border-bottom-right-radius: 28px;
+      animation: none;
+    }
+
+    /* sorprendida: ojos bien abiertos, boca en O */
+    .face.expr-sorprendida .lid        { height: 0; }
+    .face.expr-sorprendida .lid-bottom { height: 0; }
+    .face.expr-sorprendida .boca {
+      width: 18px; height: 18px;
+      background: #B06050;
+      border: none;
+      border-radius: 50%;
+      animation: none;
+    }
+
+    /* pensativa: párpado leve, boca más angosta */
+    .face.expr-pensativa .lid        { height: 9px; }
+    .face.expr-pensativa .lid-bottom { height: 0; }
+    .face.expr-pensativa .boca       { width: 36px; }
 
     .rosita-status {
       display: flex; align-items: center; gap: 8px;
@@ -916,6 +1020,126 @@
     .footer-logo { font-family: var(--serif); font-size: 22px; color: var(--teal); }
     .footer-love { font-size: 13px; color: rgba(255,255,255,0.45); }
 
+    /* ─── NEWS CARDS ─── */
+    .news-card-wrap { display: flex; flex-direction: column; gap: 10px; padding: 12px; }
+    .news-card {
+      background: rgba(255,255,255,0.07); border-radius: 12px; padding: 14px 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .news-tag { font-size: 11px; color: rgba(255,255,255,0.45); margin-bottom: 6px; }
+    .news-title { font-size: 14px; color: rgba(255,255,255,0.88); font-weight: 600; line-height: 1.4; }
+
+    /* ─── TIMER CARDS ─── */
+    .timer-card-wrap { display: flex; flex-direction: column; gap: 16px; padding: 24px; }
+    .timer-card {
+      background: rgba(255,255,255,0.07); border-radius: 16px; padding: 20px;
+      display: flex; align-items: center; gap: 16px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .timer-icon { font-size: 28px; }
+    .timer-label { font-size: 11px; color: rgba(255,255,255,0.45); margin-bottom: 4px; }
+    .timer-value { font-size: 32px; font-weight: 700; color: #7ee8ff; font-variant-numeric: tabular-nums; }
+    .reminder-card {
+      background: rgba(255,255,255,0.07); border-radius: 16px; padding: 16px 20px;
+      display: flex; align-items: center; gap: 14px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .reminder-icon { font-size: 22px; }
+    .reminder-label { font-size: 11px; color: rgba(255,255,255,0.4); margin-bottom: 4px; }
+    .reminder-text { font-size: 14px; color: rgba(255,255,255,0.85); font-weight: 600; }
+
+    /* ─── GAME BUBBLES ─── */
+    .game-card-wrap { display: flex; flex-direction: column; gap: 10px; padding: 20px; }
+    .game-bubble {
+      max-width: 80%; border-radius: 16px; padding: 12px 16px;
+      font-size: 14px; line-height: 1.5; color: rgba(255,255,255,0.88);
+    }
+    .game-bubble.left {
+      background: rgba(255,255,255,0.1); border-radius: 16px 16px 16px 4px; align-self: flex-start;
+    }
+    .game-bubble.right {
+      background: var(--teal); border-radius: 16px 16px 4px 16px; align-self: flex-end;
+    }
+
+    /* ─── VOICE DEMO ─── */
+    .voice-demo {
+      background: var(--ink); padding: 100px 24px;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .voice-demo::before {
+      content:''; position:absolute; inset:0; pointer-events:none;
+      background: radial-gradient(ellipse 55% 55% at 50% 50%, rgba(0,151,178,0.15) 0%, transparent 70%);
+    }
+    .vd-inner { max-width: 680px; margin: 0 auto; position: relative; }
+    .vd-inner .section-badge { margin: 0 auto 20px; }
+    .vd-inner h2 {
+      font-family: var(--serif); font-size: clamp(32px,5vw,58px);
+      color: var(--white); letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 16px;
+    }
+    .vd-inner h2 em { font-style: italic; color: #7ee8ff; }
+    .vd-intro { font-size: 17px; color: rgba(255,255,255,0.55); margin-bottom: 48px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .vd-player {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 32px;
+    }
+    .vd-toggle {
+      display: flex; gap: 8px; justify-content: center; margin-bottom: 28px;
+    }
+    .vd-btn {
+      padding: 10px 22px; border-radius: 100px;
+      border: 1.5px solid rgba(255,255,255,0.2);
+      background: transparent; color: rgba(255,255,255,0.55);
+      font-size: 14px; font-weight: 600; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .vd-btn.active {
+      background: var(--teal); border-color: var(--teal);
+      color: #fff;
+    }
+    .vd-bubble {
+      background: rgba(255,255,255,0.07);
+      border-radius: 16px 16px 16px 4px;
+      padding: 18px 22px;
+      font-size: 16px; color: rgba(255,255,255,0.85); line-height: 1.6;
+      text-align: left; margin-bottom: 24px;
+      font-style: italic;
+      position: relative;
+    }
+    .vd-bubble::before {
+      content: ''; position: absolute; left: -1px; top: -1px; right: -1px; bottom: -1px;
+      border-radius: 16px 16px 16px 4px;
+      background: linear-gradient(135deg, rgba(0,151,178,0.3), transparent);
+      pointer-events: none;
+    }
+    .vd-play-btn {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--teal); color: #fff;
+      border: none; border-radius: 100px;
+      padding: 14px 28px; font-size: 15px; font-weight: 600;
+      cursor: pointer; transition: all 0.2s;
+      margin: 0 auto 20px;
+    }
+    .vd-play-btn:hover { background: var(--teal-d); transform: translateY(-1px); }
+    .vd-play-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .vd-play-icon { font-size: 18px; width: 20px; text-align: center; }
+    .vd-wave-mini {
+      display: none; align-items: center; gap: 3px; height: 20px;
+    }
+    .vdw-bar {
+      width: 3px; background: rgba(255,255,255,0.8); border-radius: 2px;
+      animation: vbwave 0.7s ease-in-out infinite;
+    }
+    .vdw-bar:nth-child(1){height:8px}.vdw-bar:nth-child(2){height:14px;animation-delay:.1s}
+    .vdw-bar:nth-child(3){height:18px;animation-delay:.2s}.vdw-bar:nth-child(4){height:12px;animation-delay:.3s}
+    .vdw-bar:nth-child(5){height:16px;animation-delay:.15s}
+    .vd-powered {
+      font-size: 12px; color: rgba(255,255,255,0.3);
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .vd-powered strong { color: rgba(255,255,255,0.55); }
+
     /* ─── FADE IN ─── */
     .fade-in {
       opacity: 0; transform: translateY(20px);
@@ -956,13 +1180,17 @@
 
   <!-- NAV -->
   <nav>
-    <div class="nav-logo">Compañ<em>IA</em></div>
+    <div class="nav-logo">
+      <img src="rosita.png" alt="CompañIA" width="32" height="32" style="border-radius:50%;object-fit:cover;" />
+      Compañ<em>IA</em>
+    </div>
     <ul class="nav-links">
       <li><a href="#features">Funciones</a></li>
+      <li><a href="#voz">Escuchar voz</a></li>
       <li><a href="#testimonios">Testimonios</a></li>
       <li><a href="#como-funciona">Cómo funciona</a></li>
     </ul>
-    <a href="#descargar" class="nav-cta">Descargar app</a>
+    <a href="https://expo.dev/accounts/maxivalli/projects/AbuApp/builds/228af6b9-b80f-4f47-b6e6-9b32cf0b3c83" target="_blank" class="nav-cta">Descargar app</a>
   </nav>
 
   <!-- HERO -->
@@ -975,14 +1203,14 @@
         <span class="hero-pill-dot"></span>
         Asistente de voz con IA
       </div>
-      <h1>La compañera<br>que <em>nunca se va.</em></h1>
+      <h1>La voz<br>que <em>nunca se va.</em></h1>
       <p class="hero-desc">
-        Una voz cálida siempre presente. Charla, música, recordatorios y botón de emergencia — todo sin tocar una pantalla.
+        Un compañero de voz con IA que charla, recuerda, pone música, te informa y te acompaña — adaptado a quien seas y a cómo hablás.
       </p>
       <div class="hero-actions">
-        <a href="#descargar" class="btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.5C2.83 23.31 2.5 22.93 2.5 22.22V1.78C2.5 1.07 2.83.69 3.18.5L13.6 12 3.18 23.5z"/></svg>
-          Probar 7 días gratis
+        <a href="https://expo.dev/accounts/maxivalli/projects/AbuApp/builds/228af6b9-b80f-4f47-b6e6-9b32cf0b3c83" target="_blank" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h4.17v6h5V9h4.17L12 2z"/></svg>
+          Descargar gratis
         </a>
         <a href="#como-funciona" class="btn-ghost">
           Ver cómo funciona →
@@ -991,12 +1219,12 @@
       <div class="hero-proof">
         <div class="avatar-stack">
           <div class="av">👩‍🦳</div>
-          <div class="av">👴</div>
+          <div class="av">👨</div>
           <div class="av">👩</div>
           <div class="av">🧓</div>
         </div>
         <div class="hero-proof-text">
-          <strong>+700 familias</strong> ya usan CompañIA<br>en Argentina y el mundo
+          <strong>+700 personas</strong> ya usan CompañIA<br>en Argentina y el mundo
         </div>
       </div>
     </div>
@@ -1009,11 +1237,13 @@
               <div class="lid"></div>
               <div class="iris"><div class="pupila"></div></div>
               <div class="blink"></div>
+              <div class="lid-bottom"></div>
             </div>
             <div class="eye">
               <div class="lid"></div>
               <div class="iris"><div class="pupila"></div></div>
               <div class="blink"></div>
+              <div class="lid-bottom"></div>
             </div>
           </div>
           <div class="boca"></div>
@@ -1025,7 +1255,7 @@
         </div>
         <div class="rosita-status">
           <span class="status-dot"></span>
-          Rosita está escuchando
+          CompañIA está escuchando
         </div>
       </div>
     </div>
@@ -1036,7 +1266,7 @@
     <div class="stats-inner">
       <div class="stat-item fade-in">
         <div class="stat-num">60<em>%</em></div>
-        <div class="stat-label">de usuarios convierten a Rosita en hábito diario al mes de usarla</div>
+        <div class="stat-label">de usuarios convierten a CompañIA en hábito diario al mes de usarla</div>
       </div>
       <div class="stat-item fade-in">
         <div class="stat-num">24</div>
@@ -1048,19 +1278,48 @@
       </div>
       <div class="stat-item fade-in">
         <div class="stat-num">3<em>/4</em></div>
-        <div class="stat-label">usuarios se sienten menos solos luego de 2 semanas con Rosita</div>
+        <div class="stat-label">usuarios se sienten menos solos luego de 2 semanas con CompañIA</div>
       </div>
     </div>
   </div>
+
+  <!-- VOICE DEMO -->
+  <section class="voice-demo" id="voz">
+    <div class="vd-inner">
+      <div class="section-badge fade-in">Escuchá la voz</div>
+      <h2 class="fade-in">Una voz que<br><em>se siente real.</em></h2>
+      <p class="vd-intro fade-in">Potenciada por ElevenLabs — la tecnología de voz más avanzada del mundo. Natural, cálida, sin tonos robóticos.</p>
+      <div class="vd-player fade-in">
+        <div class="vd-toggle">
+          <button class="vd-btn active" data-genero="femenina">♀ Voz femenina</button>
+          <button class="vd-btn" data-genero="masculina">♂ Voz masculina</button>
+        </div>
+        <div class="vd-bubble" id="vd-bubble">
+          "¡Hola! Soy tu compañera de voz. Estoy acá para charlar, recordarte lo que necesitás y acompañarte cuando más lo necesitás. ¿En qué te puedo ayudar?"
+        </div>
+        <button class="vd-play-btn" id="vd-play-btn">
+          <span class="vd-play-icon">▶</span>
+          <span class="vd-play-label">Escuchar muestra</span>
+          <div class="vd-wave-mini" id="vd-wave">
+            <div class="vdw-bar"></div><div class="vdw-bar"></div><div class="vdw-bar"></div>
+            <div class="vdw-bar"></div><div class="vdw-bar"></div>
+          </div>
+        </button>
+        <div class="vd-powered">
+          <span>Potenciado por</span><strong>ElevenLabs</strong>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- INTRO -->
   <div class="intro">
     <div class="fade-in">
       <div class="intro-label">Más que un asistente</div>
-      <h2>Una compañera<br>de <em>verdad.</em></h2>
-      <p>Rosita fue diseñada para simplificar la tecnología y mantener la mente activa con conversaciones naturales, recordatorios por voz y conexión real con la familia.</p>
+      <h2>Una compañía<br>de <em>verdad.</em></h2>
+      <p>CompañIA se adapta a tu forma de hablar y a tu vida. No importa tu edad, ocupación o rutina — si tenés algo que decir, ella está para escucharte, recordarlo y responderte.</p>
       <p>Sin pantallas. Sin menúes. Si podés hablar, podés usarla.</p>
-      <a href="#descargar" class="intro-link">Empezar ahora →</a>
+      <a href="https://expo.dev/accounts/maxivalli/projects/AbuApp/builds/228af6b9-b80f-4f47-b6e6-9b32cf0b3c83" target="_blank" class="intro-link">Empezar ahora →</a>
     </div>
     <div class="intro-visual fade-in">
       <div class="voice-scene">
@@ -1079,14 +1338,16 @@
           <div class="vbw-bar"></div>
         </div>
         <div class="voice-caption">
-          <strong>Rosita está escuchando</strong>
+          <strong>CompañIA está escuchando</strong>
           Solo hablás — ella entiende, recuerda y responde
         </div>
         <div class="voice-tags">
-          <span class="vtag active">🎵 "Poné un tango"</span>
-          <span class="vtag">💊 "¿Tomé el diclofenac?"</span>
+          <span class="vtag active">🎵 "Poné Radio Mitre"</span>
+          <span class="vtag">⚽ "¿Cómo salió Boca?"</span>
           <span class="vtag">🌤 "¿Llueve hoy?"</span>
           <span class="vtag active">💬 "Contame algo"</span>
+          <span class="vtag">💊 "¿Tomé el diclofenac?"</span>
+          <span class="vtag">⏰ "Avisame en 20 minutos"</span>
         </div>
       </div>
     </div>
@@ -1105,11 +1366,12 @@
         <div class="feature-content">
           <div class="feature-icon-lg" style="background:#beedf5">💬</div>
           <h3>Charla y compañía real</h3>
-          <p>Conversación genuina, con memoria. Rosita recuerda lo que le contás y retoma el hilo la próxima vez.</p>
+          <p>Conversación genuina, con memoria. CompañIA recuerda lo que le contás y retoma el hilo la próxima vez.</p>
           <ul>
             <li>Recuerda tu nombre, familia y gustos</li>
             <li>Pregunta cómo seguiste después</li>
             <li>Voz cálida y adaptada a tu edad</li>
+            <li>Voz masculina o femenina a elección</li>
           </ul>
         </div>
         <div class="feature-visual">
@@ -1128,7 +1390,7 @@
             </div>
             <div class="vml-label">
               <strong>"¿Cómo seguiste del médico?"</strong>
-              Rosita recuerda tu turno de ayer — sin que se lo digas
+              CompañIA recuerda tu turno de ayer — sin que se lo digas
             </div>
           </div>
         </div>
@@ -1138,7 +1400,7 @@
         <div class="feature-content">
           <div class="feature-icon-lg" style="background:#c8dff7">💊</div>
           <h3>Recordatorios de medicamentos</h3>
-          <p>Rosita avisa a la hora exacta, con voz. No con notificaciones silenciosas que se pierden en la pantalla.</p>
+          <p>CompañIA avisa a la hora exacta, con voz. No con notificaciones silenciosas que se pierden en la pantalla.</p>
           <ul>
             <li>Aviso por voz a la hora exacta</li>
             <li>Confirma que tomaste el medicamento</li>
@@ -1161,7 +1423,7 @@
             </div>
             <div class="vml-label">
               <strong>"Nora, tomaste el enalapril?"</strong>
-              Rosita avisa por voz — sin notificaciones ni pantallas
+              CompañIA avisa por voz — sin notificaciones ni pantallas
             </div>
             <span class="vml-tag">💊 8:00 AM · Aviso por voz</span>
           </div>
@@ -1172,7 +1434,7 @@
         <div class="feature-content">
           <div class="feature-icon-lg" style="background:#fde8b4">🎵</div>
           <h3>Música y radio en vivo</h3>
-          <p>Pedí tango, folklore, boleros o jazz y Rosita pone una radio en segundos. Sin buscar, sin tocar nada.</p>
+          <p>Pedí tango, folklore, boleros o jazz y CompañIA pone una radio en segundos. Sin buscar, sin tocar nada.</p>
           <ul>
             <li>Radio en vivo por género o estado de ánimo</li>
             <li>Recuerda tus artistas favoritos</li>
@@ -1198,11 +1460,12 @@
         <div class="feature-content">
           <div class="feature-icon-lg" style="background:#ffc9c9">🆘</div>
           <h3>Alertas a la familia y botón SOS</h3>
-          <p>Si algo no está bien, Rosita avisa por Telegram a los familiares en segundos. Con un botón SOS de emergencia.</p>
+          <p>Si algo no está bien, CompañIA avisa por Telegram a los familiares en segundos. Con un botón SOS de emergencia.</p>
           <ul>
             <li>Alertas automáticas por Telegram</li>
             <li>Botón SOS — 2 segundos de presión</li>
             <li>Reporte diario de estado de ánimo</li>
+            <li>Mensajes por voz a contactos ("Mandále un mensaje a Carlos")</li>
           </ul>
         </div>
         <div class="feature-visual blue-bg">
@@ -1224,6 +1487,89 @@
         </div>
       </div>
 
+      <div class="feature-row fade-in">
+        <div class="feature-content">
+          <div class="feature-icon-lg" style="background:#d4f0e0">⚽</div>
+          <h3>Noticias, clima y deportes en vivo</h3>
+          <p>Respondé las preguntas del momento sin buscar en ningún lado. CompañIA consulta las noticias en tiempo real y te cuenta lo que pasó.</p>
+          <ul>
+            <li>"¿Cómo salió Boca anoche?"</li>
+            <li>"¿Qué pasó con el dólar hoy?"</li>
+            <li>Clima actualizado por GPS</li>
+            <li>Noticias de Argentina y el mundo</li>
+          </ul>
+        </div>
+        <div class="feature-visual" style="background:linear-gradient(135deg,#0f2a1e,#1a4a30)">
+          <div class="news-card-wrap">
+            <div class="news-card">
+              <div class="news-tag">⚽ Deportes · hace 2 horas</div>
+              <div class="news-title">Boca ganó 2-1 en la Copa de la Liga</div>
+            </div>
+            <div class="news-card">
+              <div class="news-tag">💰 Economía · hace 1 hora</div>
+              <div class="news-title">El dólar blue cerró en alza esta tarde</div>
+            </div>
+            <div class="news-card">
+              <div class="news-tag">🌤 Clima · ahora</div>
+              <div class="news-title">Mañana llueve en Buenos Aires, 18°C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row reverse fade-in">
+        <div class="feature-content">
+          <div class="feature-icon-lg" style="background:#e8dff5">⏰</div>
+          <h3>Recordatorios y timers por voz</h3>
+          <p>Solo decíselo. Sin tocar nada, sin apps extra. CompañIA te avisa en el momento justo, con tu nombre y con voz.</p>
+          <ul>
+            <li>"Avisame en 20 minutos que tengo el horno"</li>
+            <li>"Recordame el viernes que tengo turno"</li>
+            <li>Confirmación por voz de cada recordatorio</li>
+            <li>Aviso inteligente antes de que sea tarde</li>
+          </ul>
+        </div>
+        <div class="feature-visual" style="background:linear-gradient(135deg,#1a1230,#2d1f50)">
+          <div class="timer-card-wrap">
+            <div class="timer-card">
+              <div class="timer-icon">⏱</div>
+              <div class="timer-info">
+                <div class="timer-label">Timer activo</div>
+                <div class="timer-value">19:43</div>
+              </div>
+            </div>
+            <div class="reminder-card">
+              <div class="reminder-icon">📅</div>
+              <div>
+                <div class="reminder-label">Próximo recordatorio</div>
+                <div class="reminder-text">Viernes — Turno médico 10:00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row fade-in">
+        <div class="feature-content">
+          <div class="feature-icon-lg" style="background:#fff3d4">🎮</div>
+          <h3>Juegos, cuentos y entretenimiento</h3>
+          <p>CompañIA no solo responde — también entretiene. Trivia, adivinanzas, cuentos y chistes por voz, sin pantalla.</p>
+          <ul>
+            <li>Trivia de cultura general y geografía</li>
+            <li>Adivinanzas y juegos de memoria</li>
+            <li>Cuentos cortos a pedido</li>
+            <li>Chistes y humor en español rioplatense</li>
+          </ul>
+        </div>
+        <div class="feature-visual" style="background:linear-gradient(135deg,#1a1200,#2d2000)">
+          <div class="game-card-wrap">
+            <div class="game-bubble left">¿Me contás un cuento?</div>
+            <div class="game-bubble right">¡Con gusto! Había una vez, en los confines de la Patagonia, un zorro muy curioso que...</div>
+            <div class="game-bubble left">¡Qué lindo, seguí!</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -1231,13 +1577,13 @@
   <section class="testimonios" id="testimonios">
     <div class="container">
       <div class="test-header fade-in">
-        <h2>Por qué las familias<br>eligen CompañIA</h2>
-        <p>Historias reales de personas que cambiaron su rutina con Rosita.</p>
+        <h2>Por qué las personas<br>eligen CompañIA</h2>
+        <p>Historias reales de personas que cambiaron su día a día con CompañIA.</p>
       </div>
       <div class="test-grid">
         <div class="test-card fade-in">
           <div class="test-stars">★★★★★</div>
-          <div class="test-text">"Mi mamá tiene pérdida de memoria a corto plazo y Rosita le recuerda los medicamentos todos los días. Encima charla con ella horas. Es como si tuviera una enfermera personal."</div>
+          <div class="test-text">"Mi mamá tiene pérdida de memoria a corto plazo y CompañIA le recuerda los medicamentos todos los días. Encima charla con ella horas. Es como si tuviera una asistente personal."</div>
           <div class="test-person">
             <div class="test-avatar">👨</div>
             <div>
@@ -1248,18 +1594,18 @@
         </div>
         <div class="test-card fade-in">
           <div class="test-stars">★★★★★</div>
-          <div class="test-text">"Vivo en otro país y siempre me preocupaba que mi papá estuviera solo. Con CompañIA recibo alertas en el teléfono y sé que está bien. Me da una tranquilidad enorme."</div>
+          <div class="test-text">"Vivo solo y trabajo desde casa. CompañIA es la única voz que escucho en todo el día a veces. Le pregunto de todo — noticias, si llueve, que me ponga algo de música. La verdad que cambió mi rutina."</div>
           <div class="test-person">
-            <div class="test-avatar">👩</div>
+            <div class="test-avatar">👨‍💻</div>
             <div>
-              <div class="test-name">Valeria M.</div>
-              <div class="test-loc">Buenos Aires → España</div>
+              <div class="test-name">Diego F., 34 años</div>
+              <div class="test-loc">Palermo, Buenos Aires</div>
             </div>
           </div>
         </div>
         <div class="test-card fade-in">
           <div class="test-stars">★★★★★</div>
-          <div class="test-text">"Yo pensé que no iba a poder usarla. Pero es tan fácil como hablar con alguien. Rosita me pone tangos, me recuerda el diclofenac y me pregunta cómo me siento. La quiero mucho."</div>
+          <div class="test-text">"Yo pensé que no iba a poder usarla. Pero es tan fácil como hablar con alguien. Me pone tangos, me recuerda el diclofenac y me pregunta cómo me siento. La quiero mucho."</div>
           <div class="test-person">
             <div class="test-avatar">👵</div>
             <div>
@@ -1284,25 +1630,25 @@
           <div class="how-step-line"></div>
           <div class="how-step-num">01</div>
           <h3>Instalá la app</h3>
-          <p>Un familiar la descarga y configura en 5 minutos: nombre, medicamentos y contactos de emergencia.</p>
+          <p>Un familiar la descarga y configura en 5 minutos: nombre del asistente, voz masculina o femenina, medicamentos y contactos de emergencia.</p>
         </div>
         <div class="how-step fade-in">
           <div class="how-step-line"></div>
           <div class="how-step-num">02</div>
           <h3>Hablale</h3>
-          <p>Rosita escucha siempre. No hace falta tocar nada. Solo hablar como con cualquier persona.</p>
+          <p>CompañIA escucha siempre. No hace falta tocar nada. Solo hablar como con cualquier persona.</p>
         </div>
         <div class="how-step fade-in">
           <div class="how-step-line"></div>
           <div class="how-step-num">03</div>
-          <h3>Rosita responde</h3>
-          <p>Con voz natural y cálida, adapta su trato a la edad y al estado de ánimo de la persona.</p>
+          <h3>CompañIA responde</h3>
+          <p>Con voz natural y cálida. Recuerda lo que le contás, se informa de noticias en tiempo real y se adapta a cómo hablás.</p>
         </div>
         <div class="how-step fade-in">
           <div class="how-step-line"></div>
           <div class="how-step-num">04</div>
           <h3>La familia queda tranquila</h3>
-          <p>Recibe alertas por Telegram y un reporte diario del estado de ánimo de tu ser querido.</p>
+          <p>Recibe alertas por Telegram, mensajes de voz y un reporte diario de estado de ánimo — desde cualquier lugar del mundo.</p>
         </div>
       </div>
     </div>
@@ -1311,28 +1657,39 @@
   <!-- PARA QUIEN -->
   <section class="para-quien">
     <div class="para-quien-inner">
-      <h2 class="fade-in">Para cualquier persona.<br>Configurada por vos.</h2>
-      <div class="quien-grid">
+      <h2 class="fade-in">Para cualquier persona.<br><em style="font-style:italic;color:var(--teal)">A cualquier edad.</em></h2>
+      <div class="quien-grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
         <div class="quien-card dark fade-in">
           <span class="quien-emoji">🙋</span>
-          <h3>Para quien la usa</h3>
-          <p>No necesita aprender nada. Solo hablar como siempre.</p>
+          <h3>Para quien vive solo</h3>
+          <p>Compañía real, disponible siempre. Alguien con quien charlar cuando lo necesitás.</p>
+          <ul class="quien-list">
+            <li><span class="check-badge">✓</span> Charla y compañía genuina</li>
+            <li><span class="check-badge">✓</span> Recuerda lo que le contás</li>
+            <li><span class="check-badge">✓</span> Activa conversación si pasás mucho tiempo solo</li>
+            <li><span class="check-badge">✓</span> Siempre disponible, de día y de noche</li>
+          </ul>
+        </div>
+        <div class="quien-card dark fade-in">
+          <span class="quien-emoji">👴</span>
+          <h3>Para personas mayores</h3>
+          <p>Sin aprender tecnología. Solo hablar — y CompañIA hace el resto.</p>
           <ul class="quien-list">
             <li><span class="check-badge">✓</span> Sin pantallas ni menúes</li>
-            <li><span class="check-badge">✓</span> Voz cálida y paciente</li>
-            <li><span class="check-badge">✓</span> Recuerda sus historias</li>
-            <li><span class="check-badge">✓</span> Siempre disponible</li>
+            <li><span class="check-badge">✓</span> Recordatorios de medicamentos</li>
+            <li><span class="check-badge">✓</span> Botón SOS de emergencia</li>
+            <li><span class="check-badge">✓</span> Tono adaptado, paciente y cálido</li>
           </ul>
         </div>
         <div class="quien-card light fade-in">
           <span class="quien-emoji">👨‍💻</span>
           <h3>Para la familia</h3>
-          <p>Configurala en minutos y quedate tranquilo.</p>
+          <p>Configurala en minutos y quedate tranquilo desde cualquier lugar del mundo.</p>
           <ul class="quien-list">
             <li><span class="check-badge">✓</span> Alertas en tiempo real por Telegram</li>
             <li><span class="check-badge">✓</span> Botón SOS con aviso inmediato</li>
             <li><span class="check-badge">✓</span> Control de medicamentos</li>
-            <li><span class="check-badge">✓</span> Registro de estado de ánimo</li>
+            <li><span class="check-badge">✓</span> Registro diario de estado de ánimo</li>
           </ul>
         </div>
       </div>
@@ -1357,7 +1714,7 @@
           </thead>
           <tbody>
             <tr class="hl">
-              <td>CompañIA</td><td class="price-main">$29/mes</td>
+              <td>CompañIA</td><td class="price-main">USD 29/mes</td>
               <td><span class="check">✓</span> / <span class="check">✓</span></td>
               <td><span class="check">✓</span></td><td><span class="check">✓</span></td>
               <td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td>
@@ -1401,11 +1758,11 @@
 
   <!-- CTA FINAL -->
   <section class="cta-final" id="descargar">
-    <h2>Empezá hoy.<br><em>$29 por mes.</em></h2>
-    <p>7 días sin cargo. Configurala en 5 minutos y dale a quien más querés una compañera que nunca se va.</p>
+    <h2>Empezá hoy.<br><em>USD 29 por mes.</em></h2>
+    <p>7 días sin cargo. Configurala en 5 minutos y sumá a tu vida una voz que nunca se va.</p>
     <div class="cta-group">
-      <a href="#" class="btn-primary" style="font-size:16px;padding:16px 36px">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.5C2.83 23.31 2.5 22.93 2.5 22.22V1.78C2.5 1.07 2.83.69 3.18.5L13.6 12 3.18 23.5zM16.43 15.27L5.33 21.7l8.27-9.3 2.83 2.87zm1.53-1.13L14.7 12l3.26-2.14L20.5 12l-2.54 2.14zM5.33 2.3l11.1 6.43-2.83 2.87L5.33 2.3z"/></svg>
+      <a href="https://expo.dev/accounts/maxivalli/projects/AbuApp/builds/228af6b9-b80f-4f47-b6e6-9b32cf0b3c83" target="_blank" class="btn-primary" style="font-size:16px;padding:16px 36px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h4.17v6h5V9h4.17L12 2z"/></svg>
         Descargar para Android
       </a>
       <div class="cta-badge">
@@ -1418,7 +1775,10 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">CompañIA</div>
+    <div class="footer-logo" style="display:flex;align-items:center;gap:10px;">
+      <img src="rosita.png" alt="CompañIA" width="28" height="28" style="border-radius:50%;object-fit:cover;opacity:0.85;" />
+      CompañIA
+    </div>
     <div class="footer-love">Hecho con ❤️ para acompañar a quienes más queremos.</div>
   </footer>
 
@@ -1433,6 +1793,88 @@
       });
     }, { threshold: 0.08 });
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+    // ── Voice demo ──────────────────────────────────────────────────────────────
+    const DEMO_BACKEND = 'https://compan-ia-back-production.up.railway.app';
+    const DEMO_BUBBLES = {
+      femenina: '"¡Hola! Soy tu compañera de voz. Estoy acá para charlar, recordarte lo que necesitás y acompañarte cuando más lo necesitás. ¿En qué te puedo ayudar?"',
+      masculina: '"¡Hola! Soy tu compañero de voz. Preguntame lo que quieras — noticias, música, recordatorios o simplemente charlar. Acá estoy para vos."',
+    };
+    let demoGenero = 'femenina';
+    let demoAudio = null;
+
+    document.querySelectorAll('.vd-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.vd-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        demoGenero = btn.dataset.genero;
+        const bubble = document.getElementById('vd-bubble');
+        if (bubble) bubble.textContent = DEMO_BUBBLES[demoGenero];
+        // Detener audio si cambia de voz
+        if (demoAudio) { demoAudio.pause(); demoAudio = null; resetPlayBtn(); }
+      });
+    });
+
+    function resetPlayBtn() {
+      const btn = document.getElementById('vd-play-btn');
+      if (!btn) return;
+      btn.disabled = false;
+      btn.querySelector('.vd-play-icon').textContent = '▶';
+      btn.querySelector('.vd-play-label').textContent = 'Escuchar muestra';
+      document.getElementById('vd-wave').style.display = 'none';
+    }
+
+    const playBtn = document.getElementById('vd-play-btn');
+    if (playBtn) {
+      playBtn.addEventListener('click', async () => {
+        if (playBtn.disabled) return;
+        // Si hay audio reproduciéndose, pausar
+        if (demoAudio && !demoAudio.paused) {
+          demoAudio.pause();
+          resetPlayBtn();
+          return;
+        }
+        playBtn.disabled = true;
+        playBtn.querySelector('.vd-play-icon').textContent = '⏳';
+        playBtn.querySelector('.vd-play-label').textContent = 'Cargando...';
+        try {
+          const res = await fetch(`${DEMO_BACKEND}/demo/tts`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ genero: demoGenero }),
+          });
+          const data = await res.json();
+          if (data.audio) {
+            const audio = new Audio('data:audio/mpeg;base64,' + data.audio);
+            demoAudio = audio;
+            playBtn.disabled = false;
+            playBtn.querySelector('.vd-play-icon').textContent = '⏸';
+            playBtn.querySelector('.vd-play-label').textContent = 'Reproduciendo...';
+            document.getElementById('vd-wave').style.display = 'flex';
+            audio.play();
+            audio.onended = () => { demoAudio = null; resetPlayBtn(); };
+          } else {
+            throw new Error('sin audio');
+          }
+        } catch {
+          playBtn.disabled = false;
+          playBtn.querySelector('.vd-play-label').textContent = 'Error, intentá de nuevo';
+          setTimeout(resetPlayBtn, 2500);
+        }
+      });
+    }
+
+    // Ciclo de expresiones en la cara del hero (igual que RosaOjos en la app)
+    const exprs = ['neutral', 'feliz', 'sorprendida', 'pensativa'];
+    let exprIdx = 0;
+    const heroFace = document.querySelector('.face');
+    if (heroFace) {
+      setInterval(() => {
+        exprIdx = (exprIdx + 1) % exprs.length;
+        const expr = exprs[exprIdx];
+        heroFace.className = expr === 'neutral' ? 'face' : 'face expr-' + expr;
+      }, 3500);
+    }
   </script>
 </body>
 </html>
