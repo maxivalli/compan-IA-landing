@@ -1149,30 +1149,171 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
-      nav { padding: 0 24px; }
+      nav { padding: 0 16px; height: 60px; }
       .nav-links { display: none; }
-      .hero { grid-template-columns: 1fr; padding: 100px 32px 64px; gap: 40px; text-align: center; }
-      .hero-desc { margin-left: auto; margin-right: auto; }
+      .nav-logo { font-size: 20px; }
+      .nav-cta { padding: 8px 16px; font-size: 12px; }
+
+      .hero { grid-template-columns: 1fr; padding: 88px 24px 56px; gap: 32px; text-align: center; }
+      .hero-desc { margin-left: auto; margin-right: auto; font-size: 16px; }
       .hero-actions { justify-content: center; }
       .hero-proof { justify-content: center; }
       .hero-right { align-items: center; }
+
       .stats-bar { padding: 40px 24px; }
       .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .stat-item { padding: 24px 20px; }
       .stat-item:nth-child(2) { border-right: none; }
       .stat-item:nth-child(3) { border-right: none; }
-      .intro, .quien-grid { grid-template-columns: 1fr; gap: 40px; }
-      .intro { padding: 60px 32px; }
+      .stat-num { font-size: 40px; }
+      .stat-label { font-size: 12px; max-width: 100%; }
+
+      .intro, .quien-grid { grid-template-columns: 1fr; gap: 32px; }
+      .intro { padding: 60px 24px; }
+
+      .voice-scene { min-height: 320px; padding: 36px 28px; gap: 20px; }
+      .voice-tags { gap: 6px; }
+      .vtag { padding: 5px 12px; font-size: 11px; }
+
       .feature-row { grid-template-columns: 1fr; }
       .feature-row.reverse { direction: ltr; }
-      .feature-visual { min-height: 220px; }
+      .feature-content { padding: 36px 28px; }
+      .feature-visual { min-height: 220px; padding: 36px 28px; }
+      .feature-content h3 { font-size: 22px; }
+      .feature-content p { font-size: 15px; }
+      .feature-content li { font-size: 14px; }
+
       .test-grid { grid-template-columns: 1fr; }
+      .test-card { padding: 24px; }
+
       .how-steps { grid-template-columns: 1fr 1fr; }
-      footer { padding: 32px 24px; }
+      .how-step { padding: 28px 20px; }
+      .how-step-num { font-size: 48px; margin-bottom: 16px; }
+      .how-step h3 { font-size: 15px; }
+      .how-step p { font-size: 13px; }
+
+      .quien-card { padding: 32px 24px; }
+      .quien-card h3 { font-size: 22px; }
+      .quien-emoji { font-size: 36px; margin-bottom: 16px; }
+
+      .features-header { padding: 60px 24px 44px; }
+      .comparativa { padding: 70px 24px; }
+      .para-quien { padding: 70px 24px; }
+      .voice-demo { padding: 70px 24px; }
+
+      table { font-size: 12px; min-width: 860px; }
+      thead th { padding: 12px 8px; font-size: 10px; }
+      tbody td { padding: 12px 8px; font-size: 12px; }
+
+      footer { padding: 28px 20px; }
     }
     @media (max-width: 480px) {
+      nav { padding: 0 12px; height: 56px; }
+      .nav-logo { font-size: 16px; gap: 6px; }
+      .nav-logo img { width: 22px !important; height: 22px !important; }
+      .nav-cta { padding: 7px 13px; font-size: 11px; }
+
+      .hero { padding: 72px 16px 48px; gap: 28px; }
+      .hero h1 { font-size: clamp(32px, 8vw, 48px); margin-bottom: 16px; }
+      .hero-desc { font-size: 15px; line-height: 1.6; margin-bottom: 24px; }
+      .rosita-display { max-width: 280px; padding: 32px 36px 24px; }
+      .btn-primary { padding: 12px 20px; font-size: 13px; }
+      .hero-proof-text { font-size: 12px; }
+
+      .stats-bar { padding: 24px 12px; }
       .stats-inner { grid-template-columns: 1fr; }
-      .stat-item { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.07); }
+      .stat-item { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.07); padding: 16px 12px; }
+      .stat-item:last-child { border-bottom: none; }
+      .stat-num { font-size: 32px; margin-bottom: 6px; }
+      .stat-label { font-size: 11px; }
+
+      .intro { padding: 40px 16px; }
+      .intro h2 { font-size: clamp(26px, 6.5vw, 36px); margin-bottom: 14px; }
+      .intro p { font-size: 14px; margin-bottom: 10px; }
+      .voice-scene { min-height: 260px; padding: 24px 16px; gap: 16px; }
+      .voice-tags { gap: 4px; padding: 0 4px; }
+      .vtag { padding: 4px 10px; font-size: 10px; }
+
+      .features-header { padding: 40px 16px 28px; }
+      .features-header h2 { font-size: clamp(24px, 6vw, 36px); }
+
+      .feature-content { padding: 24px 16px; }
+      .feature-visual { padding: 20px 16px; min-height: 180px; }
+      .feature-icon-lg { width: 44px; height: 44px; font-size: 22px; margin-bottom: 14px; }
+      .feature-content h3 { font-size: 19px; margin-bottom: 10px; }
+      .feature-content p { font-size: 13px; line-height: 1.65; }
+      .feature-content ul { margin-top: 12px; gap: 8px; }
+      .feature-content li { font-size: 13px; }
+      .game-card-wrap { padding: 16px; gap: 8px; }
+      .game-bubble { padding: 10px 13px; font-size: 13px; }
+      .news-card-wrap { padding: 8px; gap: 8px; }
+      .news-title { font-size: 13px; }
+      .timer-card-wrap { padding: 16px; gap: 12px; }
+      .timer-value { font-size: 26px; }
+      .alert-card { padding: 16px; max-width: 260px; }
+      .alert-title { font-size: 13px; }
+      .alert-body { font-size: 12px; }
+      .music-card { padding: 20px; max-width: 260px; }
+      .music-title { font-size: 18px; }
+      .music-sub { font-size: 12px; }
+
+      .testimonios { padding: 56px 16px; }
+      .test-header { margin-bottom: 36px; }
+      .test-header h2 { font-size: clamp(26px, 6vw, 40px); }
+      .test-header p { font-size: 14px; }
+      .test-card { padding: 16px; gap: 12px; }
+      .test-text { font-size: 14px; line-height: 1.65; }
+      .test-avatar { width: 36px; height: 36px; font-size: 16px; }
+      .test-name { font-size: 12px; }
+      .test-loc { font-size: 11px; }
+
+      .how { padding: 56px 16px; }
+      .how-header { margin-bottom: 40px; }
+      .how-header h2 { font-size: clamp(26px, 6vw, 40px); }
+      .how-header p { font-size: 14px; max-width: 100%; }
       .how-steps { grid-template-columns: 1fr; }
+      .how-step { padding: 16px 14px; border-radius: 14px; }
+      .how-step-num { font-size: 32px; margin-bottom: 10px; }
+      .how-step h3 { font-size: 14px; margin-bottom: 6px; }
+      .how-step p { font-size: 12px; }
+
+      .para-quien { padding: 48px 16px; }
+      .para-quien h2 { font-size: clamp(24px, 6vw, 36px); margin-bottom: 28px; }
+      .quien-grid { gap: 14px; }
+      .quien-card { padding: 20px 16px; border-radius: 18px; }
+      .quien-emoji { font-size: 28px; margin-bottom: 10px; }
+      .quien-card h3 { font-size: 18px; margin-bottom: 8px; }
+      .quien-card > p { font-size: 13px; line-height: 1.6; }
+      .quien-list { margin-top: 16px; gap: 8px; }
+      .quien-list li { font-size: 12px; gap: 8px; }
+      .check-badge { width: 18px; height: 18px; font-size: 9px; flex-shrink: 0; }
+
+      .comparativa { padding: 48px 16px; }
+      .comp-header h2 { font-size: clamp(24px, 6vw, 36px); }
+      .comp-header p { font-size: 14px; }
+      table { font-size: 11px; min-width: 860px; }
+      thead th { padding: 10px 6px; font-size: 9px; }
+      tbody td { padding: 10px 6px; font-size: 11px; }
+      td:first-child { font-size: 11px; }
+
+      .voice-demo { padding: 48px 16px; }
+      .vd-inner h2 { font-size: clamp(26px, 6vw, 40px); }
+      .vd-intro { font-size: 14px; max-width: 100%; margin-bottom: 32px; }
+      .vd-toggle { flex-wrap: wrap; gap: 8px; }
+      .vd-btn { padding: 8px 14px; font-size: 12px; }
+      .vd-bubble { font-size: 13px; padding: 14px 16px; }
+      .vd-powered { font-size: 11px; }
+      .vd-player { padding: 20px 16px; }
+
+      .cta-final { padding: 72px 16px; }
+      .cta-final h2 { font-size: clamp(32px, 7vw, 52px); }
+      .cta-final p { font-size: 15px; }
+      .cta-group { gap: 10px; }
+      .cta-badge { padding: 12px 18px; font-size: 13px; }
+
+      footer { padding: 20px 12px; flex-direction: column; align-items: flex-start; gap: 8px; }
+      .footer-logo { font-size: 16px; }
+      .footer-love { font-size: 11px; }
     }
   </style>
 </head>
