@@ -1,1618 +1,1627 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CompañIA — Tu asistente de voz con inteligencia artificial</title>
-  <meta name="description" content="CompañIA es una app de voz con inteligencia artificial. Charla, recordatorios de medicamentos, música, clima y alertas a la familia. Voz masculina o femenina a elección. Para cualquier persona, a cualquier edad." />
-  <meta name="keywords" content="asistente de voz IA, inteligencia artificial, compañía virtual, recordatorios medicamentos, radio argentina, noticias por voz, app para personas mayores, compañero virtual" />
-  <meta name="author" content="CompañIA" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://compan-ia-landing-production.up.railway.app/" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CompañIA — Tu compañera de voz con IA</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="rosita.png" />
-  <link rel="apple-touch-icon" href="rosita.png" />
-  <link rel="shortcut icon" href="rosita.png" />
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="../Landing/rosita.png">
+<link rel="apple-touch-icon" href="../Landing/rosita.png">
 
-  <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:site_name"   content="CompañIA" />
-  <meta property="og:title"       content="CompañIA — Tu asistente de voz con inteligencia artificial" />
-  <meta property="og:description" content="Un compañero de voz con IA que charla, recuerda, pone música y te informa. Para cualquier persona, a cualquier edad." />
-  <meta property="og:url"         content="https://compan-ia-landing-production.up.railway.app/" />
-  <meta property="og:image"       content="https://compan-ia-landing-production.up.railway.app/rosita.png" />
-  <meta property="og:image:width"  content="512" />
-  <meta property="og:image:height" content="512" />
-  <meta property="og:image:alt"   content="CompañIA — asistente de voz con IA" />
-  <meta property="og:locale"      content="es_AR" />
+<!-- Meta SEO -->
+<meta name="description" content="Rosita es una compañera de voz con IA que escucha, recuerda y cuida. Diseñada para personas mayores, conecta a toda la familia en tiempo real vía Telegram.">
+<meta name="robots" content="index, follow">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary" />
-  <meta name="twitter:title"       content="CompañIA — Tu asistente de voz con IA" />
-  <meta name="twitter:description" content="Un compañero de voz con IA que charla, recuerda, pone música y te informa. Para cualquier persona, a cualquier edad." />
-  <meta name="twitter:image"       content="https://compan-ia-landing-production.up.railway.app/rosita.png" />
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="CompañIA — Tu compañera de voz con IA">
+<meta property="og:description" content="Rosita escucha, recuerda y cuida. Compañía real para personas mayores, alertas en tiempo real para la familia.">
+<meta property="og:image" content="../Landing/rosita.png">
+<meta property="og:site_name" content="CompañIA">
+<meta property="og:locale" content="es_AR">
 
-  <!-- Schema.org — SoftwareApplication -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "CompañIA",
-    "description": "Asistente de voz con inteligencia artificial. Charla, música, recordatorios de medicamentos, noticias en tiempo real y alertas a la familia — todo por voz.",
-    "applicationCategory": "LifestyleApplication",
-    "operatingSystem": "Android, iOS",
-    "offers": {
-      "@type": "Offer",
-      "price": "29",
-      "priceCurrency": "USD",
-      "priceValidUntil": "2027-01-01"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "700"
-    },
-    "url": "https://compan-ia-landing-production.up.railway.app/",
-    "image": "https://compan-ia-landing-production.up.railway.app/rosita.png",
-    "inLanguage": "es-AR",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CompañIA",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://compan-ia-landing-production.up.railway.app/rosita.png"
-      }
-    }
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CompañIA — Tu compañera de voz con IA">
+<meta name="twitter:description" content="Rosita escucha, recuerda y cuida. Compañía real para personas mayores, alertas en tiempo real para la familia.">
+<meta name="twitter:image" content="../Landing/rosita.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Base ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue:        #1B4D9E;
+  --blue-mid:    #2D62C4;
+  --blue-light:  #EAF0FB;
+  --blue-pale:   #F4F7FD;
+  --coral:       #E8735A;
+  --coral-light: #FDF0ED;
+  --warm-white:  #FAFAF8;
+  --ink:         #12131A;
+  --ink-mid:     #3D4252;
+  --ink-soft:    #7B839A;
+  --border:      #E2E6F0;
+  --shadow-sm:   0 2px 8px rgba(0,0,0,.06);
+  --shadow-md:   0 8px 32px rgba(0,0,0,.10);
+  --shadow-lg:   0 20px 60px rgba(0,0,0,.12);
+  --radius-sm:   12px;
+  --radius-md:   20px;
+  --radius-lg:   32px;
+  --radius-xl:   48px;
+  --ff-body:     'Instrument Sans', system-ui, sans-serif;
+  --ff-serif:    'Instrument Serif', Georgia, serif;
+  --max-w:       1160px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--ff-body);
+  background: var(--warm-white);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+/* ── Layout helpers ───────────────────────────────────── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+@media (max-width: 768px) { .container { padding: 0 20px; } }
+
+/* ── Nav ──────────────────────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: background .3s, border-color .3s, backdrop-filter .3s;
+}
+
+.nav.scrolled {
+  background: rgba(250,250,248,.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.nav-brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -.5px;
+  transition: color .3s;
+}
+.nav.scrolled .nav-brand { color: var(--blue); }
+.nav-brand span { color: var(--coral); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255,255,255,.85);
+  transition: color .2s;
+}
+.nav.scrolled .nav-links a { color: var(--ink-mid); }
+.nav-links a:hover { color: #fff; }
+.nav.scrolled .nav-links a:hover { color: var(--blue); }
+
+.nav-cta {
+  background: var(--coral) !important;
+  color: #fff !important;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 600 !important;
+  transition: background .2s, transform .15s !important;
+}
+.nav-cta:hover { background: #d4604a !important; transform: translateY(-1px); }
+
+@media (max-width: 768px) { .nav-links { display: none; } }
+
+/* ── Buttons ──────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  border-radius: 999px;
+  font-family: var(--ff-body);
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: transform .15s, box-shadow .15s;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary {
+  background: var(--coral);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(232,115,90,.35);
+}
+.btn-primary:hover { box-shadow: 0 8px 32px rgba(232,115,90,.45); }
+
+.btn-ghost {
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.35);
+  backdrop-filter: blur(8px);
+}
+.btn-ghost:hover { background: rgba(255,255,255,.22); }
+
+.btn-secondary {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+.btn-secondary:hover { background: #d9e5f8; }
+
+/* ── HERO — full screen ───────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* Gradient: transparent top → dark bottom-left for text */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(10,20,50,.78) 0%, rgba(10,20,50,.45) 55%, transparent 100%),
+    linear-gradient(to top, rgba(10,20,50,.60) 0%, transparent 50%);
+}
+
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  left: clamp(24px, 5vw, 80px);
+  bottom: 48px;
+  max-width: 500px;
+  text-align: left;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.25);
+  color: rgba(255,255,255,.9);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 28px;
+  backdrop-filter: blur(8px);
+}
+
+.hero-eyebrow::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: var(--coral);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .6; transform: scale(.8); }
+}
+
+.hero-title {
+  font-family: var(--ff-serif);
+  font-size: clamp(42px, 6vw, 80px);
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 24px;
+  letter-spacing: -2px;
+  max-width: 660px;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: #f4c5bb;
+}
+
+.hero-desc {
+  font-size: 20px;
+  color: rgba(255,255,255,.8);
+  line-height: 1.65;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  color: rgba(255,255,255,.65);
+}
+
+.trust-avatars {
+  display: flex;
+}
+
+.trust-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.4);
+  overflow: hidden;
+  margin-left: -10px;
+}
+.trust-avatar:first-child { margin-left: 0; }
+.trust-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Floating quote badge */
+.hero-quote {
+  position: absolute;
+  right: 80px;
+  bottom: 80px;
+  z-index: 3;
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  max-width: 280px;
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-quote-text {
+  font-family: var(--ff-serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.hero-quote-author {
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.hero-quote-author strong {
+  display: block;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .hero-quote { display: none; }
+  .hero-overlay {
+    background:
+      linear-gradient(to top, rgba(10,20,50,.85) 0%, rgba(10,20,50,.50) 60%, rgba(10,20,50,.30) 100%);
   }
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --teal:      #0097b2;
-      --teal-d:    #007a91;
-      --teal-l:    #d0f0f7;
-      --teal-glow: rgba(0,151,178,0.3);
-      --ink:       #0c1517;
-      --ink2:      #1a2426;
-      --sand:      #faf7f2;
-      --sand2:     #e8e2d8;
-      --cream:     #fffdf9;
-      --body:      #253032;   /* subido de #2d3e42 → mejor contraste sobre claro */
-      --muted:     #4e6368;   /* subido de #7a9099 → ratio 5.8:1 sobre --sand */
-      --white:     #ffffff;
-      --r:         16px;
-      --serif:     'Instrument Serif', Georgia, serif;
-      --sans:      'DM Sans', system-ui, sans-serif;
-    }
-
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--sans);
-      background: var(--cream);
-      color: var(--body);
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ─── NAV ─── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 48px;
-      height: 68px;
-      background: rgba(255,253,249,0.88);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-    }
-    .nav-logo {
-      display: flex; align-items: center; gap: 10px;
-      font-family: var(--serif);
-      font-size: 26px;
-      color: var(--ink);
-      letter-spacing: -0.5px;
-    }
-    .nav-logo em { color: var(--teal); font-style: normal; }
-    .nav-links {
-      display: flex; gap: 32px; list-style: none;
-    }
-    .nav-links a {
-      font-size: 14px; font-weight: 500;
-      color: var(--body); text-decoration: none;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-cta {
-      background: var(--ink); color: #fff;
-      padding: 10px 22px; border-radius: 100px;
-      font-size: 14px; font-weight: 600; text-decoration: none;
-      transition: all 0.2s;
-    }
-    .nav-cta:hover { background: var(--teal); transform: translateY(-1px); }
-
-    /* ─── HERO ─── */
-    .hero {
-      min-height: 100vh;
-      background: var(--ink);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      padding: 120px 80px 80px;
-      gap: 64px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Fondo orgánico */
-    .hero-bg {
-      position: absolute; inset: 0; pointer-events: none;
-      background:
-        radial-gradient(ellipse 80% 60% at -10% 60%, rgba(0,151,178,0.18) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 50% at 110% 20%, rgba(0,90,110,0.15) 0%, transparent 60%);
-    }
-    .hero-grain {
-      position: absolute; inset: 0; pointer-events: none; opacity: 0.03;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-      background-size: 180px;
-    }
-
-    .hero-left { position: relative; z-index: 1; }
-    .hero-right { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 24px; }
-
-    .hero-pill {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(0,151,178,0.12);
-      border: 1px solid rgba(0,151,178,0.25);
-      color: #7ee8ff;
-      padding: 6px 16px; border-radius: 100px;
-      font-size: 12px; font-weight: 600; letter-spacing: 0.8px;
-      text-transform: uppercase; margin-bottom: 28px;
-    }
-    .hero-pill-dot {
-      width: 6px; height: 6px; border-radius: 50%; background: #7ee8ff;
-      animation: pulse 2s ease-in-out infinite;
-    }
-    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(1.5)} }
-
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(50px, 5.5vw, 80px);
-      font-weight: 400;
-      line-height: 1.0;
-      color: var(--white);
-      margin-bottom: 24px;
-      letter-spacing: -1px;
-    }
-    .hero h1 em {
-      font-style: italic;
-      background: linear-gradient(135deg, #7ee8ff, #0097b2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-desc {
-      font-size: 18px;
-      color: rgba(255,255,255,0.68);
-      line-height: 1.7;
-      max-width: 480px;
-      margin-bottom: 40px;
-    }
-
-    .hero-actions {
-      display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
-      margin-bottom: 48px;
-    }
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: var(--teal); color: #fff;
-      padding: 14px 28px; border-radius: 100px;
-      font-size: 15px; font-weight: 600; text-decoration: none;
-      transition: all 0.2s;
-      box-shadow: 0 0 32px rgba(0,151,178,0.35);
-    }
-    .btn-primary:hover { background: var(--teal-d); transform: translateY(-2px); box-shadow: 0 0 48px rgba(0,151,178,0.5); }
-    .btn-ghost {
-      display: inline-flex; align-items: center; gap: 8px;
-      color: rgba(255,255,255,0.7);
-      font-size: 14px; font-weight: 500; text-decoration: none;
-      transition: color 0.2s;
-    }
-    .btn-ghost:hover { color: rgba(255,255,255,0.95); }
-
-    /* Mini social proof en hero */
-    .hero-proof {
-      display: flex; align-items: center; gap: 14px;
-    }
-    .avatar-stack {
-      display: flex;
-    }
-    .avatar-stack .av {
-      width: 36px; height: 36px; border-radius: 50%;
-      border: 2px solid var(--ink);
-      background: var(--teal-l);
-      margin-left: -10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 16px;
-      overflow: hidden;
-    }
-    .avatar-stack .av:first-child { margin-left: 0; }
-    .hero-proof-text { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.4; }
-    .hero-proof-text strong { color: rgba(255,255,255,0.9); }
-
-    /* Rosita card en hero */
-    .rosita-display {
-      background: #0D0D14;
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 28px;
-      padding: 48px 52px 36px;
-      backdrop-filter: blur(24px);
-      display: flex; flex-direction: column; align-items: center; gap: 28px;
-      box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,151,178,0.08);
-      width: 100%; max-width: 360px;
-    }
-
-    /* ── Cara de Rosita (fiel al componente RN) ── */
-    /* Proporciones: EYE_W=108, EYE_H=126, IRIS=68, PUPIL=34, gap=32 → escala 0.63 */
-    .face {
-      display: flex; flex-direction: column; align-items: center;
-      gap: 0; /* la boca tiene margin-top propio */
-    }
-    .eyes-row {
-      display: flex;
-      gap: 20px; /* gap=32 * 0.63 ≈ 20 */
-      align-items: flex-end;
-    }
-
-    /* EYE_W*0.63=68, EYE_H*0.63=79 */
-    .eye {
-      width: 68px; height: 79px;
-      background: #EDE8DF;
-      border-top-left-radius: 34px;
-      border-top-right-radius: 34px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-      position: relative; overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
-    }
-
-    /* IRIS=68*0.63=43 */
-    .iris {
-      width: 43px; height: 43px; border-radius: 50%;
-      background: #4B7FB5;
-      display: flex; align-items: center; justify-content: center;
-      position: relative;
-      animation: mirada 7s ease-in-out infinite;
-    }
-    /* Parpadeo desincronizado: ojo derecho tiene delay */
-    .eye:nth-child(2) .iris { animation-delay: 0.3s; }
-
-    @keyframes mirada {
-      0%  { transform: translate(0px, 0px); }
-      15% { transform: translate(4px, -3px); }
-      30% { transform: translate(4px, -3px); }
-      45% { transform: translate(-3px, -4px); }
-      60% { transform: translate(3px, 2px); }
-      75% { transform: translate(3px, 2px); }
-      88% { transform: translate(-4px, -2px); }
-      100%{ transform: translate(0px, 0px); }
-    }
-
-    /* PUPIL=34*0.63=21 */
-    .pupila {
-      width: 21px; height: 21px; border-radius: 50%;
-      background: #1A3A5C;
-      position: relative;
-    }
-    /* Reflejo principal (reflect1) */
-    .pupila::before {
-      content: ''; position: absolute;
-      width: 6px; height: 6px; border-radius: 50%;
-      background: #fff;
-      top: 3px; left: 3px;
-    }
-    /* Reflejo secundario (reflect2) */
-    .pupila::after {
-      content: ''; position: absolute;
-      width: 3px; height: 3px; border-radius: 50%;
-      background: #fff;
-      bottom: 3px; right: 2px;
-    }
-
-    /* Párpado superior fijo (upper lid neutral = EYE_H*0.06 ≈ 5px) */
-    .lid {
-      position: absolute; left: 0; right: 0; top: 0;
-      height: 5px;
-      background: #0D0D14;
-      border-top-left-radius: 34px;
-      border-top-right-radius: 34px;
-      transition: height 0.55s ease;
-    }
-
-    /* Párpado inferior (para expresión feliz/cansada) */
-    .lid-bottom {
-      position: absolute; left: 0; right: 0; bottom: 0;
-      height: 0;
-      background: #0D0D14;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-      transition: height 0.55s ease;
-    }
-
-    /* Parpadeo: cierra y abre */
-    .blink {
-      position: absolute; left: 0; right: 0; top: 0;
-      height: 0;
-      background: #0D0D14;
-      border-top-left-radius: 34px;
-      border-top-right-radius: 34px;
-      animation: blink-anim 5s ease-in-out infinite;
-    }
-    /* Ojo derecho parpadea un poco después */
-    .eye:nth-child(2) .blink { animation-delay: 0.18s; }
-
-    @keyframes blink-anim {
-      0%, 88%, 100% { height: 0; }
-      91%            { height: 79px; }
-      95%            { height: 0; }
-    }
-
-    /* Boca neutral: curva con border, ancho 86*0.63≈54, radio 42*0.63≈26 */
-    .boca {
-      margin-top: 50px;
-      width: 54px; height: 0;
-      border-bottom: 3px solid #B06050;
-      border-left:   1.5px solid #B06050;
-      border-right:  1.5px solid #B06050;
-      background: transparent;
-      border-bottom-left-radius:  26px;
-      border-bottom-right-radius: 26px;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-      animation: boca-breathe 4s ease-in-out infinite;
-      transition: width 0.45s ease, height 0.45s ease,
-                  border-top-left-radius 0.45s ease, border-top-right-radius 0.45s ease,
-                  border-bottom-left-radius 0.45s ease, border-bottom-right-radius 0.45s ease;
-    }
-    @keyframes boca-breathe {
-      0%, 100% { transform: scaleX(1); }
-      50%       { transform: scaleX(0.92); }
-    }
-
-    /* ── Expresiones ── */
-    /* feliz: ojos entrecerrados arriba y abajo, sonrisa llena */
-    .face.expr-feliz .lid        { height: 24px; }
-    .face.expr-feliz .lid-bottom { height: 16px; }
-    .face.expr-feliz .boca {
-      width: 50px; height: 8px;
-      background: #B06050;
-      border: none;
-      border-top-left-radius: 3px; border-top-right-radius: 3px;
-      border-bottom-left-radius: 28px; border-bottom-right-radius: 28px;
-      animation: none;
-    }
-
-    /* sorprendida: ojos bien abiertos, boca en O */
-    .face.expr-sorprendida .lid        { height: 0; }
-    .face.expr-sorprendida .lid-bottom { height: 0; }
-    .face.expr-sorprendida .boca {
-      width: 18px; height: 18px;
-      background: #B06050;
-      border: none;
-      border-radius: 50%;
-      animation: none;
-    }
-
-    /* pensativa: párpado leve, boca más angosta */
-    .face.expr-pensativa .lid        { height: 9px; }
-    .face.expr-pensativa .lid-bottom { height: 0; }
-    .face.expr-pensativa .boca       { width: 36px; }
-
-    .rosita-status {
-      display: flex; align-items: center; gap: 8px;
-      color: rgba(255,255,255,0.65); font-size: 13px;
-    }
-    .status-dot {
-      width: 8px; height: 8px; border-radius: 50%; background: #7ee8ff;
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    /* Waveform animado */
-    .waveform {
-      display: flex; align-items: center; gap: 3px; height: 28px;
-    }
-    .wave-bar {
-      width: 3px; border-radius: 2px;
-      background: rgba(0,151,178,0.5);
-      animation: wave 1.2s ease-in-out infinite;
-    }
-    .wave-bar:nth-child(1) { height: 8px; animation-delay: 0s; }
-    .wave-bar:nth-child(2) { height: 16px; animation-delay: 0.1s; }
-    .wave-bar:nth-child(3) { height: 24px; animation-delay: 0.2s; background: var(--teal); }
-    .wave-bar:nth-child(4) { height: 20px; animation-delay: 0.3s; }
-    .wave-bar:nth-child(5) { height: 28px; animation-delay: 0.15s; background: var(--teal); }
-    .wave-bar:nth-child(6) { height: 16px; animation-delay: 0.25s; }
-    .wave-bar:nth-child(7) { height: 10px; animation-delay: 0.05s; }
-    .wave-bar:nth-child(8) { height: 22px; animation-delay: 0.35s; }
-    .wave-bar:nth-child(9) { height: 14px; animation-delay: 0.18s; }
-    @keyframes wave {
-      0%,100%{transform:scaleY(1)} 50%{transform:scaleY(0.3)}
-    }
-
-    /* ─── STATS BAR ─── */
-    .stats-bar {
-      background: var(--sand);
-      border-bottom: 1px solid var(--sand2);
-      padding: 56px 80px;
-    }
-    .stats-inner {
-      max-width: 1080px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 2px;
-    }
-    .stat-item {
-      padding: 32px 40px;
-      border-right: 1px solid rgba(0,0,0,0.07);
-      position: relative;
-    }
-    .stat-item:last-child { border-right: none; }
-    .stat-num {
-      font-family: var(--serif);
-      font-size: 56px; color: var(--ink);
-      line-height: 1; margin-bottom: 10px;
-      letter-spacing: -2px;
-    }
-    .stat-num em { color: var(--teal); font-style: normal; }
-    .stat-label { font-size: 14px; color: var(--body); line-height: 1.5; max-width: 160px; }
-
-    /* ─── INTRO ─── */
-    .intro {
-      padding: 100px 80px;
-      max-width: 1080px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 80px; align-items: center;
-    }
-    .intro-label {
-      font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
-      color: var(--teal-d); font-weight: 700; margin-bottom: 20px;
-    }
-    .intro h2 {
-      font-family: var(--serif);
-      font-size: clamp(36px, 4vw, 54px);
-      font-weight: 400; line-height: 1.15;
-      color: var(--ink); letter-spacing: -1px;
-      margin-bottom: 24px;
-    }
-    .intro h2 em { font-style: italic; color: var(--teal); }
-    .intro p {
-      font-size: 17px; line-height: 1.75;
-      color: var(--body); margin-bottom: 16px;
-    }
-    .intro-link {
-      display: inline-flex; align-items: center; gap: 8px;
-      color: var(--teal-d); font-weight: 700; font-size: 15px;
-      text-decoration: none; margin-top: 8px;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.2s;
-    }
-    .intro-link:hover { border-color: var(--teal-d); }
-    .intro-visual {
-      border-radius: 24px;
-      overflow: hidden;
-    }
-    /* ─── VOICE VISUAL (reemplaza burbujas de chat) ─── */
-    .voice-scene {
-      background: #0D0D14;
-      border-radius: 24px;
-      padding: 52px 44px;
-      display: flex; flex-direction: column; align-items: center; gap: 28px;
-      position: relative; overflow: hidden;
-      min-height: 400px; justify-content: center;
-    }
-    .voice-scene::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 50% 80%, rgba(0,151,178,0.18) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .voice-orb {
-      width: 96px; height: 96px; border-radius: 50%;
-      background: radial-gradient(circle at 35% 35%, #00c4e8, var(--teal));
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 0 0 12px rgba(0,151,178,0.12), 0 0 0 24px rgba(0,151,178,0.06), 0 0 40px rgba(0,151,178,0.3);
-      animation: orb-pulse 3s ease-in-out infinite;
-      position: relative; z-index: 1;
-    }
-    @keyframes orb-pulse {
-      0%,100%{box-shadow:0 0 0 12px rgba(0,151,178,0.12),0 0 0 24px rgba(0,151,178,0.06),0 0 40px rgba(0,151,178,0.3)}
-      50%{box-shadow:0 0 0 18px rgba(0,151,178,0.1),0 0 0 34px rgba(0,151,178,0.05),0 0 60px rgba(0,151,178,0.4)}
-    }
-    .voice-orb svg { opacity: 0.9; }
-    .voice-big-wave {
-      display: flex; align-items: center; gap: 4px; height: 48px; position: relative; z-index: 1;
-    }
-    .vbw-bar {
-      width: 4px; border-radius: 3px;
-      background: var(--teal);
-      animation: vbwave 1.4s ease-in-out infinite;
-    }
-    .vbw-bar:nth-child(1){height:12px;animation-delay:0s;opacity:.5}
-    .vbw-bar:nth-child(2){height:24px;animation-delay:.1s;opacity:.7}
-    .vbw-bar:nth-child(3){height:38px;animation-delay:.2s}
-    .vbw-bar:nth-child(4){height:44px;animation-delay:.08s;background:#5ddcf5}
-    .vbw-bar:nth-child(5){height:48px;animation-delay:.16s}
-    .vbw-bar:nth-child(6){height:40px;animation-delay:.24s;background:#5ddcf5}
-    .vbw-bar:nth-child(7){height:32px;animation-delay:.04s}
-    .vbw-bar:nth-child(8){height:44px;animation-delay:.14s}
-    .vbw-bar:nth-child(9){height:36px;animation-delay:.22s;opacity:.8}
-    .vbw-bar:nth-child(10){height:48px;animation-delay:.06s;background:#5ddcf5}
-    .vbw-bar:nth-child(11){height:42px;animation-delay:.18s}
-    .vbw-bar:nth-child(12){height:28px;animation-delay:.12s;opacity:.7}
-    .vbw-bar:nth-child(13){height:18px;animation-delay:.26s;opacity:.5}
-    @keyframes vbwave {
-      0%,100%{transform:scaleY(1)} 50%{transform:scaleY(0.2)}
-    }
-    .voice-caption {
-      font-size: 14px; color: rgba(255,255,255,0.62); letter-spacing: 0.3px;
-      position: relative; z-index: 1; text-align: center;
-    }
-    .voice-caption strong { color: rgba(255,255,255,0.92); display: block; font-size: 16px; margin-bottom: 4px; }
-    .voice-tags {
-      display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
-      position: relative; z-index: 1;
-    }
-    .vtag {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.14);
-      color: rgba(255,255,255,0.65);
-      padding: 6px 14px; border-radius: 100px;
-      font-size: 12px; font-weight: 500;
-    }
-    .vtag.active { background: rgba(0,151,178,0.2); border-color: rgba(0,151,178,0.4); color: #5ddcf5; }
-
-    /* ─── BADGE GLOBAL ─── */
-    .section-badge {
-      display: inline-block;
-      background: #c4eef5; color: #005f73;
-      padding: 4px 16px; border-radius: 100px;
-      font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
-      text-transform: uppercase; margin-bottom: 20px;
-    }
-
-    /* ─── FEATURES ALTERNADAS ─── */
-    .features { background: var(--cream); }
-    .features-header {
-      text-align: center; padding: 80px 24px 64px;
-    }
-    .features-header .section-badge {
-      display: inline-block;
-      background: #c4eef5; color: #005f73;
-      padding: 4px 16px; border-radius: 100px;
-      font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
-      text-transform: uppercase; margin-bottom: 20px;
-    }
-    .features-header h2 {
-      font-family: var(--serif);
-      font-size: clamp(36px, 5vw, 56px);
-      color: var(--ink); letter-spacing: -1.5px;
-      line-height: 1.1;
-    }
-
-    .feature-row {
-      display: grid; grid-template-columns: 1fr 1fr;
-      max-width: 1080px; margin: 0 auto 16px;
-      gap: 0;
-      border-radius: 24px; overflow: hidden;
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-    .feature-row.reverse { direction: rtl; }
-    .feature-row.reverse > * { direction: ltr; }
-
-    .feature-content {
-      background: var(--white);
-      padding: 56px 56px;
-      display: flex; flex-direction: column; justify-content: center;
-    }
-    .feature-icon-lg {
-      width: 56px; height: 56px; border-radius: 16px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 26px; margin-bottom: 24px;
-    }
-    .feature-content h3 {
-      font-family: var(--serif);
-      font-size: 28px; color: var(--ink);
-      line-height: 1.2; margin-bottom: 14px; letter-spacing: -0.5px;
-    }
-    .feature-content p {
-      font-size: 16px; color: var(--body); line-height: 1.7;
-    }
-    .feature-content ul {
-      margin-top: 20px; list-style: none;
-      display: flex; flex-direction: column; gap: 10px;
-    }
-    .feature-content li {
-      display: flex; align-items: flex-start; gap: 10px;
-      font-size: 15px; color: var(--body);
-    }
-    .feature-content li::before {
-      content: '→'; color: var(--teal-d); font-weight: 700; flex-shrink: 0; margin-top: 1px;
-    }
-    .feature-visual {
-      background: var(--sand);
-      padding: 56px;
-      display: flex; align-items: center; justify-content: center;
-      min-height: 300px;
-      position: relative; overflow: hidden;
-    }
-    .feature-visual.teal-bg { background: #0D0D14; }
-    .feature-visual.warm-bg { background: #fff8f0; }
-    .feature-visual.blue-bg { background: #f0f6ff; }
-
-    /* Ilustraciones placeholder en features */
-    /* ─── CARA MINI DE ROSITA (para feature visuals) ─── */
-    /* Escala pequeña: EYE_W=108→32px (factor 0.296), EYE_H=126→37px, IRIS=68→20px, PUPIL=34→10px */
-    .rosita-mini {
-      display: flex; flex-direction: column; align-items: center;
-      background: #0D0D14;
-      border-radius: 20px;
-      padding: 18px 20px 14px;
-      box-shadow:
-        0 0 0 6px rgba(0,151,178,0.12),
-        0 0 0 14px rgba(0,151,178,0.05),
-        0 16px 40px rgba(0,0,0,0.22);
-      animation: orb-pulse 3s ease-in-out infinite;
-      flex-shrink: 0;
-    }
-    .rm-eyes { display: flex; gap: 8px; align-items: flex-end; }
-    .rm-eye {
-      width: 32px; height: 37px;
-      background: #EDE8DF;
-      border-top-left-radius: 16px; border-top-right-radius: 16px;
-      border-bottom-left-radius: 2px; border-bottom-right-radius: 2px;
-      position: relative; overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .rm-iris {
-      width: 20px; height: 20px; border-radius: 50%;
-      background: #4B7FB5;
-      display: flex; align-items: center; justify-content: center;
-      animation: mirada 7s ease-in-out infinite;
-    }
-    .rm-eye:nth-child(2) .rm-iris { animation-delay: 0.3s; }
-    .rm-pupil {
-      width: 10px; height: 10px; border-radius: 50%;
-      background: #1A3A5C; position: relative;
-    }
-    .rm-pupil::before {
-      content: ''; position: absolute;
-      width: 3px; height: 3px; border-radius: 50%;
-      background: #fff; top: 1px; left: 1px;
-    }
-    .rm-pupil::after {
-      content: ''; position: absolute;
-      width: 2px; height: 2px; border-radius: 50%;
-      background: #fff; bottom: 1px; right: 1px;
-    }
-    .rm-lid {
-      position: absolute; left: 0; right: 0; top: 0;
-      height: 2px; background: #0D0D14;
-      border-top-left-radius: 16px; border-top-right-radius: 16px;
-    }
-    .rm-blink {
-      position: absolute; left: 0; right: 0; top: 0;
-      height: 0; background: #0D0D14;
-      border-top-left-radius: 16px; border-top-right-radius: 16px;
-      animation: blink-anim 5s ease-in-out infinite;
-    }
-    .rm-eye:nth-child(2) .rm-blink { animation-delay: 0.18s; }
-    .rm-boca {
-      margin-top: 10px;
-      width: 20px; height: 0;
-      border-bottom: 1.5px solid #B06050;
-      border-left: 1px solid #B06050;
-      border-right: 1px solid #B06050;
-      background: transparent;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      animation: boca-breathe 4s ease-in-out infinite;
-    }
-
-    /* ─── VOICE FEATURE VISUALS ─── */
-    .voice-moment {
-      display: flex; flex-direction: column; align-items: center; gap: 16px;
-      width: 100%; max-width: 280px;
-    }
-    .vm-wave {
-      display: flex; align-items: center; gap: 3px; height: 36px;
-    }
-    .vmw-bar {
-      width: 3px; border-radius: 2px; background: var(--teal);
-      animation: vbwave 1.3s ease-in-out infinite;
-    }
-    .vmw-bar:nth-child(1){height:8px;opacity:.6;animation-delay:0s}
-    .vmw-bar:nth-child(2){height:18px;opacity:.8;animation-delay:.1s}
-    .vmw-bar:nth-child(3){height:30px;animation-delay:.2s;background:#5ddcf5}
-    .vmw-bar:nth-child(4){height:36px;animation-delay:.08s}
-    .vmw-bar:nth-child(5){height:28px;animation-delay:.16s;background:#5ddcf5}
-    .vmw-bar:nth-child(6){height:20px;animation-delay:.24s}
-    .vmw-bar:nth-child(7){height:12px;opacity:.7;animation-delay:.04s}
-    .vm-label {
-      font-size: 13px; color: rgba(255,255,255,0.7); text-align: center; line-height: 1.5;
-    }
-    .vm-label strong { color: rgba(255,255,255,0.95); display: block; font-size: 15px; margin-bottom: 3px; }
-
-    /* Micro-wave para fondos claros */
-    .voice-moment-light {
-      display: flex; flex-direction: column; align-items: center; gap: 16px;
-      width: 100%; max-width: 280px;
-    }
-    .vml-wave {
-      display: flex; align-items: center; gap: 3px; height: 36px;
-    }
-    .vmlw-bar {
-      width: 3px; border-radius: 2px; background: var(--teal);
-      animation: vbwave 1.3s ease-in-out infinite;
-      opacity: 0.85;
-    }
-    .vmlw-bar:nth-child(1){height:8px;animation-delay:0s}
-    .vmlw-bar:nth-child(2){height:18px;animation-delay:.1s}
-    .vmlw-bar:nth-child(3){height:30px;animation-delay:.2s;opacity:1}
-    .vmlw-bar:nth-child(4){height:36px;animation-delay:.08s;opacity:1}
-    .vmlw-bar:nth-child(5){height:28px;animation-delay:.16s;opacity:1}
-    .vmlw-bar:nth-child(6){height:20px;animation-delay:.24s}
-    .vmlw-bar:nth-child(7){height:10px;animation-delay:.04s}
-    .vml-label {
-      font-size: 13px; color: var(--body); text-align: center; line-height: 1.5;
-    }
-    .vml-label strong { color: var(--ink); display: block; font-size: 15px; margin-bottom: 3px; font-weight: 700; }
-    .vml-tag {
-      display: inline-block; background: #c4eef5; color: #005f73;
-      padding: 4px 14px; border-radius: 100px; font-size: 12px; font-weight: 600;
-    }
-
-    /* Notificación Telegram para alertas */
-
-    .alert-card {
-      background: var(--white);
-      border-radius: 20px; padding: 24px;
-      width: 100%; max-width: 280px;
-      box-shadow: 0 8px 32px rgba(0,80,160,0.1), 0 1px 3px rgba(0,0,0,0.06);
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-    .alert-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-    .alert-icon { width: 36px; height: 36px; border-radius: 10px; background: #ffede8; display: flex; align-items: center; justify-content: center; font-size: 18px; }
-    .alert-title { font-size: 14px; font-weight: 700; color: var(--ink); }
-    .alert-sub { font-size: 12px; color: var(--muted); }
-    .alert-body { font-size: 13px; color: var(--body); line-height: 1.5; }
-    .alert-recipients { display: flex; gap: 8px; margin-top: 14px; }
-    .recipient {
-      background: var(--sand); border-radius: 8px;
-      padding: 5px 10px; font-size: 11px; font-weight: 600; color: var(--body);
-      border: 1px solid var(--sand2);
-    }
-
-    .music-card {
-      background: linear-gradient(145deg, #0e2830, #0a1e25);
-      border: 1px solid rgba(0,151,178,0.25);
-      border-radius: 20px; padding: 28px;
-      width: 100%; max-width: 280px;
-      color: var(--white);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
-    }
-    .music-tag { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #5ddcf5; font-weight: 600; margin-bottom: 12px; }
-    .music-title { font-family: var(--serif); font-size: 22px; color: var(--white); margin-bottom: 4px; }
-    .music-sub { font-size: 13px; color: rgba(255,255,255,0.62); margin-bottom: 20px; }
-    .music-progress { background: rgba(255,255,255,0.12); border-radius: 4px; height: 4px; margin-bottom: 8px; }
-    .music-bar { background: var(--teal); width: 40%; height: 100%; border-radius: 4px; }
-    .music-waveform { display: flex; gap: 2px; align-items: flex-end; height: 24px; margin-top: 12px; }
-    .mw-bar { width: 3px; border-radius: 2px; background: rgba(0,151,178,0.55); animation: wave 1s ease-in-out infinite; }
-    .mw-bar:nth-child(1){height:6px} .mw-bar:nth-child(2){height:14px;animation-delay:.1s;background:var(--teal)}
-    .mw-bar:nth-child(3){height:20px;animation-delay:.2s} .mw-bar:nth-child(4){height:16px;animation-delay:.15s}
-    .mw-bar:nth-child(5){height:22px;animation-delay:.25s;background:var(--teal)} .mw-bar:nth-child(6){height:10px;animation-delay:.05s}
-    .mw-bar:nth-child(7){height:18px;animation-delay:.3s} .mw-bar:nth-child(8){height:8px;animation-delay:.1s}
-
-    /* ─── TESTIMONIOS ─── */
-    .testimonios {
-      background: var(--sand);
-      padding: 100px 24px;
-      border-top: 1px solid var(--sand2); border-bottom: 1px solid var(--sand2);
-    }
-    .testimonios .container { max-width: 1080px; margin: 0 auto; }
-    .test-header {
-      text-align: center; margin-bottom: 64px;
-    }
-    .test-header h2 {
-      font-family: var(--serif);
-      font-size: clamp(36px, 5vw, 52px);
-      color: var(--ink); letter-spacing: -1px; line-height: 1.1;
-    }
-    .test-header p { font-size: 17px; color: var(--body); margin-top: 12px; }
-
-    .test-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .test-card {
-      background: var(--white);
-      border-radius: 20px; padding: 36px;
-      border: 1px solid rgba(0,0,0,0.05);
-      display: flex; flex-direction: column; gap: 20px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .test-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
-    .test-stars { color: #c47d00; font-size: 14px; letter-spacing: 1px; }
-    .test-text {
-      font-size: 16px; color: var(--body); line-height: 1.7;
-      font-style: italic; flex-grow: 1;
-    }
-    .test-person { display: flex; align-items: center; gap: 12px; margin-top: auto; }
-    .test-avatar {
-      width: 46px; height: 46px; border-radius: 50%;
-      background: var(--sand);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px; flex-shrink: 0;
-      border: 2px solid var(--sand2);
-    }
-    .test-name { font-weight: 700; font-size: 14px; color: var(--ink); }
-    .test-loc { font-size: 12px; color: var(--muted); margin-top: 2px; font-weight: 500; }
-
-    /* ─── COMO FUNCIONA ─── */
-    .how {
-      padding: 100px 24px;
-      background: var(--ink);
-      color: var(--white);
-    }
-    .how-inner { max-width: 1080px; margin: 0 auto; }
-    .how-header { text-align: center; margin-bottom: 72px; }
-    .how-header h2 {
-      font-family: var(--serif);
-      font-size: clamp(36px, 5vw, 56px);
-      color: var(--white); letter-spacing: -1px; line-height: 1.1;
-    }
-    .how-header p { font-size: 17px; color: rgba(255,255,255,0.62); margin-top: 14px; max-width: 480px; margin-left: auto; margin-right: auto; }
-
-    .how-steps {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 2px;
-    }
-    .how-step {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 20px; padding: 40px 32px;
-      position: relative; overflow: hidden;
-      transition: background 0.2s;
-    }
-    .how-step:hover { background: rgba(0,151,178,0.09); }
-    .how-step-line {
-      position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, var(--teal) 0%, rgba(0,151,178,0.3) 60%, transparent 100%);
-    }
-    .how-step-num {
-      font-family: var(--serif);
-      font-size: 72px; line-height: 1;
-      color: rgba(0,151,178,0.22);
-      margin-bottom: 20px;
-    }
-    .how-step h3 { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
-    .how-step p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; }
-
-    /* ─── PARA QUIÉN ─── */
-    .para-quien { padding: 100px 24px; background: var(--cream); }
-    .para-quien-inner { max-width: 1080px; margin: 0 auto; }
-    .para-quien h2 {
-      font-family: var(--serif);
-      font-size: clamp(36px, 5vw, 54px);
-      color: var(--ink); letter-spacing: -1px; line-height: 1.1;
-      margin-bottom: 56px; text-align: center;
-    }
-    .quien-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .quien-card {
-      border-radius: 24px; padding: 48px;
-    }
-    .quien-card.dark { background: var(--ink2); color: var(--white); }
-    .quien-card.light { background: var(--sand); border: 1px solid var(--sand2); }
-    .quien-emoji { font-size: 48px; margin-bottom: 24px; display: block; }
-    .quien-card h3 {
-      font-family: var(--serif); font-size: 28px;
-      margin-bottom: 12px; letter-spacing: -0.5px;
-    }
-    .quien-card.dark h3 { color: var(--white); }
-    .quien-card.light h3 { color: var(--ink); }
-    .quien-card > p { font-size: 16px; line-height: 1.7; }
-    .quien-card.dark > p { color: rgba(255,255,255,0.65); }
-    .quien-card.light > p { color: var(--body); }
-    .quien-list { list-style: none; margin-top: 24px; display: flex; flex-direction: column; gap: 10px; }
-    .quien-list li {
-      display: flex; align-items: center; gap: 10px; font-size: 15px;
-    }
-    .quien-card.dark .quien-list li { color: rgba(255,255,255,0.82); }
-    .quien-card.light .quien-list li { color: var(--body); }
-    .check-badge {
-      width: 22px; height: 22px; border-radius: 50%;
-      background: var(--teal-d); color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 11px; font-weight: 700; flex-shrink: 0;
-    }
-
-    /* ─── COMPARATIVA ─── */
-    .comparativa { background: var(--sand); padding: 100px 24px; border-top: 1px solid var(--sand2); }
-    .comp-inner { max-width: 1080px; margin: 0 auto; }
-    .comp-header { text-align: center; margin-bottom: 56px; }
-    .comp-header h2 {
-      font-family: var(--serif); font-size: clamp(36px, 5vw, 52px);
-      color: var(--ink); letter-spacing: -1px;
-    }
-    .comp-header p { font-size: 17px; color: var(--body); margin-top: 12px; }
-
-    .comp-table-wrap {
-      overflow-x: auto; border-radius: 20px;
-      border: 1px solid rgba(0,0,0,0.07);
-    }
-    table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 680px; }
-    thead tr { background: var(--ink); }
-    thead th {
-      padding: 14px 18px; text-align: left;
-      font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
-      color: rgba(255,255,255,0.65); white-space: nowrap;
-    }
-    thead th:first-child { color: rgba(255,255,255,0.92); }
-    tbody tr { border-bottom: 1px solid rgba(0,0,0,0.05); background: var(--white); transition: background 0.15s; }
-    tbody tr:last-child { border-bottom: none; }
-    tbody tr:hover { background: #fefcfa; }
-    tbody tr.hl { background: rgba(0,151,178,0.05); }
-    tbody tr.hl:hover { background: rgba(0,151,178,0.09); }
-    td { padding: 14px 18px; color: var(--body); vertical-align: middle; }
-    td:first-child { font-weight: 600; color: var(--ink); white-space: nowrap; }
-    .hl td:first-child { color: var(--teal-d); font-weight: 700; }
-    .check { color: var(--teal-d); font-weight: 700; font-size: 15px; }
-    .cross { color: #8fa5ab; font-size: 16px; }
-    .partial { color: #b56a00; font-size: 13px; font-weight: 600; }
-    .price-tag { font-weight: 600; color: var(--ink); }
-    .price-main { color: var(--teal-d); font-weight: 700; }
-    .comp-note { text-align: center; font-size: 12px; color: var(--muted); margin-top: 16px; }
-
-    /* ─── CTA FINAL ─── */
-    .cta-final {
-      background: var(--ink); padding: 120px 24px;
-      text-align: center; position: relative; overflow: hidden;
-    }
-    .cta-final::before {
-      content:''; position:absolute; inset:0; pointer-events:none;
-      background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(0,151,178,0.18) 0%, transparent 70%);
-    }
-    .cta-final h2 {
-      font-family: var(--serif);
-      font-size: clamp(40px, 6vw, 76px);
-      color: var(--white); letter-spacing: -2px; line-height: 1.05;
-      margin-bottom: 20px; position: relative;
-    }
-    .cta-final h2 em { font-style: italic; color: #7ee8ff; }
-    .cta-final p {
-      font-size: 18px; color: rgba(255,255,255,0.62);
-      max-width: 460px; margin: 0 auto 40px; line-height: 1.6; position: relative;
-    }
-    .cta-group { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; }
-    .cta-final .btn-primary { font-size: 16px; padding: 16px 36px; }
-    .cta-badge {
-      display: flex; align-items: center; gap: 8px;
-      padding: 14px 24px; border-radius: 100px;
-      border: 1px solid rgba(255,255,255,0.18);
-      color: rgba(255,255,255,0.7); font-size: 14px;
-    }
-    .cta-badge svg { opacity: 0.7; }
-    .cta-guarantee {
-      margin-top: 28px; font-size: 13px; color: rgba(255,255,255,0.55);
-      position: relative;
-    }
-
-    /* ─── FOOTER ─── */
-    /* ─── POWERED BY ─── */
-    .powered-by {
-      background: var(--ink);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 64px 80px;
-      text-align: center;
-    }
-    .powered-label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: rgba(255,255,255,0.3);
-      margin-bottom: 36px;
-    }
-    .powered-grid {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: center;
-      gap: 12px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .powered-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      padding: 12px 20px;
-      flex: 1;
-    }
-    .powered-name { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.85); }
-    .powered-by-tag {
-      font-size: 10px;
-      color: var(--teal);
-      background: rgba(0,162,173,0.12);
-      border-radius: 20px;
-      padding: 2px 8px;
-      margin-top: 6px;
-      letter-spacing: 0.3px;
-    }
-    .powered-logo { display: block; margin-bottom: 10px; opacity: 0.85; }
-
-    /* ─── CONTACT ─── */
-    .contact-section {
-      background: var(--ink);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 80px 80px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .contact-label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: rgba(255,255,255,0.3);
-      margin-bottom: 12px;
-    }
-    .contact-title {
-      font-family: var(--serif);
-      font-size: 32px;
-      color: #fff;
-      margin-bottom: 8px;
-      text-align: center;
-    }
-    .contact-sub {
-      font-size: 15px;
-      color: rgba(255,255,255,0.45);
-      margin-bottom: 40px;
-      text-align: center;
-    }
-    .contact-form {
-      width: 100%;
-      max-width: 520px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 10px;
-      padding: 14px 16px;
-      font-size: 15px;
-      color: #fff;
-      font-family: var(--sans);
-      outline: none;
-      transition: border-color 0.2s;
-      resize: none;
-    }
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder { color: rgba(255,255,255,0.3); }
-    .contact-form input:focus,
-    .contact-form textarea:focus { border-color: var(--teal); }
-    .contact-form textarea { min-height: 120px; }
-    .contact-submit {
-      background: var(--teal);
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      padding: 14px 24px;
-      font-size: 15px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: opacity 0.2s;
-      font-family: var(--sans);
-    }
-    .contact-submit:hover { opacity: 0.85; }
-    .contact-ok {
-      display: none;
-      text-align: center;
-      color: var(--teal);
-      font-size: 15px;
-      padding: 16px 0;
-    }
-
-    footer {
-      background: var(--ink);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 40px 80px;
-      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
-    }
-    .footer-logo { font-family: var(--serif); font-size: 22px; color: var(--teal); }
-    .footer-love { font-size: 13px; color: rgba(255,255,255,0.45); }
-
-    /* ─── NEWS CARDS ─── */
-    .news-card-wrap { display: flex; flex-direction: column; gap: 10px; padding: 12px; }
-    .news-card {
-      background: rgba(255,255,255,0.07); border-radius: 12px; padding: 14px 16px;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-    .news-tag { font-size: 11px; color: rgba(255,255,255,0.45); margin-bottom: 6px; }
-    .news-title { font-size: 14px; color: rgba(255,255,255,0.88); font-weight: 600; line-height: 1.4; }
-
-    /* ─── TIMER CARDS ─── */
-    .timer-card-wrap { display: flex; flex-direction: column; gap: 16px; padding: 24px; }
-    .timer-card {
-      background: rgba(255,255,255,0.07); border-radius: 16px; padding: 20px;
-      display: flex; align-items: center; gap: 16px;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-    .timer-icon { font-size: 28px; }
-    .timer-label { font-size: 11px; color: rgba(255,255,255,0.45); margin-bottom: 4px; }
-    .timer-value { font-size: 32px; font-weight: 700; color: #7ee8ff; font-variant-numeric: tabular-nums; }
-    .reminder-card {
-      background: rgba(255,255,255,0.07); border-radius: 16px; padding: 16px 20px;
-      display: flex; align-items: center; gap: 14px;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-    .reminder-icon { font-size: 22px; }
-    .reminder-label { font-size: 11px; color: rgba(255,255,255,0.4); margin-bottom: 4px; }
-    .reminder-text { font-size: 14px; color: rgba(255,255,255,0.85); font-weight: 600; }
-
-    /* ─── GAME BUBBLES ─── */
-    .game-card-wrap { display: flex; flex-direction: column; gap: 10px; padding: 20px; }
-    .game-bubble {
-      max-width: 80%; border-radius: 16px; padding: 12px 16px;
-      font-size: 14px; line-height: 1.5; color: rgba(255,255,255,0.88);
-    }
-    .game-bubble.left {
-      background: rgba(255,255,255,0.1); border-radius: 16px 16px 16px 4px; align-self: flex-start;
-    }
-    .game-bubble.right {
-      background: var(--teal); border-radius: 16px 16px 4px 16px; align-self: flex-end;
-    }
-
-    /* ─── VOICE DEMO ─── */
-    .voice-demo {
-      background: var(--ink); padding: 100px 24px;
-      text-align: center; position: relative; overflow: hidden;
-    }
-    .voice-demo::before {
-      content:''; position:absolute; inset:0; pointer-events:none;
-      background: radial-gradient(ellipse 55% 55% at 50% 50%, rgba(0,151,178,0.15) 0%, transparent 70%);
-    }
-    .vd-inner { max-width: 680px; margin: 0 auto; position: relative; }
-    .vd-inner .section-badge { margin: 0 auto 20px; }
-    .vd-inner h2 {
-      font-family: var(--serif); font-size: clamp(32px,5vw,58px);
-      color: var(--white); letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 16px;
-    }
-    .vd-inner h2 em { font-style: italic; color: #7ee8ff; }
-    .vd-intro { font-size: 17px; color: rgba(255,255,255,0.55); margin-bottom: 48px; max-width: 480px; margin-left: auto; margin-right: auto; }
-    .vd-player {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 24px;
-      padding: 32px;
-    }
-    .vd-toggle {
-      display: flex; gap: 8px; justify-content: center; margin-bottom: 28px;
-    }
-    .vd-btn {
-      padding: 10px 22px; border-radius: 100px;
-      border: 1.5px solid rgba(255,255,255,0.2);
-      background: transparent; color: rgba(255,255,255,0.55);
-      font-size: 14px; font-weight: 600; cursor: pointer;
-      transition: all 0.2s;
-    }
-    .vd-btn.active {
-      background: var(--teal); border-color: var(--teal);
-      color: #fff;
-    }
-    .vd-bubble {
-      background: rgba(255,255,255,0.07);
-      border-radius: 16px 16px 16px 4px;
-      padding: 18px 22px;
-      font-size: 16px; color: rgba(255,255,255,0.85); line-height: 1.6;
-      text-align: left; margin-bottom: 24px;
-      font-style: italic;
-      position: relative;
-    }
-    .vd-bubble::before {
-      content: ''; position: absolute; left: -1px; top: -1px; right: -1px; bottom: -1px;
-      border-radius: 16px 16px 16px 4px;
-      background: linear-gradient(135deg, rgba(0,151,178,0.3), transparent);
-      pointer-events: none;
-    }
-    .vd-play-btn {
-      display: flex; align-items: center; gap: 12px;
-      background: var(--teal); color: #fff;
-      border: none; border-radius: 100px;
-      padding: 14px 28px; font-size: 15px; font-weight: 600;
-      cursor: pointer; transition: all 0.2s;
-      margin: 0 auto 20px;
-    }
-    .vd-play-btn:hover { background: var(--teal-d); transform: translateY(-1px); }
-    .vd-play-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
-    .vd-play-icon { font-size: 18px; width: 20px; text-align: center; }
-    .vd-wave-mini {
-      display: none; align-items: center; gap: 3px; height: 20px;
-    }
-    .vdw-bar {
-      width: 3px; background: rgba(255,255,255,0.8); border-radius: 2px;
-      animation: vbwave 0.7s ease-in-out infinite;
-    }
-    .vdw-bar:nth-child(1){height:8px}.vdw-bar:nth-child(2){height:14px;animation-delay:.1s}
-    .vdw-bar:nth-child(3){height:18px;animation-delay:.2s}.vdw-bar:nth-child(4){height:12px;animation-delay:.3s}
-    .vdw-bar:nth-child(5){height:16px;animation-delay:.15s}
-    .vd-powered {
-      font-size: 12px; color: rgba(255,255,255,0.3);
-      display: flex; align-items: center; justify-content: center; gap: 6px;
-    }
-    .vd-powered strong { color: rgba(255,255,255,0.55); }
-
-    /* ─── FADE IN ─── */
-    .fade-in {
-      opacity: 0; transform: translateY(20px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
-    }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 900px) {
-      nav { padding: 0 16px; height: 60px; }
-      .nav-links { display: none; }
-      .nav-logo { font-size: 20px; }
-      .nav-cta { padding: 8px 16px; font-size: 12px; }
-
-      .hero { grid-template-columns: 1fr; padding: 88px 24px 56px; gap: 32px; text-align: center; }
-      .hero-desc { margin-left: auto; margin-right: auto; font-size: 16px; }
-      .hero-actions { justify-content: center; }
-      .hero-proof { justify-content: center; }
-      .hero-right { align-items: center; }
-
-      .stats-bar { padding: 40px 24px; }
-      .stats-inner { grid-template-columns: repeat(2, 1fr); }
-      .stat-item { padding: 24px 20px; }
-      .stat-item:nth-child(2) { border-right: none; }
-      .stat-item:nth-child(3) { border-right: none; }
-      .stat-num { font-size: 40px; }
-      .stat-label { font-size: 12px; max-width: 100%; }
-
-      .intro, .quien-grid { grid-template-columns: 1fr; gap: 32px; }
-      .intro { padding: 60px 24px; }
-
-      .voice-scene { min-height: 320px; padding: 36px 28px; gap: 20px; }
-      .voice-tags { gap: 6px; }
-      .vtag { padding: 5px 12px; font-size: 11px; }
-
-      .feature-row { grid-template-columns: 1fr; }
-      .feature-row.reverse { direction: ltr; }
-      .feature-content { padding: 36px 28px; }
-      .feature-visual { min-height: 220px; padding: 36px 28px; }
-      .feature-content h3 { font-size: 22px; }
-      .feature-content p { font-size: 15px; }
-      .feature-content li { font-size: 14px; }
-
-      .test-grid { grid-template-columns: 1fr; }
-      .test-card { padding: 24px; }
-
-      .how-steps { grid-template-columns: 1fr 1fr; }
-      .how-step { padding: 28px 20px; }
-      .how-step-num { font-size: 48px; margin-bottom: 16px; }
-      .how-step h3 { font-size: 15px; }
-      .how-step p { font-size: 13px; }
-
-      .quien-card { padding: 32px 24px; }
-      .quien-card h3 { font-size: 22px; }
-      .quien-emoji { font-size: 36px; margin-bottom: 16px; }
-
-      .features-header { padding: 60px 24px 44px; }
-      .comparativa { padding: 70px 24px; }
-      .para-quien { padding: 70px 24px; }
-      .voice-demo { padding: 70px 24px; }
-
-      table { font-size: 12px; min-width: 860px; }
-      thead th { padding: 12px 8px; font-size: 10px; }
-      tbody td { padding: 12px 8px; font-size: 12px; }
-
-      .contact-section { padding: 64px 24px; }
-      .contact-title { font-size: 26px; }
-      .powered-by { padding: 48px 24px; }
-      .powered-grid { flex-wrap: wrap; }
-      .powered-item { min-width: 140px; flex: 1 1 calc(33% - 12px); padding: 14px 16px; }
-      footer { padding: 28px 20px; }
-    }
-    @media (max-width: 480px) {
-      nav { padding: 0 12px; height: 56px; }
-      .nav-logo { font-size: 16px; gap: 6px; }
-      .nav-logo img { width: 22px !important; height: 22px !important; }
-      .nav-cta { padding: 7px 13px; font-size: 11px; }
-
-      .hero { padding: 72px 16px 48px; gap: 28px; }
-      .hero h1 { font-size: clamp(32px, 8vw, 48px); margin-bottom: 16px; }
-      .hero-desc { font-size: 15px; line-height: 1.6; margin-bottom: 24px; }
-      .rosita-display { max-width: 280px; padding: 32px 36px 24px; }
-      .btn-primary { padding: 12px 20px; font-size: 13px; }
-      .hero-proof-text { font-size: 12px; }
-
-      .stats-bar { padding: 24px 12px; }
-      .stats-inner { grid-template-columns: 1fr; }
-      .stat-item { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.07); padding: 16px 12px; }
-      .stat-item:last-child { border-bottom: none; }
-      .stat-num { font-size: 32px; margin-bottom: 6px; }
-      .stat-label { font-size: 11px; }
-
-      .intro { padding: 40px 16px; }
-      .intro h2 { font-size: clamp(26px, 6.5vw, 36px); margin-bottom: 14px; }
-      .intro p { font-size: 14px; margin-bottom: 10px; }
-      .voice-scene { min-height: 260px; padding: 24px 16px; gap: 16px; }
-      .voice-tags { gap: 4px; padding: 0 4px; }
-      .vtag { padding: 4px 10px; font-size: 10px; }
-
-      .features-header { padding: 40px 16px 28px; }
-      .features-header h2 { font-size: clamp(24px, 6vw, 36px); }
-
-      .feature-content { padding: 24px 16px; }
-      .feature-visual { padding: 20px 16px; min-height: 180px; }
-      .feature-icon-lg { width: 44px; height: 44px; font-size: 22px; margin-bottom: 14px; }
-      .feature-content h3 { font-size: 19px; margin-bottom: 10px; }
-      .feature-content p { font-size: 13px; line-height: 1.65; }
-      .feature-content ul { margin-top: 12px; gap: 8px; }
-      .feature-content li { font-size: 13px; }
-      .game-card-wrap { padding: 16px; gap: 8px; }
-      .game-bubble { padding: 10px 13px; font-size: 13px; }
-      .news-card-wrap { padding: 8px; gap: 8px; }
-      .news-title { font-size: 13px; }
-      .timer-card-wrap { padding: 16px; gap: 12px; }
-      .timer-value { font-size: 26px; }
-      .alert-card { padding: 16px; max-width: 260px; }
-      .alert-title { font-size: 13px; }
-      .alert-body { font-size: 12px; }
-      .music-card { padding: 20px; max-width: 260px; }
-      .music-title { font-size: 18px; }
-      .music-sub { font-size: 12px; }
-
-      .testimonios { padding: 56px 16px; }
-      .test-header { margin-bottom: 36px; }
-      .test-header h2 { font-size: clamp(26px, 6vw, 40px); }
-      .test-header p { font-size: 14px; }
-      .test-card { padding: 16px; gap: 12px; }
-      .test-text { font-size: 14px; line-height: 1.65; }
-      .test-avatar { width: 36px; height: 36px; font-size: 16px; }
-      .test-name { font-size: 12px; }
-      .test-loc { font-size: 11px; }
-
-      .how { padding: 56px 16px; }
-      .how-header { margin-bottom: 40px; }
-      .how-header h2 { font-size: clamp(26px, 6vw, 40px); }
-      .how-header p { font-size: 14px; max-width: 100%; }
-      .how-steps { grid-template-columns: 1fr; }
-      .how-step { padding: 16px 14px; border-radius: 14px; }
-      .how-step-num { font-size: 32px; margin-bottom: 10px; }
-      .how-step h3 { font-size: 14px; margin-bottom: 6px; }
-      .how-step p { font-size: 12px; }
-
-      .para-quien { padding: 48px 16px; }
-      .para-quien h2 { font-size: clamp(24px, 6vw, 36px); margin-bottom: 28px; }
-      .quien-grid { gap: 14px; }
-      .quien-card { padding: 20px 16px; border-radius: 18px; }
-      .quien-emoji { font-size: 28px; margin-bottom: 10px; }
-      .quien-card h3 { font-size: 18px; margin-bottom: 8px; }
-      .quien-card > p { font-size: 13px; line-height: 1.6; }
-      .quien-list { margin-top: 16px; gap: 8px; }
-      .quien-list li { font-size: 12px; gap: 8px; }
-      .check-badge { width: 18px; height: 18px; font-size: 9px; flex-shrink: 0; }
-
-      .comparativa { padding: 48px 16px; }
-      .comp-header h2 { font-size: clamp(24px, 6vw, 36px); }
-      .comp-header p { font-size: 14px; }
-      table { font-size: 11px; min-width: 860px; }
-      thead th { padding: 10px 6px; font-size: 9px; }
-      tbody td { padding: 10px 6px; font-size: 11px; }
-      td:first-child { font-size: 11px; }
-
-      .voice-demo { padding: 48px 16px; }
-      .vd-inner h2 { font-size: clamp(26px, 6vw, 40px); }
-      .vd-intro { font-size: 14px; max-width: 100%; margin-bottom: 32px; }
-      .vd-toggle { flex-wrap: wrap; gap: 8px; }
-      .vd-btn { padding: 8px 14px; font-size: 12px; }
-      .vd-bubble { font-size: 13px; padding: 14px 16px; }
-      .vd-powered { font-size: 11px; }
-      .vd-player { padding: 20px 16px; }
-
-      .cta-final { padding: 72px 16px; }
-      .cta-final h2 { font-size: clamp(32px, 7vw, 52px); }
-      .cta-final p { font-size: 15px; }
-      .cta-group { gap: 10px; }
-      .cta-badge { padding: 12px 18px; font-size: 13px; }
-
-      .contact-section { padding: 48px 16px; }
-      .powered-by { padding: 36px 16px; }
-      .powered-grid { gap: 8px; flex-wrap: wrap; }
-      .powered-item { min-width: 0; max-width: none; flex: 1 1 calc(50% - 8px); }
-      footer { padding: 20px 12px; flex-direction: column; align-items: flex-start; gap: 8px; }
-      .footer-logo { font-size: 16px; }
-      .footer-love { font-size: 11px; }
-    }
-  </style>
+}
+
+/* Scroll cue */
+.hero-scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,.5);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: bounce 2.4s ease-in-out infinite;
+}
+
+.hero-scroll svg { opacity: .6; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+/* ── Section headers ──────────────────────────────────── */
+.section-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 16px;
+}
+
+.section-title-lg {
+  font-family: var(--ff-serif);
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.2;
+  color: var(--ink);
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+.section-title-lg em { font-style: italic; color: var(--blue); }
+
+.section-lead {
+  font-size: 18px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+/* ── Press strip ──────────────────────────────────────── */
+.press {
+  background: var(--blue-pale);
+  border-bottom: 1px solid var(--border);
+  padding: 22px 0;
+}
+
+.press-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.press-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.press-logos {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.press-logo {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  letter-spacing: .5px;
+  opacity: .65;
+}
+
+/* ── Problem section ──────────────────────────────────── */
+.problem {
+  padding: 100px 0;
+}
+
+.problem-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+@media (max-width: 900px) { .problem-inner { grid-template-columns: 1fr; gap: 48px; } }
+
+.problem-photo {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 3/4;
+}
+
+.problem-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.problem-photo:hover img { transform: scale(1.03); }
+
+.problem-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,20,50,.3) 0%, transparent 50%);
+  border-radius: var(--radius-lg);
+}
+
+.problem-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stat-card {
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow .2s, transform .2s;
+}
+.stat-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--coral);
+}
+.stat-card:hover { box-shadow: var(--shadow-md); transform: translateX(4px); }
+
+.stat-number {
+  font-family: var(--ff-serif);
+  font-size: 52px;
+  color: var(--blue);
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.stat-text { font-size: 15px; color: var(--ink-mid); line-height: 1.5; }
+.stat-source { font-size: 11px; color: var(--ink-soft); margin-top: 6px; }
+
+/* ── Solution section ─────────────────────────────────── */
+.solution {
+  padding: 100px 0;
+  background: var(--blue);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.solution::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.04);
+}
+
+.solution .section-eyebrow { color: rgba(255,255,255,.6); }
+.solution .section-title-lg { color: #fff; }
+.solution .section-lead { color: rgba(255,255,255,.7); }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 64px;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 768px) { .steps { grid-template-columns: 1fr; } }
+
+.step {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius-md);
+  padding: 36px 32px;
+  position: relative;
+  transition: background .2s;
+}
+.step:hover { background: rgba(255,255,255,.12); }
+
+.step-num {
+  font-family: var(--ff-serif);
+  font-size: 80px;
+  font-style: italic;
+  color: rgba(255,255,255,.10);
+  position: absolute;
+  top: 12px; right: 20px;
+  line-height: 1;
+}
+
+.step-icon { font-size: 40px; margin-bottom: 20px; }
+.step-title { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 12px; }
+.step-desc { font-size: 15px; color: rgba(255,255,255,.7); line-height: 1.65; }
+
+/* ── Features ─────────────────────────────────────────── */
+.features { padding: 100px 0; }
+
+.features-header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+.features-header .section-lead { margin: 0 auto; }
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+@media (max-width: 768px) { .features-grid { grid-template-columns: 1fr; } }
+
+.feature-card {
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  transition: box-shadow .2s, transform .2s;
+}
+.feature-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+
+.feature-card-icon {
+  width: 60px; height: 60px;
+  border-radius: var(--radius-sm);
+  background: var(--blue-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+.feature-card.accent .feature-card-icon { background: var(--coral-light); }
+
+.feature-card-title { font-size: 21px; font-weight: 700; color: var(--ink); margin-bottom: 12px; letter-spacing: -.3px; }
+.feature-card-desc { font-size: 16px; color: var(--ink-mid); line-height: 1.65; }
+
+/* Big card with photo */
+.feature-card-big {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  background: var(--blue-pale);
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .feature-card-big { grid-column: span 1; grid-template-columns: 1fr; }
+}
+
+.feature-card-big .feature-photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 340px;
+}
+.feature-card-big .feature-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.feature-card-big:hover .feature-photo img { transform: scale(1.04); }
+
+.feature-card-big .feature-content {
+  padding: 52px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-tag {
+  display: inline-block;
+  background: var(--coral);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+/* ── Testimonials ─────────────────────────────────────── */
+.testimonials {
+  padding: 100px 0;
+  background: var(--blue-pale);
+}
+
+.testimonials-header { text-align: center; margin-bottom: 64px; }
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+.testimonial-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: box-shadow .2s, transform .2s;
+}
+.testimonial-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+
+.testimonial-quote {
+  font-family: var(--ff-serif);
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testimonial-avatar {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--blue-light);
+}
+.testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.testimonial-author-name { font-size: 15px; font-weight: 700; color: var(--ink); }
+.testimonial-author-role { font-size: 13px; color: var(--ink-soft); }
+
+.stars { color: #F4B730; font-size: 16px; letter-spacing: 2px; }
+
+/* ── Stats row ────────────────────────────────────────── */
+.stats-row {
+  padding: 80px 0;
+  background: var(--coral);
+  color: #fff;
+}
+
+.stats-row-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+@media (max-width: 768px) { .stats-row-inner { grid-template-columns: 1fr 1fr; } }
+
+.stat-item-num {
+  font-family: var(--ff-serif);
+  font-size: 52px;
+  color: #fff;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.stat-item-label { font-size: 14px; color: rgba(255,255,255,.8); line-height: 1.4; }
+
+/* ── Pricing ──────────────────────────────────────────── */
+.pricing { padding: 100px 0; }
+
+.pricing-header { text-align: center; margin-bottom: 64px; }
+
+.pricing-card {
+  max-width: 520px;
+  margin: 0 auto;
+  background: var(--blue);
+  color: #fff;
+  border-radius: var(--radius-xl);
+  padding: 56px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(27,77,158,.30);
+}
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+}
+
+.pricing-badge {
+  display: inline-block;
+  background: var(--coral);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 28px;
+}
+
+.pricing-amount {
+  font-family: var(--ff-serif);
+  font-size: 80px;
+  color: #fff;
+  letter-spacing: -3px;
+  line-height: 1;
+}
+.pricing-period { font-size: 18px; color: rgba(255,255,255,.6); margin-bottom: 40px; }
+
+.pricing-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+.pricing-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 16px;
+  color: rgba(255,255,255,.85);
+  line-height: 1.5;
+}
+.pricing-features li::before {
+  content: '✓';
+  background: var(--coral);
+  color: #fff;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.pricing-note { font-size: 13px; color: rgba(255,255,255,.4); margin-top: 20px; }
+
+/* ── CTA ──────────────────────────────────────────────── */
+.cta {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+}
+
+.cta-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(10,20,50,.88) 0%,
+    rgba(10,20,50,.60) 60%,
+    rgba(10,20,50,.30) 100%
+  );
+}
+
+.cta-content {
+  position: absolute;
+  z-index: 2;
+  left: clamp(24px, 5vw, 80px);
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 560px;
+  text-align: left;
+}
+
+.cta .section-eyebrow { color: rgba(255,255,255,.6); }
+.cta .section-title-lg { color: #fff; }
+.cta .section-lead { color: rgba(255,255,255,.75); margin-bottom: 40px; }
+
+.cta-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ── Footer ───────────────────────────────────────────── */
+.footer {
+  background: var(--ink);
+  color: rgba(255,255,255,.6);
+  padding: 48px 0;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-brand { font-size: 20px; font-weight: 700; color: #fff; }
+.footer-brand span { color: var(--coral); }
+
+.footer-links { display: flex; gap: 28px; list-style: none; }
+.footer-links a { font-size: 14px; color: rgba(255,255,255,.5); transition: color .2s; }
+.footer-links a:hover { color: rgba(255,255,255,.9); }
+
+.footer-copy { font-size: 13px; color: rgba(255,255,255,.3); }
+
+/* ── Full feature list ────────────────────────────────── */
+.features-full {
+  margin-top: 80px;
+  border-top: 1px solid var(--border);
+  padding-top: 64px;
+}
+
+.features-full-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.features-full-header h3 {
+  font-family: var(--ff-serif);
+  font-size: clamp(22px, 3vw, 32px);
+  color: var(--ink);
+  letter-spacing: -.5px;
+  margin-bottom: 12px;
+}
+
+.features-full-header p {
+  font-size: 16px;
+  color: var(--ink-soft);
+}
+
+.features-full-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .features-full-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .features-full-grid { grid-template-columns: 1fr; }
+}
+
+.features-full-group {
+  padding: 32px 28px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.features-full-group:nth-child(3n) { border-right: none; }
+
+@media (max-width: 900px) {
+  .features-full-group:nth-child(2n) { border-right: none; }
+  .features-full-group:nth-child(3n) { border-right: 1px solid var(--border); }
+  .features-full-group:nth-child(2n+1):nth-last-child(-n+2),
+  .features-full-group:nth-child(2n+1):nth-last-child(-n+2) ~ .features-full-group { border-bottom: none; }
+}
+
+.features-full-group-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.features-full-group-title span {
+  font-size: 16px;
+}
+
+.features-full-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.features-full-list li {
+  font-size: 14px;
+  color: var(--ink-mid);
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  line-height: 1.5;
+}
+
+.features-full-list li::before {
+  content: '✓';
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── Voice demo ───────────────────────────────────────── */
+.voice-demo {
+  padding: 100px 0;
+  background: var(--ink);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.voice-demo::before {
+  content: '';
+  position: absolute;
+  bottom: -120px; left: -120px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: rgba(232,115,90,.07);
+}
+.voice-demo-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+.voice-demo-inner .section-eyebrow { color: rgba(255,255,255,.5); }
+.voice-demo-inner .section-title-lg { color: #fff; }
+
+.vd-toggle {
+  display: inline-flex;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 999px;
+  padding: 4px;
+  gap: 4px;
+  margin: 40px auto 28px;
+}
+.vd-btn {
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: rgba(255,255,255,.55);
+  font-family: var(--ff-body);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.vd-btn.active {
+  background: var(--coral);
+  color: #fff;
+}
+
+.vd-bubble {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  font-family: var(--ff-serif);
+  font-style: italic;
+  font-size: 18px;
+  color: rgba(255,255,255,.85);
+  line-height: 1.65;
+  margin-bottom: 28px;
+  min-height: 80px;
+  transition: opacity .3s;
+}
+
+.vd-play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--coral);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 16px 36px;
+  font-family: var(--ff-body);
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .15s, box-shadow .15s;
+  margin-bottom: 20px;
+}
+.vd-play-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(232,115,90,.4); }
+
+.vd-wave {
+  display: none;
+  align-items: center;
+  gap: 3px;
+  height: 20px;
+}
+.vd-wave.playing { display: flex; }
+.vdw-bar {
+  width: 3px;
+  height: 8px;
+  background: rgba(255,255,255,.85);
+  border-radius: 2px;
+  animation: vdwave .8s ease-in-out infinite;
+}
+.vdw-bar:nth-child(2) { animation-delay: .1s; }
+.vdw-bar:nth-child(3) { animation-delay: .2s; }
+.vdw-bar:nth-child(4) { animation-delay: .15s; }
+.vdw-bar:nth-child(5) { animation-delay: .05s; }
+@keyframes vdwave {
+  0%, 100% { height: 6px; }
+  50% { height: 18px; }
+}
+.vd-powered {
+  font-size: 13px;
+  color: rgba(255,255,255,.35);
+}
+.vd-powered strong { color: rgba(255,255,255,.6); }
+
+/* ── Voice tags ───────────────────────────────────────── */
+.voice-tags-wrap {
+  margin-top: 48px;
+  text-align: center;
+}
+.voice-tags-label {
+  font-size: 13px;
+  color: rgba(255,255,255,.45);
+  letter-spacing: .5px;
+  margin-bottom: 16px;
+}
+.voice-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.vtag {
+  display: inline-block;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  color: rgba(255,255,255,.75);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: default;
+  transition: background .15s, border-color .15s;
+}
+.vtag:hover {
+  background: rgba(255,255,255,.13);
+  border-color: rgba(255,255,255,.25);
+}
+
+/* ── Para quién ───────────────────────────────────────── */
+.para-quien {
+  padding: 100px 0;
+  background: var(--blue-pale);
+}
+.para-quien-header { text-align: center; margin-bottom: 56px; }
+.quien-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 900px) { .quien-grid { grid-template-columns: 1fr; } }
+
+.quien-card {
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  transition: transform .2s, box-shadow .2s;
+}
+.quien-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.quien-card.dark {
+  background: var(--blue);
+  color: #fff;
+}
+.quien-card.light {
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--ink);
+}
+.quien-emoji { font-size: 40px; display: block; margin-bottom: 20px; }
+.quien-card h3 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -.3px;
+}
+.quien-card.dark h3 { color: #fff; }
+.quien-card.light h3 { color: var(--ink); }
+.quien-card p {
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+.quien-card.dark p { color: rgba(255,255,255,.7); }
+.quien-card.light p { color: var(--ink-mid); }
+.quien-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.quien-list li {
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+.quien-card.dark .quien-list li { color: rgba(255,255,255,.8); }
+.quien-card.light .quien-list li { color: var(--ink-mid); }
+.check-badge {
+  background: var(--coral);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── Comparativa ──────────────────────────────────────── */
+.comparativa {
+  padding: 100px 0;
+  background: var(--warm-white);
+}
+.comparativa-header { text-align: center; margin-bottom: 56px; }
+
+.comparativa-wrap { overflow-x: auto; }
+.comparativa-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 860px;
+}
+.comparativa-table th {
+  padding: 12px 14px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+}
+.comparativa-table th:first-child { text-align: left; min-width: 160px; }
+.comparativa-table td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink-mid);
+  vertical-align: middle;
+}
+.comparativa-table td:first-child { text-align: left; font-weight: 600; color: var(--ink); }
+.comparativa-table tr:last-child td { border-bottom: none; }
+
+.comparativa-table tr.hl { background: var(--blue-pale); }
+.comparativa-table tr.hl td:first-child { color: var(--blue); font-weight: 800; }
+.comparativa-table tr.hl td { border-bottom: 1px solid var(--border); }
+
+.comp-check { color: var(--blue); font-weight: 700; font-size: 16px; }
+.comp-cross { color: var(--ink-soft); font-size: 16px; opacity: .4; }
+.comp-partial {
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.comp-price { font-size: 13px; color: var(--ink); font-weight: 600; }
+.comp-price-main { color: var(--blue); font-weight: 800; }
+.comparativa-note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 20px;
+}
+
+/* ── Pricing guarantee ────────────────────────────────── */
+.pricing-guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: rgba(255,255,255,.5);
+}
+.pricing-guarantee svg { flex-shrink: 0; opacity: .7; }
+
+/* ── Contact ──────────────────────────────────────────── */
+.contact {
+  padding: 100px 0;
+  background: var(--blue-pale);
+}
+.contact-inner {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact-inner .section-lead { margin: 0 auto 40px; }
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  font-family: var(--ff-body);
+  font-size: 16px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(27,77,158,.12);
+}
+.contact-form textarea { min-height: 130px; resize: vertical; }
+.contact-submit {
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 16px 40px;
+  font-family: var(--ff-body);
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+  align-self: center;
+}
+.contact-submit:hover { background: var(--blue-mid); transform: translateY(-2px); }
+.contact-submit:disabled { opacity: .6; cursor: wait; }
+.contact-ok {
+  display: none;
+  text-align: center;
+  font-size: 17px;
+  color: var(--blue);
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* ── Powered by visual ────────────────────────────────── */
+.powered-by {
+  background: var(--ink);
+  padding: 60px 0;
+}
+.powered-by-label {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+  margin-bottom: 36px;
+}
+.powered-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.powered-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: var(--radius-sm);
+  padding: 12px 20px;
+  transition: background .2s;
+}
+.powered-item:hover { background: rgba(255,255,255,.10); }
+.powered-logo { width: 24px; height: 24px; opacity: .8; }
+.powered-name { font-size: 15px; font-weight: 700; color: rgba(255,255,255,.8); }
+.powered-tag { font-size: 11px; color: rgba(255,255,255,.35); margin-left: 2px; }
+
+/* ── Utils ────────────────────────────────────────────── */
+.text-center { text-align: center; }
+</style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <div class="nav-logo">
-      <img src="rosita.png" alt="CompañIA" width="32" height="32" style="border-radius:50%;object-fit:cover;" />
-      Compañ<em>IA</em>
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <div class="nav-brand">Compañ<span>IA</span></div>
+      <ul class="nav-links">
+        <li><a href="#voz">Demo de voz</a></li>
+        <li><a href="#funciones">Funciones</a></li>
+        <li><a href="#testimonios">Historias</a></li>
+        <li><a href="#precio">Precio</a></li>
+        <li><a href="#precio" class="nav-cta">Empezar gratis</a></li>
+      </ul>
     </div>
-    <ul class="nav-links">
-      <li><a href="#features">Funciones</a></li>
-      <li><a href="#voz">Escuchar voz</a></li>
-      <li><a href="#testimonios">Testimonios</a></li>
-      <li><a href="#como-funciona">Cómo funciona</a></li>
-    </ul>
-    <a href="https://expo.dev/artifacts/eas/bUSefXyLPKEEjCk1b9pJjT.apk" target="_blank" class="nav-cta">Descargar app</a>
-  </nav>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grain"></div>
+<!-- HERO — full screen -->
+<section class="hero">
+  <!-- Foto: abuela sonriendo con tablet en sala luminosa -->
+  <img
+    class="hero-bg"
+    src="https://res.cloudinary.com/dy1ll1azp/image/upload/v1774034375/Gemini_Generated_Image_mn4eosmn4eosmn4e_dnumw6.png"
+    alt="Adulta mayor sonriendo con su smartphone"
+  >
+  <div class="hero-overlay"></div>
 
-    <div class="hero-left fade-in visible">
-      <div class="hero-pill">
-        <span class="hero-pill-dot"></span>
-        Asistente de voz con IA
-      </div>
-      <h1>La voz<br>que <em>nunca se va.</em></h1>
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Tu ser querido<br>
+        nunca más<br>
+        <em>completamente solo.</em>
+      </h1>
       <p class="hero-desc">
-        Un compañero de voz con IA que charla, recuerda, pone música, te informa y te acompaña — adaptado a quien seas y a cómo hablás.
+        Rosita es una compañera de voz con IA que escucha, recuerda y cuida — y mantiene a toda la familia informada, en tiempo real.
       </p>
       <div class="hero-actions">
-        <a href="https://expo.dev/artifacts/eas/bUSefXyLPKEEjCk1b9pJjT.apk" target="_blank" class="btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h4.17v6h5V9h4.17L12 2z"/></svg>
-          Descargar gratis
+        <a href="#precio" class="btn btn-primary">
+          Probá gratis 7 días →
         </a>
-        <a href="#como-funciona" class="btn-ghost">
-          Ver cómo funciona →
-        </a>
+        <a href="#como-funciona" class="btn btn-ghost">Ver cómo funciona</a>
       </div>
-      <div class="hero-proof">
-        <div class="avatar-stack">
-          <div class="av">👩‍🦳</div>
-          <div class="av">👨</div>
-          <div class="av">👩</div>
-          <div class="av">🧓</div>
-        </div>
-        <div class="hero-proof-text">
-          <strong>Muchas personas</strong> ya usan CompañIA<br>en Argentina
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-right fade-in visible">
-      <div class="rosita-display">
-        <div class="face">
-          <div class="eyes-row">
-            <div class="eye">
-              <div class="lid"></div>
-              <div class="iris"><div class="pupila"></div></div>
-              <div class="blink"></div>
-              <div class="lid-bottom"></div>
-            </div>
-            <div class="eye">
-              <div class="lid"></div>
-              <div class="iris"><div class="pupila"></div></div>
-              <div class="blink"></div>
-              <div class="lid-bottom"></div>
-            </div>
+      <div class="hero-trust">
+        <div class="trust-avatars">
+          <div class="trust-avatar">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=72&h=72&q=80" alt="">
           </div>
-          <div class="boca"></div>
+          <div class="trust-avatar">
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=72&h=72&q=80" alt="">
+          </div>
+          <div class="trust-avatar">
+            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=72&h=72&q=80" alt="">
+          </div>
         </div>
-        <div class="waveform">
-          <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
-          <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
-          <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
-        </div>
-        <div class="rosita-status">
-          <span class="status-dot"></span>
-          CompañIA está escuchando
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <div class="stats-bar">
-    <div class="stats-inner">
-      <div class="stat-item fade-in">
-        <div class="stat-num">60<em>%</em></div>
-        <div class="stat-label">de usuarios convierten a CompañIA en hábito diario al mes de usarla</div>
-      </div>
-      <div class="stat-item fade-in">
-        <div class="stat-num">24</div>
-        <div class="stat-label">conversaciones semanales en promedio por usuario activo</div>
-      </div>
-      <div class="stat-item fade-in">
-        <div class="stat-num">70<em>%</em></div>
-        <div class="stat-label">más lento es el deterioro cognitivo con interacción social frecuente ¹</div>
-      </div>
-      <div class="stat-item fade-in">
-        <div class="stat-num">3<em>/4</em></div>
-        <div class="stat-label">usuarios se sienten menos solos luego de 2 semanas con CompañIA</div>
+        <span>Familias de Argentina ya la usan · <strong style="color:#fff">MVP en producción</strong></span>
       </div>
     </div>
   </div>
 
-  <!-- VOICE DEMO -->
-  <section class="voice-demo" id="voz">
-    <div class="vd-inner">
-      <div class="section-badge fade-in">Escuchá la voz</div>
-      <h2 class="fade-in">Una voz que<br><em>se siente real.</em></h2>
-      <p class="vd-intro fade-in">Potenciada por ElevenLabs — la tecnología de voz más avanzada del mundo. Natural, cálida, sin tonos robóticos.</p>
-      <div class="vd-player fade-in">
-        <div class="vd-toggle">
-          <button class="vd-btn active" data-genero="femenina">♀ Voz femenina</button>
-          <button class="vd-btn" data-genero="masculina">♂ Voz masculina</button>
-        </div>
-        <div class="vd-bubble" id="vd-bubble">
-          "¡Hola! Soy tu compañera de voz. Estoy acá para charlar, recordarte lo que quieras y acompañarte cuando más lo necesitás. ¿En qué te puedo ayudar?"
-        </div>
-        <button class="vd-play-btn" id="vd-play-btn">
-          <span class="vd-play-icon">▶</span>
-          <span class="vd-play-label">Escuchar muestra</span>
-          <div class="vd-wave-mini" id="vd-wave">
-            <div class="vdw-bar"></div><div class="vdw-bar"></div><div class="vdw-bar"></div>
-            <div class="vdw-bar"></div><div class="vdw-bar"></div>
+  <!-- Floating quote, desktop only -->
+  <div class="hero-quote">
+    <div class="hero-quote-text">"La llama por su nombre. A veces le cuenta cosas que a nosotros no nos dice."</div>
+    <div class="hero-quote-author">
+      <strong>Tomás V.</strong>
+      Nieto · Córdoba
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="hero-scroll">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <path d="M10 4v12M4 10l6 6 6-6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section>
+
+<!-- PRESS STRIP -->
+<div class="press">
+  <div class="container">
+    <div class="press-inner">
+      <div class="press-label">Mencionado en</div>
+      <div class="press-logos">
+        <div class="press-logo">La Nación</div>
+        <div class="press-logo">Clarín</div>
+        <div class="press-logo">Infobae Tech</div>
+        <div class="press-logo">TecnoXplora</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POWERED BY VISUAL -->
+<div class="powered-by">
+  <div class="container">
+    <div class="powered-by-label">Construido sobre tecnología de clase mundial</div>
+    <div class="powered-grid">
+      <div class="powered-item">
+        <img class="powered-logo" src="https://cdn.simpleicons.org/anthropic/ffffff" alt="Anthropic">
+        <span class="powered-name">Claude</span>
+        <span class="powered-tag">Anthropic</span>
+      </div>
+      <div class="powered-item">
+        <img class="powered-logo" src="https://cdn.simpleicons.org/elevenlabs/ffffff" alt="ElevenLabs">
+        <span class="powered-name">ElevenLabs</span>
+        <span class="powered-tag">Síntesis de voz</span>
+      </div>
+      <div class="powered-item">
+        <svg class="powered-logo" viewBox="0 0 24 24" fill="none"><rect x="9" y="2" width="6" height="11" rx="3" fill="white"/><path d="M5 10a7 7 0 0 0 14 0" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="17" x2="12" y2="21" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="9" y1="21" x2="15" y2="21" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="powered-name">Whisper</span>
+        <span class="powered-tag">OpenAI</span>
+      </div>
+      <div class="powered-item">
+        <img class="powered-logo" src="https://cdn.simpleicons.org/telegram/ffffff" alt="Telegram">
+        <span class="powered-name">Telegram</span>
+        <span class="powered-tag">Alertas familia</span>
+      </div>
+      <div class="powered-item">
+        <img class="powered-logo" src="https://cdn.simpleicons.org/react/ffffff" alt="React Native">
+        <span class="powered-name">React Native</span>
+        <span class="powered-tag">Expo</span>
+      </div>
+      <div class="powered-item">
+        <img class="powered-logo" src="https://cdn.simpleicons.org/railway/ffffff" alt="Railway">
+        <span class="powered-name">Railway</span>
+        <span class="powered-tag">Cloud</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="container">
+    <div class="problem-inner">
+
+      <div class="problem-photo">
+        <!-- Foto: persona mayor mirando por la ventana, sola, luz cálida -->
+        <img
+          src="https://res.cloudinary.com/dy1ll1azp/image/upload/v1774034548/Gemini_Generated_Image_3q9gur3q9gur3q9g_kk77am.png"
+          alt="Adulto mayor mirando por la ventana"
+          loading="lazy"
+        >
+      </div>
+
+      <div>
+        <div class="section-eyebrow">El problema</div>
+        <h2 class="section-title-lg">
+          Millones de adultos mayores<br>pasan el día <em>en silencio.</em>
+        </h2>
+        <p class="section-lead" style="margin-bottom: 40px;">
+          El aislamiento no es solo tristeza. Es un riesgo real para la salud. Y las soluciones actuales — Alexa, Google — no tienen memoria ni calidez. Son herramientas, no compañeras.
+        </p>
+
+        <div class="problem-stats">
+          <div class="stat-card">
+            <div class="stat-number">40%</div>
+            <div class="stat-text">de los mayores de 75 años pasa más de <strong>8 horas diarias sin contacto humano</strong></div>
+            <div class="stat-source">Fuente: OMS, 2023</div>
           </div>
-        </button>
-        <div class="vd-powered">
-          <span>Potenciado por</span><strong>ElevenLabs</strong>
+          <div class="stat-card">
+            <div class="stat-number">+50%</div>
+            <div class="stat-text">de riesgo de <strong>deterioro cognitivo</strong> por aislamiento social sostenido</div>
+            <div class="stat-source">Fuente: OMS</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" style="font-size:36px;letter-spacing:-1px">$400–1.200</div>
+            <div class="stat-text">al mes cuesta un <strong>cuidador presencial</strong> — inaccesible para la gran mayoría</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution" id="como-funciona">
+  <div class="container">
+    <div class="section-eyebrow">Cómo funciona</div>
+    <h2 class="section-title-lg">Rosita escucha. Recuerda.<em> Cuida.</em></h2>
+    <p class="section-lead">
+      Sin comandos, sin botones, sin complicaciones. El usuario simplemente habla — igual que habla con cualquier persona.
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-icon">🗣️</div>
+        <div class="step-title">El usuario habla</div>
+        <div class="step-desc">
+          Rosita escucha de forma continua en español rioplatense. No hace falta decir "Hey" ni tocar la pantalla. Es completamente natural.
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-icon">🧠</div>
+        <div class="step-title">Entiende el contexto</div>
+        <div class="step-desc">
+          La IA recuerda conversaciones anteriores, medicamentos, los nombres de los nietos, fechas importantes. Cada charla construye la relación.
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-icon">🔊</div>
+        <div class="step-title">Responde con voz cálida</div>
+        <div class="step-desc">
+          Voz natural adaptada a la edad, generada en segundos. No suena a robot. Suena a alguien que te conoce hace tiempo.
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- INTRO -->
-  <div class="intro">
-    <div class="fade-in">
-      <div class="intro-label">Más que un asistente</div>
-      <h2>Una compañía<br>de <em>verdad.</em></h2>
-      <p>CompañIA se adapta a tu forma de hablar y a tu vida. No importa tu edad, ocupación o rutina — si tenés algo que decir, ella está para escucharte, recordarlo y responderte.</p>
-      <p>Sin pantallas. Sin menúes. Si podés hablar, podés usarla.</p>
-      <a href="https://expo.dev/artifacts/eas/bUSefXyLPKEEjCk1b9pJjT.apk" target="_blank" class="intro-link">Empezar ahora →</a>
-    </div>
-    <div class="intro-visual fade-in">
-      <div class="voice-scene">
-        <div class="rosita-mini" style="padding:22px 26px 18px; border-radius:24px;">
-          <div class="rm-eyes">
-            <div class="rm-eye"><div class="rm-lid"></div><div class="rm-iris"><div class="rm-pupil"></div></div><div class="rm-blink"></div></div>
-            <div class="rm-eye"><div class="rm-lid"></div><div class="rm-iris"><div class="rm-pupil"></div></div><div class="rm-blink"></div></div>
-          </div>
-          <div class="rm-boca"></div>
+<!-- VOICE DEMO -->
+<section class="voice-demo" id="voz">
+  <div class="container">
+    <div class="voice-demo-inner">
+      <div class="section-eyebrow">Escuchá la voz</div>
+      <h2 class="section-title-lg">Una voz que <em>se siente real.</em></h2>
+      <p class="section-lead" style="color:rgba(255,255,255,.65);margin:0 auto;">
+        Potenciada por ElevenLabs — la tecnología de síntesis de voz más avanzada del mundo. Natural, cálida, sin tonos robóticos.
+      </p>
+
+      <div class="vd-toggle">
+        <button class="vd-btn active" data-genero="femenina">♀ Voz femenina</button>
+        <button class="vd-btn" data-genero="masculina">♂ Voz masculina</button>
+      </div>
+
+      <div class="vd-bubble" id="vd-bubble">
+        "¡Hola! Soy tu compañera de voz. Estoy acá para charlar, recordarte lo que quieras y acompañarte cuando más lo necesitás. ¿En qué te puedo ayudar?"
+      </div>
+
+      <button class="vd-play-btn" id="vd-play-btn">
+        <span id="vd-icon">▶</span>
+        <span id="vd-label">Escuchar muestra</span>
+        <div class="vd-wave" id="vd-wave">
+          <div class="vdw-bar"></div><div class="vdw-bar"></div><div class="vdw-bar"></div>
+          <div class="vdw-bar"></div><div class="vdw-bar"></div>
         </div>
-        <div class="voice-big-wave">
-          <div class="vbw-bar"></div><div class="vbw-bar"></div><div class="vbw-bar"></div>
-          <div class="vbw-bar"></div><div class="vbw-bar"></div><div class="vbw-bar"></div>
-          <div class="vbw-bar"></div><div class="vbw-bar"></div><div class="vbw-bar"></div>
-          <div class="vbw-bar"></div><div class="vbw-bar"></div><div class="vbw-bar"></div>
-          <div class="vbw-bar"></div>
-        </div>
-        <div class="voice-caption">
-          <strong>CompañIA está escuchando</strong>
-          Solo hablás — ella entiende, recuerda y responde
-        </div>
+      </button>
+
+      <div class="vd-powered">Potenciado por <strong>ElevenLabs</strong></div>
+
+      <!-- VOICE TAGS -->
+      <div class="voice-tags-wrap">
+        <div class="voice-tags-label">Ejemplos de lo que podés decirle</div>
         <div class="voice-tags">
-          <span class="vtag active">🎵 "Ponete unos boleros"</span>
+          <span class="vtag">🎵 "Ponete unos boleros"</span>
           <span class="vtag">⚽ "¿Cómo salió Boca?"</span>
           <span class="vtag">🌤 "¿Llueve hoy?"</span>
-          <span class="vtag active">🧠 "Poneme un cálculo"</span>
+          <span class="vtag">🧠 "Poneme un cálculo"</span>
           <span class="vtag">💊 "¿Tomé el diclofenac?"</span>
           <span class="vtag">⏰ "Avisame en 20 minutos"</span>
           <span class="vtag">🗣 "Jugamos a los refranes"</span>
@@ -1620,709 +1629,639 @@
       </div>
     </div>
   </div>
+</section>
 
-  <!-- FEATURES -->
-  <section class="features" id="features">
-    <div class="features-header fade-in">
-      <div class="section-badge">Funcionalidades</div>
-      <h2>Todo lo que necesitás,<br>sin complicaciones.</h2>
+<!-- FEATURES -->
+<section class="features" id="funciones">
+  <div class="container">
+    <div class="features-header">
+      <div class="section-eyebrow">Funciones</div>
+      <h2 class="section-title-lg">Todo lo que Rosita puede hacer</h2>
+      <p class="section-lead">Diseñada para personas mayores. Construida para familias que no pueden estar ahí las 24 horas.</p>
     </div>
 
-    <div style="max-width:1080px;margin:0 auto;padding:0 24px 80px;display:flex;flex-direction:column;gap:16px">
+    <div class="features-grid">
 
-      <!-- 1. Charla y compañía -->
-      <div class="feature-row fade-in">
-        <div class="feature-content">
-          <div class="feature-icon-lg" style="background:#beedf5">💬</div>
-          <h3>Charla y compañía real</h3>
-          <p>Conversación genuina, con memoria. CompañIA recuerda lo que le contás y retoma el hilo la próxima vez.</p>
-          <ul>
-            <li>Recuerda tu nombre, familia, gustos y anécdotas</li>
-            <li>Pregunta cómo seguiste después de cada charla</li>
-            <li>Tono cálido adaptado a la edad del usuario</li>
-            <li>Voz masculina o femenina a elección</li>
-          </ul>
+      <!-- Big card with real photo -->
+      <div class="feature-card feature-card-big">
+        <div class="feature-photo">
+          <!-- Foto: familia joven mirando celular juntos, felices -->
+          <img
+            src="https://res.cloudinary.com/dy1ll1azp/image/upload/v1774034833/Gemini_Generated_Image_pf7te8pf7te8pf7t_j8zdry.png"
+            alt="Familia conectada vía celular"
+            loading="lazy"
+          >
         </div>
-        <div class="feature-visual">
-          <div class="voice-moment">
-            <div class="rosita-mini">
-              <div class="rm-eyes">
-                <div class="rm-eye"><div class="rm-lid"></div><div class="rm-iris"><div class="rm-pupil"></div></div><div class="rm-blink"></div></div>
-                <div class="rm-eye"><div class="rm-lid"></div><div class="rm-iris"><div class="rm-pupil"></div></div><div class="rm-blink"></div></div>
-              </div>
-              <div class="rm-boca"></div>
-            </div>
-            <div class="vm-wave">
-              <div class="vmw-bar"></div><div class="vmw-bar"></div><div class="vmw-bar"></div>
-              <div class="vmw-bar"></div><div class="vmw-bar"></div><div class="vmw-bar"></div>
-              <div class="vmw-bar"></div>
-            </div>
-            <div class="vml-label">
-              <strong>"¿Cómo seguiste del médico?"</strong>
-              CompañIA recuerda tu turno de ayer — sin que se lo digas
-            </div>
+        <div class="feature-content">
+          <div class="feature-tag">Familia conectada</div>
+          <div class="feature-card-title" style="font-size:26px">La familia siempre sabe cómo está</div>
+          <div class="feature-card-desc" style="font-size:17px;line-height:1.7">
+            Rosita envía alertas de SOS, resúmenes del estado de ánimo y mensajes de voz directamente al celular de cada familiar vía Telegram. Y también transmite mensajes de voz de la familia — en ambas direcciones.
           </div>
         </div>
       </div>
 
-      <!-- 2. Siempre escuchando -->
-      <div class="feature-row reverse fade-in">
-        <div class="feature-content">
-          <div class="feature-icon-lg" style="background:#fce7f3">🎙️</div>
-          <h3>Siempre escuchando, sin tocar nada</h3>
-          <p>No hay botones que presionar. CompañIA escucha en todo momento en español rioplatense y filtra inteligentemente para responder solo cuando te dirigís a ella.</p>
-          <ul>
-            <li>Escucha continua en segundo plano — siempre lista</li>
-            <li>Responde si la mencionás, si venís de charlar, o con pregunta directa</li>
-            <li>Botón manual para dictar, transcripto con IA</li>
-            <li>Se detiene sola durante la música y se reactiva al terminar</li>
-          </ul>
-        </div>
-        <div class="feature-visual" style="background:linear-gradient(135deg,#1a0a2e,#2d1060)">
-          <div class="voice-moment">
-            <div class="rosita-mini">
-              <div class="rm-eyes">
-                <div class="rm-eye"><div class="rm-lid"></div><div class="rm-iris"><div class="rm-pupil"></div></div><div class="rm-blink"></div></div>
-                <div class="rm-eye"><div class="rm-lid"></div><div class="rm-iris"><div class="rm-pupil"></div></div><div class="rm-blink"></div></div>
-              </div>
-              <div class="rm-boca"></div>
-            </div>
-            <div class="vm-wave">
-              <div class="vmw-bar"></div><div class="vmw-bar"></div><div class="vmw-bar"></div>
-              <div class="vmw-bar"></div><div class="vmw-bar"></div><div class="vmw-bar"></div>
-              <div class="vmw-bar"></div>
-            </div>
-            <div class="vml-label" style="color:#fff">
-              <strong style="color:#fff">"Rosita, ¿qué tiempo hace mañana?"</strong>
-              Sin botones — solo hablá
-            </div>
-          </div>
+      <div class="feature-card">
+        <div class="feature-card-icon">🧠</div>
+        <div class="feature-card-title">Memoria que crece con el tiempo</div>
+        <div class="feature-card-desc">
+          Recuerda anécdotas, el nombre de los nietos, los medicamentos que toma y las fechas que importan. Cada conversación enriquece la relación.
         </div>
       </div>
 
-      <!-- 3. Presencia activa -->
-      <div class="feature-row fade-in">
-        <div class="feature-content">
-          <div class="feature-icon-lg" style="background:#dff5e8">🌅</div>
-          <h3>Presencia activa, no solo respuestas</h3>
-          <p>CompañIA no espera que la llames. Si pasaron más de dos horas sin charlar, ella toma la iniciativa — con contexto real, no con frases genéricas.</p>
-          <ul>
-            <li>Saludo matutino a las 9h con clima, día y fecha</li>
-            <li>Saludo especial en el cumpleaños (con globos), Navidad y Año Nuevo</li>
-            <li>Inicia conversación si hay más de 2 hs de silencio (de día)</li>
-            <li>Silbido suave de inactividad a los 15 minutos</li>
-            <li>Recuerda fechas importantes y las menciona el día que corresponde</li>
-            <li>Modo noche: no interrumpe entre las 23h y las 9h</li>
-          </ul>
-        </div>
-        <div class="feature-visual" style="background:linear-gradient(135deg,#0a1f14,#1a3d26)">
-          <div class="voice-moment">
-            <div class="rosita-mini">
-              <div class="rm-eyes">
-                <div class="rm-eye"><div class="rm-lid"></div><div class="rm-iris"><div class="rm-pupil"></div></div><div class="rm-blink"></div></div>
-                <div class="rm-eye"><div class="rm-lid"></div><div class="rm-iris"><div class="rm-pupil"></div></div><div class="rm-blink"></div></div>
-              </div>
-              <div class="rm-boca"></div>
-            </div>
-            <div class="vm-wave">
-              <div class="vmw-bar"></div><div class="vmw-bar"></div><div class="vmw-bar"></div>
-              <div class="vmw-bar"></div><div class="vmw-bar"></div><div class="vmw-bar"></div>
-              <div class="vmw-bar"></div>
-            </div>
-            <div class="vm-label">
-              <strong>"¡Buenos días, Nora! Hoy es martes y hace fresco, 14 grados. ¿Cómo amaneciste?"</strong>
-              Sin que nadie la llame — ella inicia
-            </div>
-          </div>
+      <div class="feature-card accent">
+        <div class="feature-card-icon">🆘</div>
+        <div class="feature-card-title">SOS con un toque</div>
+        <div class="feature-card-desc">
+          Botón de emergencia visible en pantalla. Al mantenerlo presionado, Rosita alerta a todos los contactos familiares de forma inmediata.
         </div>
       </div>
 
-      <!-- 4. Familia + SOS -->
-      <div class="feature-row reverse fade-in">
-        <div class="feature-content">
-          <div class="feature-icon-lg" style="background:#dbeafe">📱</div>
-          <h3>La familia siempre conectada</h3>
-          <p>Los familiares se vinculan por Telegram. Reciben resúmenes diarios, pueden mandar audios y ser alertados al instante si algo no está bien.</p>
-          <ul>
-            <li>Audios de familiares anunciados y reproducidos en voz alta</li>
-            <li>Respuesta de voz desde la app — graba y envía por Telegram</li>
-            <li>"Sacame una foto" — cámara automática con cuenta regresiva y envío directo a la familia</li>
-            <li>Resumen diario automático del estado de ánimo a las 22h</li>
-            <li>Botón SOS de emergencia — 2 segundos de presión</li>
-            <li>Alerta instantánea a toda la familia ante emergencias</li>
-          </ul>
-        </div>
-        <div class="feature-visual blue-bg">
-          <div style="display:flex;flex-direction:column;gap:12px;width:100%;max-width:320px">
-            <div class="alert-card">
-              <div class="alert-header">
-                <div class="alert-icon">🎙️</div>
-                <div>
-                  <div class="alert-title">Mensaje de tu hijo Carlos</div>
-                  <div class="alert-sub">Telegram · Hace 2 min</div>
-                </div>
-              </div>
-              <div class="alert-body">"Mamá, ¿cómo estás? ¿Tomaste el medicamento?"</div>
-              <div class="alert-recipients">
-                <span class="recipient">▶ Reproduciendo</span>
-                <span class="recipient">🎤 Responder</span>
-              </div>
-            </div>
-            <div class="alert-card" style="border-left:3px solid #ef4444">
-              <div class="alert-header">
-                <div class="alert-icon">🆘</div>
-                <div>
-                  <div class="alert-title" style="color:#dc2626">Alerta de emergencia</div>
-                  <div class="alert-sub">Enviado a 3 familiares · Ahora</div>
-                </div>
-              </div>
-              <div class="alert-body" style="font-size:12px">Nora presionó el botón SOS. Por favor comunicate con ella de inmediato.</div>
-            </div>
-          </div>
+      <div class="feature-card">
+        <div class="feature-card-icon">🎵</div>
+        <div class="feature-card-title">Música, cuentos y juegos</div>
+        <div class="feature-card-desc">
+          Pone radio con solo pedirlo — Cadena 3, Radio Mitre, tango, folklore. También cuenta cuentos y juega a las adivinanzas para mantener la mente activa.
         </div>
       </div>
 
-      <!-- 5. Medicamentos -->
-      <div class="feature-row fade-in">
-        <div class="feature-content">
-          <div class="feature-icon-lg" style="background:#c8dff7">💊</div>
-          <h3>Recordatorios de medicamentos</h3>
-          <p>CompañIA avisa a la hora exacta, con voz. No con notificaciones silenciosas que se pierden en la pantalla.</p>
-          <ul>
-            <li>Aviso por voz a la hora exacta</li>
-            <li>Confirma que tomaste el medicamento</li>
-            <li>Conoce todos los medicamentos del perfil</li>
-            <li>La familia recibe reporte diario automático</li>
-          </ul>
-        </div>
-        <div class="feature-visual warm-bg">
-          <div class="voice-moment-light">
-            <div class="rosita-mini">
-              <div class="rm-eyes">
-                <div class="rm-eye"><div class="rm-lid"></div><div class="rm-iris"><div class="rm-pupil"></div></div><div class="rm-blink"></div></div>
-                <div class="rm-eye"><div class="rm-lid"></div><div class="rm-iris"><div class="rm-pupil"></div></div><div class="rm-blink"></div></div>
-              </div>
-              <div class="rm-boca"></div>
-            </div>
-            <div class="vml-wave">
-              <div class="vmlw-bar"></div><div class="vmlw-bar"></div><div class="vmlw-bar"></div>
-              <div class="vmlw-bar"></div><div class="vmlw-bar"></div><div class="vmlw-bar"></div>
-              <div class="vmlw-bar"></div>
-            </div>
-            <div class="vml-label">
-              <strong>"Nora, tomaste el enalapril?"</strong>
-              CompañIA avisa por voz — sin notificaciones ni pantallas
-            </div>
-            <span class="vml-tag">💊 8:00 AM · Aviso por voz</span>
-          </div>
+      <div class="feature-card accent">
+        <div class="feature-card-icon">💊</div>
+        <div class="feature-card-title">Recordatorios y clima</div>
+        <div class="feature-card-desc">
+          Recuerda tomar la medicación, avisa si va a llover antes de salir, y felicita en cumpleaños y fechas especiales — automáticamente.
         </div>
       </div>
 
-      <!-- 6. Ejercicios cognitivos -->
-      <div class="feature-row reverse fade-in">
-        <div class="feature-content">
-          <div class="feature-icon-lg" style="background:#fff3d4">🧠</div>
-          <h3>Ejercicios cognitivos y entretenimiento</h3>
-          <p>CompañIA no solo responde — también estimula la mente. Seis tipos de juegos por voz, diseñados para mantener el cerebro activo.</p>
-          <ul>
-            <li>Trivia de cultura general, historia y geografía argentina</li>
-            <li>Adivinanzas y refranes populares</li>
-            <li>Ejercicios de memoria (recordar palabras con distracción)</li>
-            <li>Cálculos mentales simples y del día a día</li>
-            <li>Trabalenguas para ejercitar la dicción</li>
-            <li>Cuentos cortos y humor rioplatense</li>
-          </ul>
-        </div>
-        <div class="feature-visual" style="background:linear-gradient(135deg,#1a1200,#2d2000)">
-          <div class="game-card-wrap">
-            <div class="game-bubble left">Poneme un cálculo mental</div>
-            <div class="game-bubble right">¡Va! Tenés 200 pesos. Comprás pan por 80 y leche por 65. ¿Cuánto te queda?</div>
-            <div class="game-bubble left">55 pesos</div>
-            <div class="game-bubble right">¡Exacto! ¡Muy bien! 🎉</div>
-          </div>
-        </div>
+    </div><!-- /features-grid -->
+
+    <!-- LISTA COMPLETA DE FUNCIONES -->
+    <div class="features-full">
+      <div class="features-full-header">
+        <h3>Todo lo que viene incluido</h3>
+        <p>Cada función está activa desde el primer día, sin configuración adicional.</p>
       </div>
 
-      <!-- TAMBIÉN INCLUYE -->
-      <div class="fade-in" style="background:linear-gradient(135deg,#f0fafa 0%,#e6f5f5 100%);border-radius:24px;padding:48px 40px;margin-top:8px;border:1px solid rgba(0,151,178,.1)">
-        <div style="text-align:center;margin-bottom:36px">
-          <div class="section-badge" style="margin:0 auto 14px">También incluye</div>
-          <h3 style="font-size:clamp(20px,2.8vw,26px);font-weight:300;color:#191c1d;letter-spacing:-.4px;margin:0">Todo lo que necesitás, ya incluido.</h3>
-          <p style="font-size:14px;color:#5a7a7a;margin-top:8px">Sin configuración extra. Sin apps adicionales.</p>
+      <div class="features-full-grid">
+
+        <div class="features-full-group">
+          <div class="features-full-group-title"><span>🗣️</span> Conversación con IA</div>
+          <ul class="features-full-list">
+            <li>Escucha continua en español rioplatense (es-AR), sin botones</li>
+            <li>Respuestas de voz natural con ElevenLabs — no suena a robot</li>
+            <li>Velocidad de voz adaptada automáticamente según la edad</li>
+            <li>Tono y vocabulario ajustado al perfil (jovial, cálido, pausado)</li>
+            <li>Modo de escucha manual con botón para grabación de hasta 8 seg</li>
+            <li>Transcripción de audio con OpenAI Whisper</li>
+            <li>Repetición del último mensaje si no se escuchó bien</li>
+          </ul>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px">
-          <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid rgba(0,151,178,.08);box-shadow:0 2px 10px rgba(0,151,178,.06)">
-            <div style="font-size:26px;margin-bottom:10px">🎵</div>
-            <h4 style="font-size:14px;font-weight:700;color:#191c1d;margin-bottom:6px">Música y radio</h4>
-            <p style="font-size:12px;color:#5a7a7a;line-height:1.6;margin:0">Tango, folklore, boleros, jazz, clásica y pop. Radios en vivo: Mitre, Nacional, Rivadavia y más. Solo con la voz.</p>
-          </div>
-          <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid rgba(0,151,178,.08);box-shadow:0 2px 10px rgba(0,151,178,.06)">
-            <div style="font-size:26px;margin-bottom:10px">📰</div>
-            <h4 style="font-size:14px;font-weight:700;color:#191c1d;margin-bottom:6px">Noticias y deportes</h4>
-            <p style="font-size:12px;color:#5a7a7a;line-height:1.6;margin:0">"¿Cómo salió Boca?" "¿Qué pasó con el dólar?" Titulares de Argentina actualizados en tiempo real.</p>
-          </div>
-          <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid rgba(0,151,178,.08);box-shadow:0 2px 10px rgba(0,151,178,.06)">
-            <div style="font-size:26px;margin-bottom:10px">⏰</div>
-            <h4 style="font-size:14px;font-weight:700;color:#191c1d;margin-bottom:6px">Timers por voz</h4>
-            <p style="font-size:12px;color:#5a7a7a;line-height:1.6;margin:0">"Avisame en 20 minutos." "Recordame el viernes el turno." Avisa con voz a la hora exacta.</p>
-          </div>
-          <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid rgba(0,151,178,.08);box-shadow:0 2px 10px rgba(0,151,178,.06)">
-            <div style="font-size:26px;margin-bottom:10px">🎭</div>
-            <h4 style="font-size:14px;font-weight:700;color:#191c1d;margin-bottom:6px">4 voces y avatar</h4>
-            <p style="font-size:12px;color:#5a7a7a;line-height:1.6;margin:0">2 femeninas + 2 masculinas. Avatar animado con expresiones en tiempo real: feliz, triste, sorprendida y más.</p>
-          </div>
-          <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid rgba(0,151,178,.08);box-shadow:0 2px 10px rgba(0,151,178,.06)">
-            <div style="font-size:26px;margin-bottom:10px">📊</div>
-            <h4 style="font-size:14px;font-weight:700;color:#191c1d;margin-bottom:6px">Historial de ánimo</h4>
-            <p style="font-size:12px;color:#5a7a7a;line-height:1.6;margin:0">Registro automático del estado emocional en cada charla. Visible para la familia con detalle por día.</p>
-          </div>
-          <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid rgba(0,151,178,.08);box-shadow:0 2px 10px rgba(0,151,178,.06)">
-            <div style="font-size:26px;margin-bottom:10px">🌤</div>
-            <h4 style="font-size:14px;font-weight:700;color:#191c1d;margin-bottom:6px">Fondo vivo</h4>
-            <p style="font-size:12px;color:#5a7a7a;line-height:1.6;margin:0">La pantalla cambia con la hora y el clima: azul de día, naranja al atardecer, estrellada de noche. Lluvia y nieve animadas.</p>
-          </div>
-          <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid rgba(0,151,178,.08);box-shadow:0 2px 10px rgba(0,151,178,.06)">
-            <div style="font-size:26px;margin-bottom:10px">🌙</div>
-            <h4 style="font-size:14px;font-weight:700;color:#191c1d;margin-bottom:6px">Modo noche</h4>
-            <p style="font-size:12px;color:#5a7a7a;line-height:1.6;margin:0">Entre las 23h y las 9h no interrumpe. Si la llamás, responde igual. Se reactiva sola al día siguiente.</p>
-          </div>
-          <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid rgba(0,151,178,.08);box-shadow:0 2px 10px rgba(0,151,178,.06)">
-            <div style="font-size:26px;margin-bottom:10px">📡</div>
-            <h4 style="font-size:14px;font-weight:700;color:#191c1d;margin-bottom:6px">Sin internet igual funciona</h4>
-            <p style="font-size:12px;color:#5a7a7a;line-height:1.6;margin:0">Chistes, hora y conversación básica sin señal. Avisa cuando se corta la conexión y cuando vuelve.</p>
-          </div>
-          <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid rgba(0,151,178,.08);box-shadow:0 2px 10px rgba(0,151,178,.06)">
-            <div style="font-size:26px;margin-bottom:10px">📸</div>
-            <h4 style="font-size:14px;font-weight:700;color:#191c1d;margin-bottom:6px">Foto para la familia</h4>
-            <p style="font-size:12px;color:#5a7a7a;line-height:1.6;margin:0">"Sacame una foto." La cámara abre sola, cuenta regresiva de 3 segundos y la foto llega directo al Telegram familiar.</p>
-          </div>
-          <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid rgba(0,151,178,.08);box-shadow:0 2px 10px rgba(0,151,178,.06)">
-            <div style="font-size:26px;margin-bottom:10px">🎂</div>
-            <h4 style="font-size:14px;font-weight:700;color:#191c1d;margin-bottom:6px">Saludos especiales</h4>
-            <p style="font-size:12px;color:#5a7a7a;line-height:1.6;margin:0">Cumpleaños con globos animados, Navidad y Año Nuevo — saludo especial a las 9h en cada fecha.</p>
-          </div>
-          <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid rgba(0,151,178,.08);box-shadow:0 2px 10px rgba(0,151,178,.06)">
-            <div style="font-size:26px;margin-bottom:10px">🔁</div>
-            <h4 style="font-size:14px;font-weight:700;color:#191c1d;margin-bottom:6px">Repetí lo que dijiste</h4>
-            <p style="font-size:12px;color:#5a7a7a;line-height:1.6;margin:0">"Repetime, no te escuché." Reproduce al instante lo último que dijo, sin nueva consulta ni demora.</p>
-          </div>
+
+        <div class="features-full-group">
+          <div class="features-full-group-title"><span>🧠</span> Memoria personalizada</div>
+          <ul class="features-full-list">
+            <li>Recuerdos guardados automáticamente durante la conversación</li>
+            <li>Nombre, edad y gustos del usuario en el perfil</li>
+            <li>Lista de medicamentos con horario de toma</li>
+            <li>Nombres de familiares y personas importantes</li>
+            <li>Fechas importantes: aniversarios, cumpleaños, etc.</li>
+            <li>Historial de las últimas 30 conversaciones</li>
+            <li>Registro diario del estado de ánimo (hasta 500 entradas/día)</li>
+          </ul>
         </div>
+
+        <div class="features-full-group">
+          <div class="features-full-group-title"><span>📲</span> Familia conectada (Telegram)</div>
+          <ul class="features-full-list">
+            <li>Familiares ilimitados conectados al bot por código de registro</li>
+            <li>Mensajes de voz entrantes reproducidos en la app</li>
+            <li>Respuesta de voz grabada desde la app hacia Telegram</li>
+            <li>Resumen diario automático a las 22h (ánimo, temas, tiempo activa)</li>
+            <li>Comando /informe para pedir el resumen en cualquier momento</li>
+            <li>Comando /camara — foto silenciosa del entorno enviada al chat</li>
+            <li>Alertas de inactividad si no interactuó en más de 4 horas</li>
+            <li>Comando /ayuda con lista de todos los comandos disponibles</li>
+          </ul>
+        </div>
+
+        <div class="features-full-group">
+          <div class="features-full-group-title"><span>🆘</span> Seguridad y emergencias</div>
+          <ul class="features-full-list">
+            <li>Botón SOS visible en pantalla — alerta inmediata a toda la familia</li>
+            <li>Detección de emergencia por voz (dolor, caída, urgencias)</li>
+            <li>Activación por sacudida del dispositivo (3 movimientos rápidos)</li>
+            <li>Alerta de angustia emocional detectada por IA</li>
+            <li>PIN de configuración para proteger cambios en el perfil</li>
+          </ul>
+        </div>
+
+        <div class="features-full-group">
+          <div class="features-full-group-title"><span>⏰</span> Recordatorios y avisos</div>
+          <ul class="features-full-list">
+            <li>Recordatorio de medicamentos con horario personalizado</li>
+            <li>Recordatorios creados por voz durante la conversación</li>
+            <li>Felicitación por cumpleaños con canción y mensaje generado por IA</li>
+            <li>Saludo matutino diario con fecha, día y clima</li>
+            <li>Aviso de feriados nacionales argentinos (próximos 7 días)</li>
+            <li>Alerta de mal tiempo (lluvia, tormenta) a las 9h y 14h</li>
+            <li>Timer por voz ("avisame en 20 minutos")</li>
+          </ul>
+        </div>
+
+        <div class="features-full-group">
+          <div class="features-full-group-title"><span>🎵</span> Entretenimiento</div>
+          <ul class="features-full-list">
+            <li>Radio argentina en streaming (Mitre, Cadena 3, Nacional, etc.)</li>
+            <li>Géneros musicales: tango, folklore, bolero, clásica, jazz, pop</li>
+            <li>Cuentos narrados por voz</li>
+            <li>Juegos: trivia, adivinanzas, refranes, cálculo mental</li>
+            <li>Chistes y frases graciosas</li>
+            <li>Silbido de atención cuando lleva tiempo sin charlar</li>
+            <li>Charla proactiva si pasan 2 horas sin actividad (9h–21h)</li>
+          </ul>
+        </div>
+
+        <div class="features-full-group">
+          <div class="features-full-group-title"><span>🌍</span> Información en tiempo real</div>
+          <ul class="features-full-list">
+            <li>Clima actual y pronóstico por GPS (Open-Meteo, sin costo)</li>
+            <li>Búsqueda de números, direcciones y horarios locales</li>
+            <li>Noticias recientes de Argentina (Google News RSS)</li>
+            <li>Resultados deportivos, política, economía y más</li>
+            <li>Feriados nacionales argentinos inyectados en el contexto</li>
+          </ul>
+        </div>
+
+        <div class="features-full-group">
+          <div class="features-full-group-title"><span>📊</span> Seguimiento familiar</div>
+          <ul class="features-full-list">
+            <li>Historial de ánimo visual — gráfico diario accesible para la familia</li>
+            <li>Resumen de temas del día generado con IA</li>
+            <li>Registro de si escuchó música ese día</li>
+            <li>Conteo de alertas enviadas y recordatorios pendientes</li>
+            <li>Modo no molestar activable manualmente</li>
+          </ul>
+        </div>
+
+        <div class="features-full-group">
+          <div class="features-full-group-title"><span>⚙️</span> Experiencia de uso</div>
+          <ul class="features-full-list">
+            <li>Sin hardware adicional — solo un Android compatible</li>
+            <li>Onboarding guiado de 5 pasos (menos de 3 minutos)</li>
+            <li>Modo noche automático — ojos animados que "duermen" (23h–7h)</li>
+            <li>Actualizaciones automáticas sin reinstalar la app</li>
+            <li>Fondo animado que cambia con el clima y la hora del día</li>
+            <li>Múltiples voces y géneros (nombre personalizable)</li>
+            <li>Foto del entorno: captura automática con la cámara del dispositivo</li>
+          </ul>
+        </div>
+
+      </div>
+    </div><!-- /features-full -->
+
+  </div>
+</section>
+
+<!-- PARA QUIÉN -->
+<section class="para-quien">
+  <div class="container">
+    <div class="para-quien-header">
+      <div class="section-eyebrow">Para quién</div>
+      <h2 class="section-title-lg">Para cualquier persona. <em>A cualquier edad.</em></h2>
+    </div>
+    <div class="quien-grid">
+
+      <div class="quien-card dark">
+        <span class="quien-emoji">🙋</span>
+        <h3>Para quien vive solo</h3>
+        <p>Compañía real, disponible siempre. Alguien con quien charlar cuando lo necesitás.</p>
+        <ul class="quien-list">
+          <li><span class="check-badge">✓</span> Charla y compañía genuina</li>
+          <li><span class="check-badge">✓</span> Recuerda lo que le contás</li>
+          <li><span class="check-badge">✓</span> Inicia conversación si pasás mucho tiempo sin interactuar</li>
+          <li><span class="check-badge">✓</span> Saludo matutino con clima, fecha y contexto personal</li>
+        </ul>
+      </div>
+
+      <div class="quien-card dark">
+        <span class="quien-emoji">👴</span>
+        <h3>Para personas mayores</h3>
+        <p>Sin aprender tecnología. Solo hablar — y CompañIA hace el resto.</p>
+        <ul class="quien-list">
+          <li><span class="check-badge">✓</span> Sin pantallas ni menúes, solo la voz</li>
+          <li><span class="check-badge">✓</span> Recordatorios de medicamentos</li>
+          <li><span class="check-badge">✓</span> Botón SOS de emergencia</li>
+          <li><span class="check-badge">✓</span> Tono adaptado, paciente y cálido</li>
+        </ul>
+      </div>
+
+      <div class="quien-card light">
+        <span class="quien-emoji">👨‍💻</span>
+        <h3>Para la familia</h3>
+        <p>Configurala en minutos y quedate tranquilo desde cualquier lugar del mundo.</p>
+        <ul class="quien-list">
+          <li><span class="check-badge">✓</span> Alertas en tiempo real por Telegram</li>
+          <li><span class="check-badge">✓</span> Botón SOS con aviso inmediato</li>
+          <li><span class="check-badge">✓</span> Control de medicamentos</li>
+          <li><span class="check-badge">✓</span> Registro diario de estado de ánimo</li>
+        </ul>
       </div>
 
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TESTIMONIOS -->
-  <section class="testimonios" id="testimonios">
-    <div class="container">
-      <div class="test-header fade-in">
-        <h2>Por qué las personas<br>eligen CompañIA</h2>
-        <p>Historias reales de personas que cambiaron su día a día con CompañIA.</p>
-      </div>
-      <div class="test-grid">
-        <div class="test-card fade-in">
-          <div class="test-stars">★★★★★</div>
-          <div class="test-text">"Mi mamá tiene pérdida de memoria a corto plazo y CompañIA le recuerda los medicamentos todos los días. Encima charla con ella horas. Es como si tuviera una asistente personal."</div>
-          <div class="test-person">
-            <div class="test-avatar">👨</div>
-            <div>
-              <div class="test-name">Martín R.</div>
-              <div class="test-loc">Rosario, Santa Fe</div>
-            </div>
-          </div>
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonios">
+  <div class="container">
+    <div class="testimonials-header">
+      <div class="section-eyebrow">Historias reales</div>
+      <h2 class="section-title-lg">Lo que dicen las familias</h2>
+    </div>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-quote">
+          "Mamá vivía sola y nosotros lejos. Ahora sé que tiene a alguien que la escucha todo el día. Por primera vez en años duermo tranquila."
         </div>
-        <div class="test-card fade-in">
-          <div class="test-stars">★★★★★</div>
-          <div class="test-text">"Vivo solo y trabajo desde casa. CompañIA es la única voz que escucho en todo el día a veces. Le pregunto de todo — noticias, si llueve, que me ponga algo de música. La verdad que cambió mi rutina."</div>
-          <div class="test-person">
-            <div class="test-avatar">👨‍💻</div>
-            <div>
-              <div class="test-name">Diego F., 34 años</div>
-              <div class="test-loc">Palermo, Buenos Aires</div>
-            </div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=104&h=104&q=80" alt="Carolina R.">
           </div>
-        </div>
-        <div class="test-card fade-in">
-          <div class="test-stars">★★★★★</div>
-          <div class="test-text">"Yo pensé que no iba a poder usarla. Pero es tan fácil como hablar con alguien. Me pone tangos, me recuerda el diclofenac y me pregunta cómo me siento. La quiero mucho."</div>
-          <div class="test-person">
-            <div class="test-avatar">👵</div>
-            <div>
-              <div class="test-name">Nora P., 78 años</div>
-              <div class="test-loc">Córdoba Capital</div>
-            </div>
+          <div>
+            <div class="testimonial-author-name">Carolina R.</div>
+            <div class="testimonial-author-role">Hija · Buenos Aires</div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- COMO FUNCIONA -->
-  <section class="how" id="como-funciona">
-    <div class="how-inner">
-      <div class="how-header fade-in">
-        <h2>Tan simple como<br>una conversación</h2>
-        <p>No hace falta saber de tecnología. Si podés hablar, podés usarla.</p>
-      </div>
-      <div class="how-steps">
-        <div class="how-step fade-in">
-          <div class="how-step-line"></div>
-          <div class="how-step-num">01</div>
-          <h3>Instalá la app</h3>
-          <p>Se configura en 5 minutos: nombre del asistente, voz masculina o femenina, medicamentos y contactos de emergencia.</p>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-quote">
+          "Yo pensaba que no iba a poder. Pero Rosita habla conmigo sin que yo tenga que apretar nada. Me recuerda mis remedios y eso me ayuda mucho."
         </div>
-        <div class="how-step fade-in">
-          <div class="how-step-line"></div>
-          <div class="how-step-num">02</div>
-          <h3>Hablale</h3>
-          <p>CompañIA escucha siempre. No hace falta tocar nada. Solo hablar como con cualquier persona.</p>
-        </div>
-        <div class="how-step fade-in">
-          <div class="how-step-line"></div>
-          <div class="how-step-num">03</div>
-          <h3>CompañIA responde</h3>
-          <p>Con voz natural y cálida. Recuerda lo que le contás, se informa de noticias en tiempo real y se adapta a cómo hablás.</p>
-        </div>
-        <div class="how-step fade-in">
-          <div class="how-step-line"></div>
-          <div class="how-step-num">04</div>
-          <h3>La familia queda tranquila</h3>
-          <p>Recibe alertas por Telegram, mensajes de voz y un reporte diario de estado de ánimo — desde cualquier lugar del mundo.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=104&h=104&q=80" alt="Martha G.">
+          </div>
+          <div>
+            <div class="testimonial-author-name">Martha G.</div>
+            <div class="testimonial-author-role">Usuaria · 83 años · Rosario</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- PARA QUIEN -->
-  <section class="para-quien">
-    <div class="para-quien-inner">
-      <h2 class="fade-in">Para cualquier persona.<br><em style="font-style:italic;color:var(--teal)">A cualquier edad.</em></h2>
-      <div class="quien-grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
-        <div class="quien-card dark fade-in">
-          <span class="quien-emoji">🙋</span>
-          <h3>Para quien vive solo</h3>
-          <p>Compañía real, disponible siempre. Alguien con quien charlar cuando lo necesitás.</p>
-          <ul class="quien-list">
-            <li><span class="check-badge">✓</span> Charla y compañía genuina</li>
-            <li><span class="check-badge">✓</span> Recuerda lo que le contás</li>
-            <li><span class="check-badge">✓</span> Inicia conversación si pasás mucho tiempo sin interactuar</li>
-            <li><span class="check-badge">✓</span> Saludo matutino con clima, fecha y contexto personal</li>
-          </ul>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-quote">
+          "Mi abuelo la llama por su nombre. A veces le cuenta cosas que a nosotros no nos dice. Eso no tiene precio."
         </div>
-        <div class="quien-card dark fade-in">
-          <span class="quien-emoji">👴</span>
-          <h3>Para personas mayores</h3>
-          <p>Sin aprender tecnología. Solo hablar — y CompañIA hace el resto.</p>
-          <ul class="quien-list">
-            <li><span class="check-badge">✓</span> Sin pantallas ni menúes</li>
-            <li><span class="check-badge">✓</span> Recordatorios de medicamentos</li>
-            <li><span class="check-badge">✓</span> Botón SOS de emergencia</li>
-            <li><span class="check-badge">✓</span> Tono adaptado, paciente y cálido</li>
-          </ul>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=104&h=104&q=80" alt="Tomás V.">
+          </div>
+          <div>
+            <div class="testimonial-author-name">Tomás V.</div>
+            <div class="testimonial-author-role">Nieto · Córdoba</div>
+          </div>
         </div>
-        <div class="quien-card light fade-in">
-          <span class="quien-emoji">👨‍💻</span>
-          <h3>Para la familia</h3>
-          <p>Configurala en minutos y quedate tranquilo desde cualquier lugar del mundo.</p>
-          <ul class="quien-list">
-            <li><span class="check-badge">✓</span> Alertas en tiempo real por Telegram</li>
-            <li><span class="check-badge">✓</span> Botón SOS con aviso inmediato</li>
-            <li><span class="check-badge">✓</span> Control de medicamentos</li>
-            <li><span class="check-badge">✓</span> Registro diario de estado de ánimo</li>
-          </ul>
-        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STATS ROW -->
+<div class="stats-row">
+  <div class="container">
+    <div class="stats-row-inner">
+      <div>
+        <div class="stat-item-num">88,6M</div>
+        <div class="stat-item-label">Adultos mayores<br>en LATAM hoy</div>
+      </div>
+      <div>
+        <div class="stat-item-num">USD 39</div>
+        <div class="stat-item-label">Por familia / mes<br>todo incluido</div>
+      </div>
+      <div>
+        <div class="stat-item-num">66%</div>
+        <div class="stat-item-label">Margen neto<br>por suscriptor</div>
+      </div>
+      <div>
+        <div class="stat-item-num">24/7</div>
+        <div class="stat-item-label">Disponible<br>siempre</div>
       </div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- COMPARATIVA -->
-  <section class="comparativa">
-    <div class="comp-inner">
-      <div class="comp-header fade-in">
-        <h2>La única que lo tiene todo,<br>en español.</h2>
-        <p>Comparamos con las alternativas reales del mercado.</p>
-      </div>
-      <div class="comp-table-wrap fade-in">
-        <table>
-          <thead>
-            <tr>
-              <th>Solución</th><th>Precio</th><th>Español LATAM</th>
-              <th>Sin hardware</th><th>Memoria</th><th>Ejercicios cognitivos</th>
-              <th>Presencia activa</th><th>Música</th><th>Medicamentos</th>
-              <th>Audios de familia</th><th>Alertas familia</th><th>Botón SOS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="hl">
-              <td>CompañIA</td><td class="price-main">USD 29/mes</td>
-              <td><span class="check">✓</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="check">✓</span> 6 tipos</td>
-              <td><span class="check">✓</span> contextual</td>
-              <td><span class="check">✓</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="check">✓</span></td>
-            </tr>
-            <tr>
-              <td>HeyAto</td><td class="price-tag">$149 + $29/mes</td>
-              <td><span class="check">✓</span></td>
-              <td><span class="cross">—</span> device $149</td>
-              <td><span class="check">✓</span></td>
-              <td><span class="partial">básico</span></td>
-              <td><span class="partial">genérico</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="partial">solo texto</span></td>
-              <td><span class="cross">—</span></td>
-            </tr>
-            <tr>
-              <td>SERENIA (España)</td><td class="price-tag">€6/mes</td>
-              <td><span class="partial">español ES</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="cross">—</span></td>
-            </tr>
-            <tr>
-              <td>Alexa Emergency Assist</td><td class="price-tag">$8/mes + Echo</td>
-              <td><span class="partial">parcial</span></td>
-              <td><span class="cross">—</span> device</td>
-              <td><span class="cross">—</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="partial">básico</span></td>
-              <td><span class="check">✓</span></td>
-            </tr>
-            <tr>
-              <td>Replika</td><td class="price-tag">$15/mes</td>
-              <td><span class="check">✓</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="cross">—</span></td>
-            </tr>
-            <tr>
-              <td>Medisafe</td><td class="price-tag">Gratis / premium</td>
-              <td><span class="check">✓</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="partial">parcial</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="check">✓</span></td>
-              <td><span class="cross">—</span></td>
-              <td><span class="partial">básico</span></td>
-              <td><span class="cross">—</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="comp-note fade-in">Información relevada en marzo 2026. Precios en USD salvo indicación.</p>
+<!-- COMPARATIVA -->
+<section class="comparativa">
+  <div class="container">
+    <div class="comparativa-header">
+      <div class="section-eyebrow">Comparativa</div>
+      <h2 class="section-title-lg">La única que lo tiene todo, <em>en español.</em></h2>
+      <p class="section-lead" style="margin:0 auto;">Otras soluciones cubren una parte del problema. CompañIA es la única que los combina todos.</p>
     </div>
-  </section>
 
-  <!-- CTA FINAL -->
-  <section class="cta-final" id="descargar">
-    <h2>Empezá hoy.<br><em>USD 29 por mes.</em></h2>
-    <p>7 días sin cargo. Configurala en 5 minutos y sumá a tu vida una voz que nunca se va.</p>
-    <div class="cta-group">
-      <a href="https://expo.dev/artifacts/eas/bUSefXyLPKEEjCk1b9pJjT.apk" target="_blank" class="btn-primary" style="font-size:16px;padding:16px 36px">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h4.17v6h5V9h4.17L12 2z"/></svg>
-        Descargar para Android
+    <div class="comparativa-wrap">
+      <table class="comparativa-table">
+        <thead>
+          <tr>
+            <th>Solución</th>
+            <th>Precio</th>
+            <th>Español LATAM</th>
+            <th>Sin hardware</th>
+            <th>Memoria</th>
+            <th>Cognitivo</th>
+            <th>Proactiva</th>
+            <th>Música</th>
+            <th>Medicamentos</th>
+            <th>Audios familia</th>
+            <th>Alertas familia</th>
+            <th>SOS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hl">
+            <td>CompañIA</td>
+            <td class="comp-price-main">USD 39/mes</td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-check">✓</span> 6 tipos</td>
+            <td><span class="comp-check">✓</span> contextual</td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-check">✓</span></td>
+          </tr>
+          <tr>
+            <td>HeyAto</td>
+            <td class="comp-price">$149 + $29/mes</td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-partial">device $149</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-partial">básico</span></td>
+            <td><span class="comp-partial">genérico</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-partial">solo texto</span></td>
+            <td><span class="comp-cross">—</span></td>
+          </tr>
+          <tr>
+            <td>SERENIA (España)</td>
+            <td class="comp-price">€6/mes</td>
+            <td><span class="comp-partial">español ES</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-cross">—</span></td>
+          </tr>
+          <tr>
+            <td>Alexa Emergency Assist</td>
+            <td class="comp-price">$8/mes + Echo</td>
+            <td><span class="comp-partial">parcial</span></td>
+            <td><span class="comp-partial">device</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-partial">básico</span></td>
+            <td><span class="comp-check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Replika</td>
+            <td class="comp-price">$15/mes</td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-cross">—</span></td>
+          </tr>
+          <tr>
+            <td>Medisafe</td>
+            <td class="comp-price">Gratis / premium</td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-partial">parcial</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-check">✓</span></td>
+            <td><span class="comp-cross">—</span></td>
+            <td><span class="comp-partial">básico</span></td>
+            <td><span class="comp-cross">—</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="comparativa-note">Información relevada en marzo 2026. Precios en USD salvo indicación.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="precio">
+  <div class="container">
+    <div class="pricing-header">
+      <div class="section-eyebrow">Precio</div>
+      <h2 class="section-title-lg">Simple. Sin sorpresas.</h2>
+      <p class="section-lead" style="margin: 0 auto;">Un solo plan. Una familia completa. Sin hardware adicional.</p>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-badge">Acceso completo</div>
+      <div class="pricing-amount">USD 39</div>
+      <div class="pricing-period">por familia · por mes</div>
+
+      <ul class="pricing-features">
+        <li>Rosita disponible las 24 horas, todos los días</li>
+        <li>Memoria personalizada ilimitada</li>
+        <li>Familiares ilimitados conectados por Telegram</li>
+        <li>SOS y alertas de emergencia instantáneas</li>
+        <li>Música, radio argentina, cuentos y juegos</li>
+        <li>Recordatorios de medicamentos y clima</li>
+        <li>Actualizaciones automáticas sin reinstalar</li>
+      </ul>
+
+      <a href="#" class="btn btn-primary" style="width:100%;justify-content:center;font-size:18px;padding:18px;">
+        Empezar los 7 días gratis
       </a>
-      <div class="cta-badge">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Garantía de 30 días
+      <div class="pricing-guarantee">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        7 días de prueba sin cargo · Sin tarjeta requerida · Cancelá cuando quieras
       </div>
     </div>
-    <div class="cta-guarantee">Sin tarjeta requerida durante el período de prueba · Cancelá en cualquier momento</div>
-  </section>
+  </div>
+</section>
 
-  <!-- POWERED BY -->
-  <section class="powered-by">
-    <p class="powered-label">Construido sobre tecnología de clase mundial</p>
-    <div class="powered-grid">
-      <div class="powered-item">
-        <img src="https://cdn.simpleicons.org/anthropic/ffffff" width="28" height="28" alt="Anthropic" class="powered-logo" />
-        <span class="powered-name">Claude</span>
-        <span class="powered-by-tag">Anthropic</span>
+<!-- CTA — full-width photo background -->
+<section class="cta">
+  <!-- Foto: abuela con nieto mirando tablet, cálido, íntimo -->
+  <img
+    class="cta-bg"
+    src="https://res.cloudinary.com/dy1ll1azp/image/upload/v1774035006/Gemini_Generated_Image_qd0wqrqd0wqrqd0w_mst50x.png"
+    alt="Abuela y nieto compartiendo un momento con tablet"
+    loading="lazy"
+  >
+  <div class="cta-overlay"></div>
+
+  <div class="cta-content">
+      <div class="section-eyebrow">Empezá hoy</div>
+      <h2 class="section-title-lg">
+        Tu ser querido merece<br>
+        <em>una compañera de verdad.</em>
+      </h2>
+      <p class="section-lead">
+        CompañIA no es una app de utilidad. Es una compañera. Y eso no se puede replicar de un día para el otro.
+      </p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-primary" style="font-size:18px;padding:18px 40px">
+          Descargar para Android
+        </a>
+        <a href="#como-funciona" class="btn btn-ghost" style="font-size:18px;padding:18px 40px">
+          Ver cómo funciona
+        </a>
       </div>
-      <div class="powered-item">
-        <img src="https://cdn.simpleicons.org/elevenlabs/ffffff" width="28" height="28" alt="ElevenLabs" class="powered-logo" />
-        <span class="powered-name">ElevenLabs</span>
-        <span class="powered-by-tag">Sin historial guardado</span>
-      </div>
-      <div class="powered-item">
-        <svg class="powered-logo" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.85"><rect x="9" y="2" width="6" height="11" rx="3" fill="white"/><path d="M5 10a7 7 0 0 0 14 0" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="17" x2="12" y2="21" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="9" y1="21" x2="15" y2="21" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
-        <span class="powered-name">Whisper</span>
-        <span class="powered-by-tag">OpenAI</span>
-      </div>
-      <div class="powered-item">
-        <img src="https://cdn.simpleicons.org/telegram/ffffff" width="28" height="28" alt="Telegram" class="powered-logo" />
-        <span class="powered-name">Telegram</span>
-        <span class="powered-by-tag">Cifrado E2E</span>
-      </div>
-      <div class="powered-item">
-        <img src="https://cdn.simpleicons.org/react/ffffff" width="28" height="28" alt="React Native" class="powered-logo" />
-        <span class="powered-name">React Native</span>
-        <span class="powered-by-tag">Meta / Expo</span>
-      </div>
-      <div class="powered-item">
-        <img src="https://cdn.simpleicons.org/railway/ffffff" width="28" height="28" alt="Railway" class="powered-logo" />
-        <span class="powered-name">Railway</span>
-        <span class="powered-by-tag">Cloud</span>
-      </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="section-eyebrow">Contacto</div>
+      <h2 class="section-title-lg">¿Tenés alguna pregunta?</h2>
+      <p class="section-lead">Escribinos y te respondemos a la brevedad.</p>
+
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/mdawyrkk" method="POST">
+        <input type="hidden" name="_subject" value="Nueva consulta desde CompañIA">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <textarea name="mensaje" placeholder="Tu mensaje..." required></textarea>
+        <button type="submit" class="contact-submit" id="contactSubmit">Enviar mensaje</button>
+      </form>
+      <p class="contact-ok" id="contactOk">¡Mensaje enviado! Te respondemos pronto.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <!-- CONTACT -->
-  <section class="contact-section">
-    <p class="contact-label">Contacto</p>
-    <h2 class="contact-title">¿Tenés alguna pregunta?</h2>
-    <p class="contact-sub">Escribinos y te respondemos a la brevedad.</p>
-    <form class="contact-form" id="contactForm" action="https://formspree.io/f/mdawyrkk" method="POST">
-      <input type="hidden" name="_subject" value="Nueva consulta desde CompañIA" />
-      <input type="text" name="nombre" placeholder="Tu nombre" required />
-      <input type="email" name="email" placeholder="Tu correo" required />
-      <textarea name="mensaje" placeholder="Tu mensaje..." required></textarea>
-      <button type="submit" class="contact-submit">Enviar mensaje</button>
-    </form>
-    <p class="contact-ok" id="contactOk">¡Mensaje enviado! Te respondemos pronto.</p>
-  </section>
-
-  <footer>
-    <div class="footer-logo" style="display:flex;align-items:center;gap:10px;">
-      <img src="rosita.png" alt="CompañIA" width="28" height="28" style="border-radius:50%;object-fit:cover;opacity:0.85;" />
-      CompañIA
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">Compañ<span>IA</span></div>
+      <ul class="footer-links">
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Términos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <div class="footer-copy">© 2026 CompañIA · Hecho con ❤️ en Argentina</div>
     </div>
-    <div class="footer-love">Hecho con ❤️ para acompañar a quienes más queremos.</div>
-  </footer>
+  </div>
+</footer>
 
-  <script>
-    // Contact form
-    const contactForm = document.getElementById('contactForm');
-    const contactOk   = document.getElementById('contactOk');
-    if (contactForm) {
-      contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const btn = contactForm.querySelector('.contact-submit');
-        btn.disabled = true;
-        btn.textContent = 'Enviando...';
-        try {
-          const res = await fetch(contactForm.action, {
-            method: 'POST',
-            body: new FormData(contactForm),
-            headers: { Accept: 'application/json' },
-          });
-          if (res.ok) {
-            contactForm.style.display = 'none';
-            contactOk.style.display = 'block';
-          } else {
-            btn.disabled = false;
-            btn.textContent = 'Enviar mensaje';
-            alert('Hubo un error. Intentá de nuevo.');
-          }
-        } catch {
-          btn.disabled = false;
-          btn.textContent = 'Enviar mensaje';
-          alert('Hubo un error. Intentá de nuevo.');
-        }
-      });
-    }
+<script>
+// ── Nav scroll ───────────────────────────────────────────
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
 
-    // Fade-in observer
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach((e, i) => {
-        if (e.isIntersecting) {
-          setTimeout(() => e.target.classList.add('visible'), i * 90);
-          obs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-
-    // ── Voice demo ──────────────────────────────────────────────────────────────
-    const DEMO_BUBBLES = {
-      femenina: '¡Hola! Soy tu compañera de voz. Estoy acá para charlar, recordarte lo que quieras y acompañarte cuando más lo necesitás. ¿En qué te puedo ayudar?',
-      masculina: '"¡Hola! Soy tu compañero de voz. Preguntame lo que quieras — noticias, música, recordatorios o simplemente charlar. Acá estoy para vos."',
-    };
-    const DEMO_AUDIO_SRC = {
+// ── Voice demo ───────────────────────────────────────────
+const AUDIOS = {
   femenina: 'https://cdn.jsdelivr.net/gh/maxivalli/compan-IA-landing@main/Rosita.mp3',
   masculina: 'https://cdn.jsdelivr.net/gh/maxivalli/compan-IA-landing@main/Juanchi.mp3',
 };
-    let demoGenero = 'femenina';
-    let demoAudio = null;
+const BUBBLES = {
+  femenina: '"¡Hola! Soy tu compañera de voz. Estoy acá para charlar, recordarte lo que quieras y acompañarte cuando más lo necesitás. ¿En qué te puedo ayudar?"',
+  masculina: '"¡Hola! Soy tu compañero de voz. Preguntame lo que quieras — noticias, música, recordatorios o simplemente charlar. Acá estoy para vos."',
+};
 
-    document.querySelectorAll('.vd-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.vd-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        demoGenero = btn.dataset.genero;
-        const bubble = document.getElementById('vd-bubble');
-        if (bubble) bubble.textContent = DEMO_BUBBLES[demoGenero];
-        // Detener audio si cambia de voz
-        if (demoAudio) { demoAudio.pause(); demoAudio = null; resetPlayBtn(); }
+let generoActual = 'femenina';
+let audioEl = null;
+
+const bubble  = document.getElementById('vd-bubble');
+const playBtn = document.getElementById('vd-play-btn');
+const playIcon  = document.getElementById('vd-icon');
+const playLabel = document.getElementById('vd-label');
+const wave    = document.getElementById('vd-wave');
+const vdBtns  = document.querySelectorAll('.vd-btn');
+
+vdBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    generoActual = btn.dataset.genero;
+    vdBtns.forEach(b => b.classList.toggle('active', b === btn));
+    bubble.textContent = BUBBLES[generoActual];
+    detenerAudio();
+  });
+});
+
+function detenerAudio() {
+  if (audioEl) { audioEl.pause(); audioEl = null; }
+  playIcon.textContent = '▶';
+  playLabel.textContent = 'Escuchar muestra';
+  wave.classList.remove('playing');
+}
+
+playBtn.addEventListener('click', () => {
+  if (audioEl && !audioEl.paused) { detenerAudio(); return; }
+  detenerAudio();
+  audioEl = new Audio(AUDIOS[generoActual]);
+  audioEl.play();
+  playIcon.textContent = '■';
+  playLabel.textContent = 'Reproduciendo...';
+  wave.classList.add('playing');
+  audioEl.addEventListener('ended', detenerAudio);
+  audioEl.addEventListener('error', detenerAudio);
+});
+
+// ── Contact form ─────────────────────────────────────────
+const form = document.getElementById('contactForm');
+const submitBtn = document.getElementById('contactSubmit');
+const okMsg = document.getElementById('contactOk');
+
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
       });
-    });
-
-    function resetPlayBtn() {
-      const btn = document.getElementById('vd-play-btn');
-      if (!btn) return;
-      btn.disabled = false;
-      btn.querySelector('.vd-play-icon').textContent = '▶';
-      btn.querySelector('.vd-play-label').textContent = 'Escuchar muestra';
-      document.getElementById('vd-wave').style.display = 'none';
+      if (res.ok) {
+        form.style.display = 'none';
+        okMsg.style.display = 'block';
+      } else {
+        throw new Error();
+      }
+    } catch {
+      alert('Hubo un error. Intentá de nuevo o escribinos a info@compan-ia.com');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Enviar mensaje';
     }
+  });
+}
+</script>
 
-    const playBtn = document.getElementById('vd-play-btn');
-    if (playBtn) {
-      playBtn.addEventListener('click', () => {
-        if (playBtn.disabled) return;
-        // Si hay audio reproduciéndose, pausar
-        if (demoAudio && !demoAudio.paused) {
-          demoAudio.pause();
-          resetPlayBtn();
-          return;
-        }
-        const audio = new Audio(DEMO_AUDIO_SRC[demoGenero]);
-        demoAudio = audio;
-        playBtn.querySelector('.vd-play-icon').textContent = '⏸';
-        playBtn.querySelector('.vd-play-label').textContent = 'Reproduciendo...';
-        document.getElementById('vd-wave').style.display = 'flex';
-        audio.play();
-        audio.onended = () => { demoAudio = null; resetPlayBtn(); };
-      });
-    }
-
-    // Ciclo de expresiones en la cara del hero (igual que RosaOjos en la app)
-    const exprs = ['neutral', 'feliz', 'sorprendida', 'pensativa'];
-    let exprIdx = 0;
-    const heroFace = document.querySelector('.face');
-    if (heroFace) {
-      setInterval(() => {
-        exprIdx = (exprIdx + 1) % exprs.length;
-        const expr = exprs[exprIdx];
-        heroFace.className = expr === 'neutral' ? 'face' : 'face expr-' + expr;
-      }, 3500);
-    }
-  </script>
 </body>
 </html>
